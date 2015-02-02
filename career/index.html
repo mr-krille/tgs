@@ -48,7 +48,7 @@
   </nav>
 </header>
 
-<section class="section aboutsection1">
+<section id="s1" class="section aboutsection1">
   <div class="headerleft">
     <div class="textwrapabout">
       <div class="abouth1">
@@ -63,12 +63,12 @@
     <a href="#s2" class="discover anchor">See how we're working <span class="triangle"></span></a>
   </div>
   <div class="headerright">
-    <div class="rightaboutheader"></div>  
-  </div>  
+    <div class="rightaboutheader"></div>
+  </div>
 </section>
 
 <section id="s2" class="section career2 passioncareer">
-  <div class="tablecell"> 
+  <div class="tablecell">
     <div class="passion clearfix">
       <div class="passionheader">We’re looking for</div>
       <div class="passionsubheader">craftsmen.</div>
@@ -105,8 +105,8 @@
   </div>
 </section>
 
-<section class="section career3">
-  <div class="tablecell"> 
+<section id="s3" class="section career3">
+  <div class="tablecell">
     <div class="success passion clearfix">
       <div class="passionheader">The Perks of Being</div>
       <div class="passionsubheader">a gentleman</div>
@@ -143,7 +143,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="row2s">
           <div class="wrapppp">
             <div class="textwrapsteps">
@@ -154,10 +154,10 @@
                 If you’re a UX design geek, or can nerd out about typography, you’ll be in good company at the Gentleman Studio. We’re proud to be passionate about what we do, and we’re looking for more people like us.
               </div>
               </div>
-            </div>  
+            </div>
           </div>
         </div>
-        
+
         <div class="row3s">
           <div class="row3rightresp"></div>
           <div class="row3left" style="background-color:#d1d1d1;">
@@ -188,13 +188,13 @@
   </div>
 </section>
 
-<section class="section career4">
-  <div class="tablecell"> 
+<section id="s4" class="section career4">
+  <div class="tablecell">
     <div class="success passion clearfix">
       <div class="passionheader">Current</div>
       <div class="passionsubheader">openings</div>
       <div class="accordion-module clearfix">
-        
+
         <div class="tabwrap">
           <div class="tab-head">
             <div class="tabicon">
@@ -232,7 +232,7 @@
             <div class="images"></div>
           </div>
         </div>
-  
+
         <div class="tabwrap">
           <div class="tab-head">
             <div class="tabicon">
@@ -279,7 +279,7 @@
   </div>
 </section>
 
-<section class="s7 section footer careertalk">
+<section id="s7" class="s7 section footer careertalk">
   <div class="aboutfooter careerfooter">
     <div class="aboutfootertop">
       <div class="footerleft">
@@ -302,7 +302,7 @@
             </div>
           </div>
         </div>
-      </div>  
+      </div>
       <div class="footerright">
         <div class="footerrightWrap">
           <div class="biggerpic"><img alt="Career" src="career/media/talkbigpic.jpg" height="611" width="746"></div>
@@ -310,8 +310,8 @@
             <div class="deviceheader"><p>Portfolio</p></div>
             <div class="devicetext"><p>Discover what we’ve built...</p></div>
             <div class="devicelink"><a href="./"><span class="viewworktext">more</span></a></div>
-          </div>  
-        </div>  
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -347,17 +347,17 @@
         <div class="fb social">
           <a target="_blank" href="https://www.facebook.com/thegentlemanstudio">
             <img alt="Facebook" src="img/icon_fb_02.png" height="274" width="225">
-          </a>  
+          </a>
         </div>
         <div class="db social">
           <a target="_blank" href="http://www.dribbble.com/mawa">
             <img alt="Dribble" src="img/icon_db_02.png" height="274" width="225">
-          </a>  
+          </a>
         </div>
         <div class="bh social">
           <a target="_blank" href="https://www.behance.net/mawagraphics">
             <img alt="Behance" src="img/icon_bh_02.png" height="274" width="225">
-          </a>  
+          </a>
         </div>
         <div class="overlay">
             <img alt="overlay" src="img/icon_post_02.png" height="229" width="470">
@@ -373,5 +373,19 @@
 </footer>
 <!--//END//-->
 <script src="nav.js"></script>
+<script src="animation.js"></script>
+<script>
+  animation.selectors = [{
+    selector: 's2',
+    offset: 400
+  }, {
+    selector: 's3',
+    offset: 400
+  }, {
+    selector: 's4',
+    offset: 400
+  }];
+  animation.init();
+</script>
 </body>
 </html>

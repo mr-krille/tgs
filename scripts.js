@@ -14,13 +14,20 @@ var app = {
     for (var i = 0; i < pageLinks.length; i++) {
       pageLinks[i].addEventListener('click', app.pageHandler);
     }
+
+    $('.about .s2').waypoint({
+      handler: function (direction) {
+        $(this).addClass('active');
+      }
+    });
+
   },
   pageHandler: function (evt) {
     evt.preventDefault();
-    
+
     var link = (evt.target.tagName === "A") ? evt.target : evt.target.parentNode;
     var url = link.getAttribute('href');
-    
+
     document.body.classList.add('loading');
 
     animation.destroy();
@@ -165,7 +172,7 @@ var animation = {
       }
       // events
       animation.attach();
-    
+
     // touch
     } else {
       document.body.style.overflow = 'hidden';
@@ -187,7 +194,7 @@ var touch = {
   touchhandler: function (direction) {
     // up
     if (direction === 'up' && animation.current < animation.pages.length - 1) {
-          
+
       if (animation.last !== undefined) {
         animation.pages[animation.last].removeAttribute('style');
         animation.pages[animation.last].classList.remove('animate');
@@ -205,10 +212,10 @@ var touch = {
       animation.pages[animation.last].classList.add('last');
       animation.pages[animation.last].classList.remove('active');
 
-      
+
       animation.pages[animation.current].classList.add('active');
       animation.pages[animation.current].classList.add('animate');
-      
+
 
       touch.touchhandler();
 
