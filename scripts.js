@@ -15,12 +15,6 @@ var app = {
       pageLinks[i].addEventListener('click', app.pageHandler);
     }
 
-    $('.about .s2').waypoint({
-      handler: function (direction) {
-        $(this).addClass('active');
-      }
-    });
-
   },
   pageHandler: function (evt) {
     evt.preventDefault();
