@@ -1,14 +1,14 @@
 var app = {
   init: function () {
 
+    document.body.classList.remove('loading');
+
     // portfolio?
     if (document.body.classList.contains('split')) {
       animation.init();
     } else {
       nav.init();
     }
-
-    document.body.classList.remove('loading');
 
     var pageLinks = document.querySelectorAll('.inlink');
     for (var i = 0; i < pageLinks.length; i++) {
@@ -310,17 +310,16 @@ var touch = {
 
 var nav = {
   top: 0,
-  elm: document.getElementById('navbar'),
   init: function () {
+    nav.elm = document.getElementById('navbar');
     nav.offset = nav.elm.offsetTop;
-    if (window.top.scroll) {
-      var home = document.querySelectorAll('.home');
-      //home[0].addEventListener('click', window.top.scroll.closeSite);
-    }
-    if (window.scrollY > nav.offset) {
+    nav.top = window.scrollY;
+
+    if (nav.top > nav.offset) {
       nav.elm.setAttribute('class', 'hide');
       nav.show = false;
     }
+
     window.addEventListener('MozMousePixelScroll', nav.handler);
     window.addEventListener('mousewheel', nav.handler);
     window.addEventListener('DOMMouseScroll', nav.handler);
@@ -338,7 +337,7 @@ var nav = {
       nav.top = top;
       return;
     }
-    if (top > scroll.top) {
+    if (top > nav.top) {
       //console.log('down');
       nav.elm.classList.add('hide');
       nav.elm.classList.remove('show');
