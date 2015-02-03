@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      files: ['styles/*.{scss,sass}'],
+      files: ['styles/{*/,}*.{scss,sass}'],
       tasks: ['compass:dev'],
       options: {
         livereload: true
