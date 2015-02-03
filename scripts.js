@@ -310,6 +310,7 @@ var touch = {
 
 var nav = {
   top: 0,
+  animated: [],
   init: function () {
     nav.elm = document.getElementById('navbar');
     nav.offset = nav.elm.offsetTop;
@@ -320,12 +321,36 @@ var nav = {
       nav.show = false;
     }
 
+    var animated = document.querySelectorAll('[data-animated]') || [];
+
+    for (var i = 0; i < animated.length; i++) {
+      var elm = animated[i];
+      var offset = elm.offsetTop;
+      var correct = elm.getAttribute('data-offset');
+      if (correct) {
+        offset -= parseInt(correct, 10);
+      }
+      nav.animated.push({
+        elm: elm,
+        offset: offset
+      });
+    }
+
     window.addEventListener('MozMousePixelScroll', nav.handler);
     window.addEventListener('mousewheel', nav.handler);
     window.addEventListener('DOMMouseScroll', nav.handler);
   },
   handler: function (evt) {
     var top = window.scrollY;
+
+    nav.animated.forEach(function (section) {
+      if (top > section.offset) {
+        section.elm.classList.add('active');
+      } else if (top > (section.offset * 0.5)) {
+        section.elm.classList.remove('active');
+      }
+    });
+
     if (top < nav.offset) {
       nav.elm.setAttribute('class', '');
       return;
@@ -344,6 +369,7 @@ var nav = {
       nav.show = false;
       nav.top = top;
     }
+
     return;
   }
 };
