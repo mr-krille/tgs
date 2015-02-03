@@ -1,0 +1,65 @@
+
+/* 7 - bet2win */
+/* line 3, .styles/pages/_bet2win.sass */
+#bet2win .visuals, #pagination .bet2win.active .bullet
+  background-color: #f5c62d
+
+/* line 7, .styles/pages/_bet2win.sass */
+#bet2win .slide
+  background: #eaeaea
+/* line 9, .styles/pages/_bet2win.sass */
+#bet2win .visuals
+  background-color: #e9c039
+/* line 11, .styles/pages/_bet2win.sass */
+#bet2win .mockup
+  background-image: url("img/m_shadow_bet2win.png")
+  /* line 13, .styles/pages/_bet2win.sass */
+  #bet2win .mockup::after
+    background-image: url("img/m_mockup_bet2win.png")
+/* line 15, .styles/pages/_bet2win.sass */
+#bet2win .logo
+  width: 100px
+  background-image: url("img/logo_bet2win.png")
+
+@media screen and (max-width: $breakpoint-m)
+  /* line 20, .styles/pages/_bet2win.sass */
+  #bet2win .mockup
+    position: absolute
+    top: 23%
+    right: 5%
+    height: 60%
+    width: 100%
+    background-image: url("img/m_shadow_bet2win.png")
+    background-position: center
+    background-size: contain
+    /* line 29, .styles/pages/_bet2win.sass */
+    #bet2win .mockup::after
+      background-image: url("img/m_mockup_bet2win.png")
+      background-position: center
+      background-size: contain
+@media screen and (min-width: $breakpoint-m)
+  /* line 36, .styles/pages/_bet2win.sass */
+  #bet2win .mockup
+    top: 13%
+    right: -23%
+    height: 75%
+    width: 118%
+    background-image: url("img/shadow_bet2win.png")
+    /* line 42, .styles/pages/_bet2win.sass */
+    #bet2win .mockup::after
+      background-image: url("img/mockup_bet2win.png")
+@media screen and (min-width: $breakpoint-m) and (max-height: 768px)
+  /* line 48, .styles/pages/_bet2win.sass */
+  #bet2win .mockup
+    top: 10%
+  /* line 50, .styles/pages/_bet2win.sass */
+  #bet2win .content
+    top: 35%
+@media only screen and (max-device-width: 480px) and (orientation: portrait)
+  /* line 54, .styles/pages/_bet2win.sass */
+  #bet2win .mockup
+    right: 0
+    background-size: 130% auto
+    /* line 57, .styles/pages/_bet2win.sass */
+    #bet2win .mockup::after
+      background-size: 130% auto

@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     compass: {
       dist: {
         options: {
-          sassDir: '.styles',
+          sassDir: 'styles',
           cssDir: '.',
           noLineComments: true,
           outputStyle: 'compressed',
@@ -12,7 +12,7 @@ module.exports = function(grunt) {
       },
       dev: {
         options: {
-          sassDir: '.styles',
+          sassDir: 'styles',
           cssDir: '.',
           outputStyle: 'nested',
           environment: 'development'
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      files: ['.styles/*.{scss,sass}'],
+      files: ['styles/*.{scss,sass}'],
       tasks: ['compass:dev'],
       options: {
         livereload: true

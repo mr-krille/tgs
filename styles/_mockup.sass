@@ -1,0 +1,37 @@
+
+/* mockup */
+/* line 3, .styles/_mockup.sass */
+.mockup
+  position: absolute
+  height: 100%
+  width: 100%
+  background-position: center
+  background-repeat: no-repeat
+  background-size: 100%
+  transfrom: translate3d(0, 0, 0)
+
+/* line 12, .styles/_mockup.sass */
+.last .mockup
+  opacity: 1
+
+/* line 15, .styles/_mockup.sass */
+.active .mockup
+  opacity: 1
+  +transition(opacity 1s linear 0.2s)
+
+/* line 20, .styles/_mockup.sass */
+.shadow .mockup
+  background-position: bottom right
+  background-repeat: no-repeat
+  background-size: contain
+  /* line 24, .styles/_mockup.sass */
+  .shadow .mockup::after
+    background-position: bottom right
+    background-repeat: no-repeat
+    background-size: contain
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+    height: 100%
+    width: 100%

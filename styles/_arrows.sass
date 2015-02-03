@@ -1,0 +1,39 @@
+/* arrows */
+/* line 3, .styles/_arrows.sass */
+.triangle
+  position: relative
+  width: 16px
+  height: 16px
+  border-radius: 50%
+  background: #d7c8a4
+  /* line 9, .styles/_arrows.sass */
+  .triangle::after
+    content: ""
+    position: absolute
+    width: 0
+    height: 0
+    border-style: solid
+
+/* line 16, .styles/_arrows.sass */
+.discover .triangle::after
+  top: 5px
+  left: 3px
+  border-width: 8px 5px
+  border-color: black transparent transparent
+
+/* line 22, .styles/_arrows.sass */
+.link .triangle
+  float: right
+  margin-left: 2em
+
+/* line 26, .styles/_arrows.sass */
+.about-link .triangle
+  float: left
+  margin-top: 1em
+
+/* line 30, .styles/_arrows.sass */
+.link .triangle::after, .about-link .triangle::after
+  top: 3px
+  left: 5px
+  border-width: 5px 8px
+  border-color: transparent transparent transparent white

@@ -1,0 +1,37 @@
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+=animation($opts)
+  -webkit-animation: $opts
+  -moz-animation: $opts
+  -ms-animation: $opts
+  -o-animation: $opts
+  animation: $opts
+
+=animation-name($opts)
+  -webkit-animation-name: $opts
+  -moz-animation-name: $opts
+  -ms-animation-name: $opts
+  -o-animation-name: $opts
+  animation-name: $opts
+
+=animation-fill-mode($opts)
+  -webkit-animation-fill-mode: $opts
+  -moz-animation-fill-mode: $opts
+  -ms-animation-fill-mode: $opts
+  -o-animation-fill-mode: $opts
+  animation-fill-mode: $opts
+
+=animation-delay($opts)
+  -webkit-animation-delay: $opts
+  -moz-animation-delay: $opts
+  -ms-animation-delay: $opts
+  -o-animation-delay: $opts
+  animation-delay: $opts

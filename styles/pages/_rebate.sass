@@ -1,0 +1,83 @@
+
+/* 6 - rebate */
+/* line 3, .styles/pages/_rebate.sass */
+#pagination .rebate.active .bullet
+  background-color: #5f4d45
+
+/* line 7, .styles/pages/_rebate.sass */
+#rebate .visuals
+  background-image: url("img/m_bg_07_rebatenetworks.jpg")
+  background-size: cover
+/* line 10, .styles/pages/_rebate.sass */
+#rebate .mockup
+  background-image: url("img/m_shadow_rebate.png")
+  /* line 12, .styles/pages/_rebate.sass */
+  #rebate .mockup::after
+    background-image: url("img/m_mockup_rebate.png")
+/* line 14, .styles/pages/_rebate.sass */
+#rebate .logo
+  width: 230px
+  background-image: url("img/logo_rebatenetworks.png")
+/* line 17, .styles/pages/_rebate.sass */
+#rebate .link
+  color: #b6b6b6
+
+@media screen and (max-width: $breakpoint-m)
+  /* line 21, .styles/pages/_rebate.sass */
+  #rebate .mockup
+    position: absolute
+    top: 0
+    left: -2%
+    height: 100%
+    width: 104%
+    background-image: url("img/m_shadow_rebate.png")
+    background-position: center
+    background-size: 70% auto
+    /* line 30, .styles/pages/_rebate.sass */
+    #rebate .mockup::after
+      background-image: url("img/m_mockup_rebate.png")
+      background-position: center
+      background-size: 70% auto
+@media screen and (min-width: $breakpoint-m)
+  /* line 37, .styles/pages/_rebate.sass */
+  #rebate .visuals
+    background-image: url("img/bg_07_rebatenetworks.jpg")
+  /* line 39, .styles/pages/_rebate.sass */
+  #rebate .mockup
+    top: 20%
+    right: 7%
+    height: 60%
+    width: 85%
+    background-image: url("img/shadow_rebate.png")
+    /* line 45, .styles/pages/_rebate.sass */
+    #rebate .mockup::after
+      background-image: url("img/mockup_rebate.png")
+  /* line 47, .styles/pages/_rebate.sass */
+  #rebate .napkin
+    position: absolute
+    left: 20%
+    bottom: 0
+    height: 10%
+    width: 40%
+    background-image: url("img/serviette.png")
+    background-size: contain
+    background-position: bottom
+    background-repeat: no-repeat
+@media screen and (min-width: $breakpoint-m) and (max-height: 768px)
+  /* line 60, .styles/pages/_rebate.sass */
+  #rebate .mockup
+    top: 15%
+  /* line 62, .styles/pages/_rebate.sass */
+  #rebate .content
+    top: 40%
+@media only screen and (max-device-width: 480px) and (orientation: landscape)
+  /* line 66, .styles/pages/_rebate.sass */
+  #rebate .content h2
+    margin: 0 60px 30px
+@media only screen and (max-device-width: 480px) and (orientation: portrait)
+  /* line 70, .styles/pages/_rebate.sass */
+  #rebate .mockup
+    background-size: 100% auto
+    /* line 72, .styles/pages/_rebate.sass */
+    #rebate .mockup::after
+      background-size: 100% auto

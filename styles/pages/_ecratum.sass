@@ -1,0 +1,52 @@
+
+/* 5 - ecratum */
+/* line 3, .styles/pages/_ecratum.sass */
+#ecratum .visuals, #pagination .ecratum.active .bullet
+  background-color: #bb3f17
+
+/* line 7, .styles/pages/_ecratum.sass */
+#ecratum .slide
+  background: #eeeeee
+/* line 9, .styles/pages/_ecratum.sass */
+#ecratum .logo
+  background-image: url("img/logo_ecratum.png")
+
+@media screen and (max-width: $breakpoint-m)
+  /* line 13, .styles/pages/_ecratum.sass */
+  #ecratum .mockup
+    top: 5%
+    left: 0
+    height: 80%
+    width: 100%
+    background-image: url("img/m_shadow_ecratum.png")
+    background-position: center
+    background-size: auto 100%
+    /* line 21, .styles/pages/_ecratum.sass */
+    #ecratum .mockup::after
+      background-image: url("img/m_mockup_ecratum.png")
+      background-position: center
+      background-size: auto 100%
+@media screen and (min-width: $breakpoint-m)
+  /* line 28, .styles/pages/_ecratum.sass */
+  #ecratum .mockup
+    top: 14%
+    right: -20%
+    height: 75%
+    width: 118%
+    background-image: url("img/shadow_ecratum.png")
+    /* line 34, .styles/pages/_ecratum.sass */
+    #ecratum .mockup::after
+      background-image: url("img/mockup_ecratum.png")
+@media screen and (min-width: $breakpoint-m) and (max-height: 768px)
+  /* line 40, .styles/pages/_ecratum.sass */
+  #ecratum .mockup
+    top: 8%
+    right: -27%
+    width: 150%
+  /* line 44, .styles/pages/_ecratum.sass */
+  #ecratum .content
+    top: 40%
+@media only screen and (max-device-width: 480px) and (orientation: landscape)
+  /* line 48, .styles/pages/_ecratum.sass */
+  #ecratum .content h2
+    margin: 0 50px 30px

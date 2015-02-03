@@ -1,0 +1,66 @@
+
+/* 1 - harrys */
+/* line 3, .styles/pages/_harrys.sass */
+#harrys .visuals, #pagination .harrys.active .bullet
+  background-color: #b0d150
+
+/* line 7, .styles/pages/_harrys.sass */
+#harrys .slide
+  background: #f1f2f2
+/* line 9, .styles/pages/_harrys.sass */
+#harrys .logo
+  height: 50px
+  background-image: url("img/logo_harryshome.png")
+/* line 12, .styles/pages/_harrys.sass */
+#harrys .link
+  color: #b6b6b6
+
+@media screen and (max-width: $breakpoint-m)
+  /* line 16, .styles/pages/_harrys.sass */
+  #harrys .mockup
+    position: absolute
+    left: -10%
+    height: 100%
+    width: 110%
+    background-image: url("img/m_shadow_harryshome.png")
+    background-position: center
+    background-size: auto 60%
+    /* line 24, .styles/pages/_harrys.sass */
+    #harrys .mockup::after
+      background-image: url("img/m_mockup_harryshome.png")
+      background-position: center
+      background-size: auto 60%
+@media screen and (min-width: 961px)
+  /* line 31, .styles/pages/_harrys.sass */
+  #harrys .mockup
+    top: 14%
+    right: -16%
+    height: 72%
+    width: 115%
+    background-image: url("img/shadow_harryshome.png")
+    /* line 37, .styles/pages/_harrys.sass */
+    #harrys .mockup::after
+      background-image: url("img/mockup_harryshome.png")
+  /* line 39, .styles/pages/_harrys.sass */
+  #harrys .logo
+    margin-bottom: 14%
+  /* line 41, .styles/pages/_harrys.sass */
+  #harrys .content
+    position: absolute
+    top: 50%
+    left: 10%
+    right: 28%
+    bottom: 2%
+    max-width: 400px
+    margin: -33% 0 0
+@media screen and (min-width: $breakpoint-m) and (max-height: 768px)
+  /* line 52, .styles/pages/_harrys.sass */
+  #harrys .mockup
+    top: 5%
+  /* line 54, .styles/pages/_harrys.sass */
+  #harrys .content
+    top: 40%
+@media only screen and (max-device-width: 480px) and (orientation: landscape)
+  /* line 58, .styles/pages/_harrys.sass */
+  #harrys .content h2
+    margin: 0 50px 30px

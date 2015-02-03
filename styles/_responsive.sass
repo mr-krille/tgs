@@ -1,0 +1,379 @@
+
+@media screen and (max-width: $breakpoint-m)
+  .up .page.active
+    z-index: 20
+    -webkit-transform: translate3d(0, 100%, 0)
+    +transform(translate3d(0, 100%, 0))
+
+  .up .page.last
+    z-index: 10
+
+  .down .page.last
+    z-index: 20
+    +transform(translate3d(0, 100%, 0))
+
+  .down .page.active
+    z-index: 10
+    +transform(translate3d(0, 0, 0))
+
+  .page.active
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+  .page.last
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    -webkit-transform: translate3d(0, 0, 0)
+  .page.active
+    -webkit-transform: translate3d(0, 100%, 0)
+  .page.animate
+    -webkit-transition: -webkit-transform 1s ease
+
+  .wrapper > section
+    position: relative
+    height: 200%
+    width: 100%
+
+  .content
+    position: relative
+    top: 15%
+    left: 50%
+    width: 400px
+    margin: 0 40px 0 -200px
+    text-align: center
+
+  .logo
+    height: 50px
+    width: 30%
+    margin: 0 auto 10%
+    background-position: top center
+    background-repeat: no-repeat
+    background-size: contain
+
+  .spacer, .imprint
+    overflow: hidden
+    position: relative
+    height: 50%
+    width: 100%
+@media screen and (min-width: 600px) and (max-width: $breakpoint-m) and (min-height: 600px)
+  .wrapper > section
+    position: relative
+    height: 100%
+@media screen and (max-height: 480px)
+  .content .logo
+    display: none
+@media screen and (min-width: $breakpoint-m)
+  .split
+    overflow: hidden
+    .split .wrapper
+      position: fixed
+      left: 0
+      width: 100%
+
+  .slide
+    position: absolute
+    right: 0
+    height: 100%
+    width: 42%
+
+  .visuals
+    position: absolute
+    left: 0
+    height: 100%
+    width: 58%
+    .visuals::after
+      content: ""
+      position: absolute
+      top: 0
+      right: -15px
+      z-index: 200
+      height: 100%
+      width: 100%
+      background-image: url("img/shadow.png")
+      background-position: top right
+      background-repeat: no-repeat
+      background-size: contain
+
+  .mockup
+    opacity: 0
+
+  .slide .content
+    position: absolute
+    top: 50%
+    left: 10%
+    right: 28%
+    bottom: 2%
+    max-width: 400px
+    margin: -33% 0 0
+
+  .logo
+    position: relative
+    top: 0
+    left: 0
+    height: 60px
+    width: 180px
+    margin-bottom: 14%
+    background-size: contain
+    background-position: center left
+    background-repeat: no-repeat
+
+  .content h2
+    margin-bottom: 8%
+
+  .page
+    visibility: hidden
+
+  #intro
+    visibility: visible
+
+  .page.last, .page.active
+    visibility: visible
+@media screen and (max-width: $breakpoint-m)
+  .spacer
+    background-image: url("img/mockup_footer.png")
+    background-position: left bottom
+    background-repeat: no-repeat
+    background-size: auto 70%
+
+  .contact-box
+    position: relative
+    top: 10%
+    left: 30%
+    width: 60%
+
+  #contact .about-link
+    position: absolute
+    top: 62%
+    left: 50%
+    width: 50%
+@media screen and (min-width: 961px)
+  #contact
+    position: absolute
+    top: 100%
+    left: 0
+    height: 100%
+    width: 100%
+    background: #171717
+    color: white
+    transform: translate3d(0, 0, 0)
+    #contact.active
+      transform: translate3d(0, -100%, 0)
+
+  .imprint
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    height: 33%
+    padding: 0
+
+  #contact h2
+    margin: 2% 0 3%
+    padding: 0 0 1%
+    border-bottom: 1px solid white
+  #contact p
+    line-height: 22px
+
+  .spacer
+    overflow: hidden
+    position: relative
+    height: 67%
+    margin: 0 8%
+    background-image: url("img/mockup_footer.png")
+    background-position: 75% bottom
+    background-repeat: no-repeat
+    background-size: auto 85%
+
+  #contact .about-link
+    float: right
+    top: 50%
+    width: 18%
+
+  .about-link::before
+    content: ""
+    position: absolute
+    top: -10px
+    height: 4px
+    width: 32px
+    background: #d7c8a4
+
+  .contact-box
+    position: absolute
+    left: 0
+    bottom: 25%
+    width: 70%
+    .contact-box h3
+      margin: 0
+      font-size: 30px
+    .contact-box .teaser
+      margin: 2% 0 5%
+
+  #contact .imprint h2
+    width: 36%
+    margin: 2% 0 20px 8%
+    border-bottom: 1px solid #171717
+
+  .imprint a
+    color: #171717
+  .imprint p
+    margin: 0
+  .imprint .address
+    float: left
+    width: 26%
+    margin-left: 8%
+    margin-bottom: 30px
+    line-height: 31px
+
+  #contact .social
+    float: right
+    height: 165px
+    width: 425px
+    margin-top: 3%
+    background-size: auto 100%
+    background-position: left center
+    transform: scale(0.8)
+
+  .copy strong
+    display: block
+@media screen and (min-width: 480px) and (min-height: 480px)
+  #contact
+    height: 100%
+
+  .spacer
+    height: 70%
+
+  .imprint
+    height: 30%
+@media screen and (max-width: 768px)
+  .imprint h2
+    display: none
+
+  .address
+    position: relative
+    top: 20%
+    padding: 15% 17% 20% 20%
+
+  .disclaimer
+    position: absolute
+    bottom: 2%
+    width: 100%
+    text-align: center
+
+  .copy
+    display: block
+
+  .rights a
+    display: inline-block
+@media screen and (max-width: 480px)
+  .contact h3
+    display: none
+@media screen and (max-width: 480px) and (orientation: portrait)
+  .address
+    top: 12%
+    padding: 0 20px
+    text-align: center
+    line-height: 40px
+    .address .icon
+      display: block
+      width: auto
+      margin: 10px 0 0
+
+  .disclaimer .copy strong
+    display: block
+
+  .rights a
+    margin-top: 20px
+
+  #contact .social
+    position: absolute
+    bottom: 20%
+    height: 20%
+    max-height: 165px
+    width: 100%
+    background-size: auto 100%
+    background-position: center
+@media screen and (max-width: 480px) and (min-height: 481px) and (orientation: portrait)
+  #contact .social
+    bottom: 27%
+
+  .disclaimer
+    bottom: 10%
+@media only screen and (min-width: 769px) and (max-width: $breakpoint-m)
+  #contact .imprint h2, .address, .disclaimer
+    margin-left: 4%
+@media only screen and (min-width: 481px) and (max-width: $breakpoint-m)
+  #contact .social
+    float: right
+    transform: scale(0.8)
+@media only screen and (max-device-width: 480px) and (orientation: landscape)
+  .about-link
+    left: 30%
+
+  .address
+    top: 10%
+    left: 32%
+    width: 400px
+    padding: 0
+    line-height: 30px
+@media screen and (max-height: 480px) and (min-width: 481px)
+  .address
+    top: 10%
+    left: 31%
+    width: 400px
+    padding: 0
+    line-height: 30px
+@media screen and (min-height: 700px) and (max-width: 768px)
+  .spacer
+    background-position: 20% bottom
+    background-size: auto 60%
+
+  .contact-box
+    left: 15%
+    .contact-box h2
+      width: auto
+      margin: 0 10%
+      padding: 20px 20%
+
+  .teaser
+    margin-bottom: 100px
+    padding: 20px 0 0
+
+  .contact-box h3
+    margin-left: 50%
+
+  .about-link
+    left: 45%
+
+  #contact .imprint h2
+    display: block
+    position: relative
+    top: 17%
+    left: 4%
+    width: 42%
+    margin: 0
+    border-bottom: 1px solid #171717
+
+  .address
+    top: 20%
+    left: 4%
+    padding: 0
+    line-height: 30px
+
+  #contact .social
+    float: right
+    margin-right: -50px
+
+  .copy
+    margin-left: 4%
+    float: left
+
+  .rights
+    margin-right: 4%
+    float: right
+    .rights a
+      display: inline-block

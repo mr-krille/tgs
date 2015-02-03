@@ -1,0 +1,34 @@
+
+/* 2 - interactio */
+/* line 3, .styles/pages/_interactio.sass */
+#pagination .interactio.active .bullet
+  background-color: #5f4d3e
+
+/* line 7, .styles/pages/_interactio.sass */
+#interactio .mockup
+  background-image: url("img/m_mockup_interactio.jpg")
+  background-size: cover
+/* line 10, .styles/pages/_interactio.sass */
+#interactio .logo
+  width: 150px
+  background-image: url("img/logo_interactio.png")
+
+@media screen and (min-width: 961px)
+  /* line 16, .styles/pages/_interactio.sass */
+  #interactio .mockup
+    background-image: url("img/mockup_interactio.jpg")
+  /* line 19, .styles/pages/_interactio.sass */
+  #interactio .content h2
+    margin-right: 8%
+    margin-bottom: 8%
+  /* line 22, .styles/pages/_interactio.sass */
+  #interactio .link
+    margin: 15% 0 0 -2em
+@media screen and (min-width: $breakpoint-m) and (max-height: 768px)
+  /* line 26, .styles/pages/_interactio.sass */
+  #interactio .content
+    top: 40%
+@media only screen and (max-device-width: 480px) and (orientation: portrait)
+  /* line 30, .styles/pages/_interactio.sass */
+  #interactio .content h2
+    margin: 0 30px 30px
