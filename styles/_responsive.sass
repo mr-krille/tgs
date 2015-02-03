@@ -55,7 +55,8 @@
     background-repeat: no-repeat
     background-size: contain
 
-  .spacer, .imprint
+  .spacer,
+  #contact .imprint
     overflow: hidden
     position: relative
     height: 50%
@@ -164,7 +165,7 @@
     #contact.active
       transform: translate3d(0, -100%, 0)
 
-  .imprint
+  #contact .imprint
     position: absolute
     left: 0
     right: 0
@@ -247,10 +248,10 @@
   .spacer
     height: 70%
 
-  .imprint
+  #contact .imprint
     height: 30%
 @media screen and (max-width: 768px)
-  .imprint h2
+  #contact .imprint h2
     display: none
 
   .address

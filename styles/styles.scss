@@ -88,6 +88,10 @@ table {
   box-sizing: border-box
 }
 
+img {
+  vertical-align: middle;
+}
+
 html {
   margin: 0;
   padding: 0;
@@ -796,12 +800,13 @@ iframe {
   font-weight: 800;
   border-top: 1px solid #fff;
   padding-top: 6px;
+  margin-top: 20px;
   margin-bottom: 0;
   max-width: 350px
 }
 
 .headerpic img {
-  width: 100%
+  width: 100%;
 }
 
 .casetext {
@@ -857,8 +862,21 @@ iframe {
   padding-left: 12px
 }
 
-#cc3 .csc-textpic-imagewrap div,#cc3 .csc-textpic-imagewrap img {
+#cc3 .csc-textpic-imagewrap div,
+#cc3 .csc-textpic-imagewrap img {
   width: 100%
+}
+
+.csc-textpic-image {
+  margin-bottom: 10px;
+}
+
+#c672 .csc-textpic-image {
+  margin-bottom: 0;
+}
+
+div.csc-textpic-responsive, div.csc-textpic-responsive * {
+  box-sizing: border-box;
 }
 
 .casenext {
@@ -965,7 +983,8 @@ iframe {
   font-family: Lato,sans-serif;
   font-size: 12px;
   line-height: 24px;
-  padding-top: 40px
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 #footer p {
@@ -2956,7 +2975,8 @@ div.tx-powermail {
 }
 
 .casetext {
-  padding: 22px 0
+  max-width: 750px;
+  padding: 75px 0;
 }
 
 .credits {
