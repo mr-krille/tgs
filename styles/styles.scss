@@ -1700,15 +1700,41 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
 }
 
 .colcontainer2.righttext .col1element {
-  width: 49.45%
+  width: 50%;
+  border-left: 5px solid #fff;
 }
 
 .colcontainer2.righttext .col2element {
-  width: 50.55%
+  width: 50%;
+  border-right: 5px solid #fff;
 }
 
 .colcontainer2.righttext .col3element {
   display: none
+}
+
+.colnew .colleft,
+.colnew .colright {
+  border-bottom: 10px solid #fff;
+}
+
+@media screen and (min-width: 769px) {
+  .colnew {
+    overflow: hidden;
+    border-bottom: 10px solid #fff;
+  }
+  .colnew .colleft {
+    float: left;
+    width: 50%;
+    border-right: 5px solid #fff;
+    border-bottom: none;
+  }
+  .colnew .colright {
+    float: right;
+    width: 50%;
+    border-left: 5px solid #fff;
+    border-bottom: none;
+  }
 }
 
 .career .rightaboutheader {
@@ -4838,6 +4864,10 @@ body,html {
 
 #contact .csc-default p {
   margin: 0 0 10px
+}
+
+.colcontainer2 {
+  margin-bottom: 10px;
 }
 
 @media only screen and (min-width: 960px) {
