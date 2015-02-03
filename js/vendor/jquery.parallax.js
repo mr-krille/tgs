@@ -46,7 +46,7 @@
 
     positionProperty = {
       position: {
-        setLeft: function($elem, left) { $elem.css('left', left); },
+        setLeft: function($elem, left) { $elem.css('left', '50%'); },
         setTop: function($elem, top) { $elem.css('top', top); }
       },
       transform: {
