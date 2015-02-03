@@ -22,7 +22,9 @@ var app = {
     var link = (evt.target.tagName === "A") ? evt.target : evt.target.parentNode;
     var url = link.getAttribute('href');
 
-    document.body.classList.add('loading');
+    document.body.setAttribute('class', 'loading');
+
+    app.finish = window.setTimeout(app.init, 1000);
 
     animation.destroy();
 
@@ -35,21 +37,19 @@ var app = {
         var raw = xhr.responseText.split('<!--//BEGIN//-->');
         if (raw.length > 1) {
           data = raw[1].split('<!--//END//-->');
-          document.body.setAttribute('class', url.replace('/', ''));
+          document.body.classList.add(url.replace('/', ''));
           document.getElementById('wrapper').innerHTML = data;
-          app.init();
+          if (!app.finish) {
+            app.init();
+          }
         } else {
           // error
+          window.clearTimeout(app.finish);
         }
       }
     };
 
     xhr.send();
-  },
-  closeSite: function (evt) {
-    evt.preventDefault();
-    animation.overlay.classList.remove('ready');
-    animation.overlay.src = "";
   }
 };
 
@@ -349,4 +349,5 @@ var nav = {
   }
 };
 
-window.addEventListener('load', app.init);
+//window.addEventListener('load', app.init, false);
+document.addEventListener('DOMContentLoaded', app.init, false);
