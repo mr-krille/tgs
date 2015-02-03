@@ -169,8 +169,8 @@ var animation = {
 
     // touch
     } else {
-      document.body.style.overflow = 'hidden';
-      window.addEventListener('touchstart', touch.touchstart);
+      //document.body.style.overflow = 'hidden';
+      //window.addEventListener('touchstart', touch.touchstart);
     }
   },
   destroy: function (evt) {
