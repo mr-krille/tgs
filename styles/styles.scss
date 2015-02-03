@@ -1510,14 +1510,20 @@ iframe {
 }
 
 .wetitle {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto -2px;
-  position: relative;
   font-family: SouthernAire;
   font-size: 90px;
-  line-height: 32px;
+  text-indent: -2px;
+  line-height: 23px;
+  vertical-align: top;
   color: #171717;
   z-index: 5
+}
+
+.wetitle span {
+  vertical-align: bottom;
 }
 
 .aboutfootertop {
