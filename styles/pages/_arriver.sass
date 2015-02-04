@@ -1,3 +1,267 @@
+.arriver-casestudy
+  .headerpic-arriver
+    background-image: url(arriver/media/headerpic.jpg)
+    @extend %background_full
+    // background-attachment: fixed
+    min-height: 470px
+  .full-column-wrapper,
+  .three-column-wrapper,
+  .two-column-wrapper
+    border-bottom: 10px solid white
+    +pie-clearfix
+
+  .two-column-wrapper
+    & > div
+      width: 50%
+      border-width: 0
+      border-color: white
+      border-style: solid
+      +box-sizing(border-box)
+      &:first-child
+        float: left
+        border-right-width: 5px
+      &:last-child
+        float: right
+        border-left-width: 5px
+
+
+  .map
+    position: relative
+    overflow: hidden
+    background: #b5def4
+    padding: 100px 0
+    img:first-child
+      position: absolute
+      +breakpoint(m)
+        width: 900px
+        left: 50%
+        margin-left: -450px
+      +breakpoint-max(m)
+        width: 90%
+        left: 5%
+        margin-left: 5%
+
+
+  .contacts, .meet, .history
+    background: #f0f0f0
+    &.active
+      .text
+        opacity: 1
+    .text, .image
+      height: 33.3333vw
+    .text
+      opacity: 0
+      +transition(all .4s linear)
+      background-position: left center
+      background-size: contain
+    .image
+      background-color: #fcd182
+      background-repeat: no-repeat
+      background-position-x: 50%
+
+  .contacts
+    .text
+      background-image: url(arriver/media/choose.png)
+    .image
+      background-size: 270px auto
+      background-image: url(arriver/media/phone1.png)
+
+  .meet
+    .text
+      background-image: url(arriver/media/meet.png)
+    .image
+      background-size: 270px auto
+      background-image: url(arriver/media/phone2.png)
+
+  .history
+    .text
+      background-image: url(arriver/media/history.png)
+    .image
+      background-size: 500px auto
+      background-image: url(arriver/media/phone3.png)
+
+  .waiting
+    height: 300px
+    background-color: white
+    background-image: url(arriver/media/waiting.png)
+    background-size: auto 70px
+    background-position: center
+    background-repeat: no-repeat
+
+  .photo
+    height: 280px
+    background-image: url(arriver/media/weather.jpg)
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+
+  .map-dots
+    height: 280px
+    background-image: url(arriver/media/map.jpg)
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    position: relative
+    overflow: hidden
+    .dots
+      position: absolute
+      opacity: 1
+      top: 50%
+      left: 0
+      right: 0
+      margin-top: -60px
+      .dot
+        position: absolute
+        left: 50%
+        width: 120px
+        height: 120px
+        background-size: 120px 120px
+        +transition(all 1s ease-in-out)
+        opacity: 0
+        +transform(translateY(30px))
+      .dot-stop
+        margin-left: -420px
+        +transition-delay(.3s)
+        background-image: url(arriver/media/icon_stop.png)
+      .dot-start
+        margin-left: -180px
+        +transition-delay(.6s)
+        background-image: url(arriver/media/icon_start.png)
+      .dot-location
+        margin-left: 60px
+        +transition-delay(.9s)
+        background-image: url(arriver/media/icon_location.png)
+      .dot-cross
+        margin-left: 300px
+        +transition-delay(1.2s)
+        background-image: url(arriver/media/stop.png)
+    &.active
+      .dots .dot
+        opacity: 1
+        +transform(translateY(0))
+
+  .noregistration
+    height: 300px
+    background-color: #fbd187
+    background-image: url(arriver/media/noregistration.png)
+    background-size: auto 70px
+    background-position: center
+    background-repeat: no-repeat
+
+  .screens
+    background: #b6ddf2
+    position: relative
+    overflow: hidden
+    height: 575px
+
+    img
+      position: absolute
+      display: block
+      float: left
+      width: 240px
+      opacity: 0
+      left: 50%
+      bottom: -80px
+      +transform(translateY(80px))
+      +transition(all .8s ease-in-out)
+      &:nth-child(1)
+        margin-left: -560px
+      &:nth-child(2)
+        +transition-delay(.3s)
+        margin-left: -270px
+      &:nth-child(3)
+        +transition-delay(.6s)
+        margin-left: 20px
+      &:nth-child(4)
+        +transition-delay(.9s)
+        margin-left: 310px
+
+    &.active
+      img
+        opacity: 1
+        +transform(translateY(0px))
+
+    &:after
+      content: ''
+      height: 70px
+      width: 100%
+      position: absolute
+      background: url(arriver/media/process_shadow.png)
+      background-size: auto 100%
+      background-position: center
+      left: 0
+      bottom: 0
+
+  .wewish
+    .text,.image
+      height: 20vw
+    .text
+      background-color: #b5ddf3
+      background-image: url(arriver/media/wewish.png)
+      background-size: auto 200px
+      background-position: center right
+      background-repeat: no-repeat
+    .image
+      background-size: cover
+      background-position: center left
+      background-image: url(arriver/media/final1.jpg)
+
+  .watches
+    position: relative
+    overflow: hidden
+    height: 400px
+    background: #f0f0f0
+
+    img
+      position: absolute
+      left: 50%
+      &:nth-child(1)
+        z-index: 3
+        width: 400px
+        margin-left: -200px
+      &:nth-child(2)
+        width: 200px
+        margin-left: -360px
+      &:nth-child(3)
+        width: 90px
+        margin-left: 230px
+
+  .arrived
+    background-image: url(arriver/media/arrived.jpg)
+    background-size: 100% auto
+    background-repeat: no-repeat
+    background-position: bottom center
+    height: 85vh
+    position: relative
+    overflow: hidden
+    .icon
+      position: absolute
+      margin-left: -150px
+      width: 300px
+      height: 300px
+      background-image: url(arriver/media/arrived_icon.png)
+      background-size: 300px 300px
+      position: absolute
+      bottom: 100px
+
+  .hidden
+    position: relative !important
+    opacity: 0 !important
+    display: block
+    +breakpoint(m)
+      width: 900px
+      margin: 0 auto
+    +breakpoint-max(m)
+      width: 90%
+      margin: 0 5%
+
+
+
+
+
+
+
+
 #pagination .arriver.active .bullet
   background-color: #ff9f4c
 

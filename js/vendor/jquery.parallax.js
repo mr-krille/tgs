@@ -85,7 +85,7 @@
     setBackgroundPosition = (supportsBackgroundPositionXY ?
       function($elem, x, y) {
         $elem.css({
-          'background-position-x': x,
+          'background-position-x': '50%',
           'background-position-y': y
         });
       } :
