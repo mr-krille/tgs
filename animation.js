@@ -20,6 +20,7 @@ var animation = {
     window.addEventListener('MozMousePixelScroll', animation.handler);
     window.addEventListener('mousewheel', animation.handler);
     window.addEventListener('DOMMouseScroll', animation.handler);
+    window.addEventListener('scroll', animation.handler);
     animation.handler();
     return true;
   },
