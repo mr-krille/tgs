@@ -1,3 +1,181 @@
+.ecratum-casestudy
+  .headerpic-ecratum
+    background-image: url(ecratum/media/headerpic.jpg)
+    @extend %background_full
+    // background-attachment: fixed
+    min-height: 470px
+
+  .simple
+    height: 14vw
+    background: #ededed url(ecratum/media/simple.png) no-repeat center
+    background-size: 30%
+
+  .beforeafter
+    .before, .after
+      background-size: 390px auto
+      background-position: center
+      background-color: #ededed
+      background-repeat: no-repeat
+      height: 33vw
+      opacity: 0
+      +transition(opacity .5s linear)
+    .before
+      background-image: url(ecratum/media/before.jpg)
+    .after
+      +transition-delay(.2s)
+      background-image: url(ecratum/media/after.jpg)
+    &.active
+      .before, .after
+        opacity: 1
+
+  .logo-mockup
+    background-image: url(ecratum/media/logo_bg.png), url(ecratum/media/logo.png)
+    background-size: auto 100%, auto 100%
+    background-position: auto, center
+    // background-repeat: repeat-x, no-repeat
+    height: 50vw
+    opacity: 0
+    +transition(opacity .5s linear)
+    &.active
+      opacity: 1
+
+  .colors
+    div
+      +transition(all .8s linear)
+      opacity: 0
+    div:nth-child(2)
+      +transition-delay(.4s)
+    div:nth-child(3)
+      +transition-delay(.8s)
+    &.active
+      div
+        opacity: 1
+
+  .font
+    height: 400px
+    background: white url(ecratum/media/font.png) no-repeat center
+    background-size: auto 200px
+    opacity: 0
+    +transition(opacity .5s linear)
+    &.active
+      opacity: 1
+
+  .stationary1
+    background: url(ecratum/media/stationary1.jpg) no-repeat center
+    background-size: cover
+    background-attachment: fixed
+    height: 740px
+    opacity: 0
+    +transition(opacity .5s linear)
+    &.active
+      opacity: 1
+
+  .stationary-grid
+    div
+      height: 400px
+      background-size: auto 460px
+      background-repeat: no-repeat
+      background-position: center
+      +transition(opacity .5s linear)
+      opacity: 0
+    div:first-child
+      background-image: url(ecratum/media/stationary2.jpg)
+    div:last-child
+      +transition-delay(.25s)
+      background-image: url(ecratum/media/stationary3.jpg)
+    &.active div
+      opacity: 1
+
+  .adapt
+    height: 28vh
+    background: no-repeat center
+    background-image: url(ecratum/media/adapting.png)
+    background-color: #bb3f17
+    background-size: auto 20%
+
+  .mockup-image
+    padding: 100px 0
+    background: white
+    text-align: center
+    img
+      opacity: 0
+      +transition(opacity .5s linear)
+    &.active img
+      opacity: 1
+
+  .screenshots
+    position: relative
+    overflow: hidden
+    height: 1400px
+    background: url(ecratum/media/bg_website.jpg) no-repeat center bottom
+    background-size: cover
+    img
+      position: absolute
+      left: 50%
+      &:nth-child(1)
+        width: 600px
+        z-index: 2
+        margin-top: 100px
+        margin-left: -400px
+      &:nth-child(2)
+        width: 560px
+        z-index: 1
+        margin-top: 150px
+        margin-left: -130px
+
+  .modules
+    background: url(ecratum/media/modules.jpg) no-repeat center
+    background-size: cover
+    height: 14vw
+    opacity: 0
+    +transition(opacity .5s linear)
+    &.active
+      opacity: 1
+
+  .easy
+    background: url(ecratum/media/easy.png) no-repeat center
+    background-size: cover
+    height: 14vw
+    opacity: 0
+    +transition(opacity .5s linear)
+    &.active
+      opacity: 1
+
+  .modules2
+    background: url(ecratum/media/modules2.jpg) no-repeat center
+    background-size: cover
+    height: 30vw
+    opacity: 0
+    +transition(opacity .5s linear)
+    &.active
+      opacity: 1
+
+  .help
+    background: url(ecratum/media/help.png) no-repeat center
+    background-size: cover
+    height: 30vw
+    opacity: 0
+    +transition(opacity .5s linear)
+    &.active
+      opacity: 1
+
+
+  .final
+    background: url(ecratum/media/final.jpg) no-repeat bottom center
+    background-size: cover
+    height: 50vw
+    opacity: 0
+    +transition(opacity .5s linear)
+    &.active
+      opacity: 1
+
+
+
+
+
+
+
+
 
 /* 5 - ecratum */
 /* line 3, .styles/pages/_ecratum.sass */
