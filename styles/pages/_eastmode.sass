@@ -7,7 +7,7 @@
 /* line 7, .styles/pages/_rebate.sass */
 #eastmode .visuals
   background-image: url("img/m_bg_eastmode.jpg")
-  background-size: cover
+  @extend %background_full
 /* line 10, .styles/pages/_rebate.sass */
 #eastmode .mockup
   background-image: url("img/m_mockup_eastmode.png")
@@ -43,7 +43,7 @@
     height: 60%
     width: 100%
     background-image: url("img/mockup_eastmode.png")
-  
+
 @media screen and (min-width: $breakpoint-m) and (max-height: 768px)
   /* line 60, .styles/pages/_rebate.sass */
   #eastmode .mockup

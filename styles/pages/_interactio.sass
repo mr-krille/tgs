@@ -3,14 +3,14 @@ body
 
 .headerpic-interactio
   background: url(interactio/media/header.jpg)
-  background-size: cover
+  @extend %background_full
   // background-attachment: fixed
   min-height: 470px
 
 #c388
   background: url(interactio/media/bg_worktable.jpg)
   background-position-x: 50%
-  background-size: cover
+  @extend %background_full
   background-attachment: fixed
   height: 80vh
   position: relative
@@ -166,13 +166,13 @@ body
 #c440
   height: 390px
   background-image: url(interactio/media/csm_img14_d8609763a4.jpg)
-  background-size: cover
+  @extend %background_full
   background-position: 50%
 
 #c442
   height: 390px
   background-image: url(interactio/media/stack.jpg)
-  background-size: cover
+  @extend %background_full
   background-position-x: 50%
 
 #c443
@@ -197,7 +197,7 @@ body
 /* line 7, .styles/pages/_interactio.sass */
 #interactio .mockup
   background-image: url("img/m_mockup_interactio.jpg")
-  background-size: cover
+  @extend %background_full
 /* line 10, .styles/pages/_interactio.sass */
 #interactio .logo
   width: 150px
