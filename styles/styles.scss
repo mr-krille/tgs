@@ -984,15 +984,16 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
   font-family: Lato,sans-serif;
   font-size: 12px;
   line-height: 24px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 60px;
+  padding-bottom: 15px;
 }
 
 #footer p {
   margin-bottom: 0
 }
 
-.fl,.footerleft {
+.fl,
+.footerleft {
   float: left;
   width: 60%
 }
@@ -1624,6 +1625,7 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
 }
 
 .aboutfh {
+  padding-bottom: 15px;
   border-bottom: 1px solid #fff;
   margin-bottom: 35px;
   width: 60%
@@ -2074,7 +2076,7 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
 }
 
 .absolutewrap {
-  max-width: 665px;
+  max-width: 682px;
   float: right
 }
 
@@ -4860,13 +4862,6 @@ body,html {
 
 .aboutfmail a,.aboutftel a {
   padding-left: 20px
-}
-
-#contact .csc-default p {
-  margin: 0 0 10px
-}
-
-.colcontainer2 {
 }
 
 @media only screen and (min-width: 960px) {
