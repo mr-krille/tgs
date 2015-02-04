@@ -65,11 +65,13 @@ var animation = {
     window.addEventListener('MozMousePixelScroll', animation.handler);
     window.addEventListener('mousewheel', animation.handler);
     window.addEventListener('DOMMouseScroll', animation.handler);
+    window.addEventListener('touchstart', touch.touchstart);
   },
   detach: function () {
     window.removeEventListener('MozMousePixelScroll', animation.handler);
     window.removeEventListener('mousewheel', animation.handler);
     window.removeEventListener('DOMMouseScroll', animation.handler);
+    window.removeEventListener('touchstart', touch.touchstart);
   },
   move: function () {
     // special footer
@@ -186,9 +188,11 @@ var animation = {
 var touch = {
   threshold: 40,
   touchhandler: function (direction) {
+    var step;
     // up
     if (direction === 'up' && animation.current < animation.pages.length - 1) {
-
+      step = 1;
+      /*
       if (animation.last !== undefined) {
         animation.pages[animation.last].removeAttribute('style');
         animation.pages[animation.last].classList.remove('animate');
@@ -216,10 +220,12 @@ var touch = {
       window.setTimeout(function () {
         animation.pages[animation.current].setAttribute('style', '-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)');
       }, 100);
+      */
     }
     // down
     if (direction === 'down' && animation.current > 0) {
-
+      step = -1;
+      /*
       if (animation.last !== undefined) {
         animation.pages[animation.last].removeAttribute('style');
         animation.pages[animation.last].classList.remove('animate');
@@ -244,9 +250,21 @@ var touch = {
       window.setTimeout(function () {
         animation.pages[animation.last].setAttribute('style', '-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)');
       }, 100);
+      */
     }
+    var next = animation.current + step;
+    // out of range
+    if (next < 0 || next >= animation.count) {
+      return false;
+    }
+    animation.last = animation.current;
+    animation.current += step;
+    // hash
+    window.location.hash = '#' + animation.anchors[animation.current];
+    // positioning
+    animation.move();
     // clear after animation
-    window.addEventListener('webkitTransitionEnd', touch.touchend);
+    //window.addEventListener('webkitTransitionEnd', touch.touchend);
   },
   touchmove: function (event) {
     event.preventDefault();
