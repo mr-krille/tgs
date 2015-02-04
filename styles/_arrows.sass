@@ -7,7 +7,7 @@
   border-radius: 50%
   background: #d7c8a4
   /* line 9, .styles/_arrows.sass */
-  .triangle::after
+  &::after
     content: ""
     position: absolute
     width: 0
@@ -32,7 +32,8 @@
   margin-top: 1em
 
 /* line 30, .styles/_arrows.sass */
-.link .triangle::after, .about-link .triangle::after
+.link .triangle::after,
+.about-link .triangle::after
   top: 3px
   left: 5px
   border-width: 5px 8px
