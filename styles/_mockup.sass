@@ -1,3 +1,39 @@
+.full-column-wrapper,
+.three-column-wrapper,
+.two-column-wrapper
+  border-bottom: 10px solid white
+  +pie-clearfix
+
+.two-column-wrapper
+  & > div
+    width: 50%
+    border-width: 0
+    border-color: white
+    border-style: solid
+    +box-sizing(border-box)
+    &:first-child
+      float: left
+      border-right-width: 5px
+    &:last-child
+      float: right
+      border-left-width: 5px
+
+.three-column-wrapper
+  & > div
+    width: 33.33333%
+    border-width: 0
+    border-color: white
+    border-style: solid
+    +box-sizing(border-box)
+    float: left
+    &:first-child
+      border-right-width: 10px
+    &:last-child
+      float: right
+      border-left-width: 10px
+
+
+
 
 /* mockup */
 /* line 3, .styles/_mockup.sass */
