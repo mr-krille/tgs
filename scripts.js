@@ -274,7 +274,7 @@ var touch = {
       var deltaX = startX - touches[0].pageX;
       var deltaY = startY - touches[0].pageY;
 
-      window.removeEventListener('touchstart', touch.touchstart);
+      //window.removeEventListener('touchstart', touch.touchstart);
 
       if (deltaY >= touch.threshold) {
         //console.log("swipeUp");
@@ -296,11 +296,11 @@ var touch = {
         touch.touchhandler('down');
         //}
       }
-
+      /*
       window.setTimeout(function () {
         window.addEventListener('touchstart', touch.touchstart);
       }, 1300);
-
+      */
       if (Math.abs(deltaX) >= touch.threshold || Math.abs(deltaY) >= touch.threshold) {
         window.removeEventListener('touchmove', touch.touchmove);
       }
