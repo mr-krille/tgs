@@ -1,3 +1,127 @@
+.headerpic-partech
+  background: url(partech/media/partechtop.jpg)
+  @extend %background_full
+  min-height: 470px
+
+.partech-casestudy
+  .full-column-wrapper,
+  .three-column-wrapper,
+  .two-column-wrapper
+    border-bottom: 10px solid white
+    +pie-clearfix
+
+  .two-column-wrapper
+    & > div
+      width: 50%
+      float: left
+      border-width: 0
+      border-color: white
+      border-style: solid
+      +box-sizing(border-box)
+      &:first-child
+        border-right-width: 5px
+      &:last-child
+        border-left-width: 5px
+
+  .mockups
+    padding: 10vw
+    background: #dbe1e7
+    img
+      max-width: 1270px
+  .values
+    background: url(partech/media/bg_values.jpg)
+    background-size: cover
+    height: 360px
+    position: relative
+    .value-container
+      position: absolute
+      top: 50%
+      left: 0
+      right: 0
+      margin-top: -80px
+      .value
+        background-size: 160px 160px
+        position: absolute
+        left: 50%
+        width: 160px
+        height: 160px
+        +transition(all 1s linear)
+      .value-passion
+        background-image: url(partech/media/passion.png)
+        margin-left: -300px
+        opacity: 0
+        z-index: 98
+        +transition-delay(.5s)
+      .value-resilience
+        background-image: url(partech/media/resilience.png)
+        margin-left: -80px
+        z-index: 99
+        opacity: 0
+      .value-integrity
+        background-image: url(partech/media/integrity.png)
+        margin-left: 140px
+        opacity: 0
+        z-index: 98
+        +transition-delay(.5s)
+    &.active
+      .value-container
+        .value-passion
+          margin-left: -330px
+          opacity: 1
+        .value-resilience
+          opacity: 1
+        .value-integrity
+          margin-left: 170px
+          opacity: 1
+
+  .map, .operate
+    height: 460px
+  .map
+    position: relative
+    background-color: #d2232a
+    background-image: url(partech/media/map.png)
+    background-size: auto 460px
+    background-position: center
+    background-repeat: no-repeat
+    .dots
+      .dot
+        background: url(partech/media/dot_map.png)
+        background-size: 16px 16px
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 16px
+        height: 16px
+      .dot:nth-child(1)
+        margin-top: -55px
+        margin-left: -360px
+      .dot:nth-child(2)
+        margin-top: -90px
+        margin-left: -15px
+      .dot:nth-child(3)
+        margin-top: -80px
+        margin-left: -35px
+
+  .operate
+    background: #17528f url(partech/media/operate.png)
+    background-position: left center
+    background-size: contain
+  .third-height
+    height: 33.33333vw
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 3 - partech */
 /* line 3, .styles/pages/_partech.sass */
@@ -10,7 +134,7 @@
 /* line 9, .styles/pages/_partech.sass */
 #partech .visuals
   background-image: url("img/bg_04_partechventures.jpg")
-  background-size: cover
+  @extend %background_full
 /* line 12, .styles/pages/_partech.sass */
 #partech .logo
   background-image: url("img/logo_partechventures.png")
