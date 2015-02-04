@@ -13,14 +13,15 @@
   .two-column-wrapper
     & > div
       width: 50%
-      float: left
       border-width: 0
       border-color: white
       border-style: solid
       +box-sizing(border-box)
       &:first-child
+        float: left
         border-right-width: 5px
       &:last-child
+        float: right
         border-left-width: 5px
 
   .mockups
@@ -28,6 +29,90 @@
     background: #dbe1e7
     img
       max-width: 1270px
+      opacity: 0
+      +transition(opacity 1s linear)
+    &.active img
+      opacity: 1
+
+  .screens
+    border-bottom: 10px solid white
+    background: url(partech/media/bg_websites.jpg)
+    background-size: cover
+    background-position: center
+    text-align: center
+    padding: 100px 0 0
+    position: relative
+    img
+      opacity: 0
+      +transition(all 1s ease-in-out)
+      &:nth-child(1)
+        position: relative
+        z-index: 99
+        max-width: 800px
+        width: 90%
+      &:nth-child(2),
+      &:nth-child(3)
+        +transition-delay(.5s)
+        +transform(scale(0.8))
+        position: absolute
+        z-index: 98
+        width: 560px
+        top: 200px
+        left: 50%
+        opacity: 0
+        margin-left: -280px
+
+    &.active
+      img
+        opacity: 1
+        +transform(scale(1))
+        &:nth-child(2)
+          margin-left: -560px
+        &:nth-child(3)
+          margin-left: 0
+
+  .screenshots
+    .mockup-screen
+      background-image: url(partech/media/mockup.jpg)
+      @extend %background_full_centered
+    .layers
+      background: #e1262d
+      position: relative
+      overflow: hidden
+      img
+        max-width: initial
+        position: absolute
+        bottom: -240px
+        opacity: 0
+        +transition(all 1s ease-in-out)
+        left: -20%
+        width: 140%
+    &.active
+      .layers img
+        bottom: -170px
+        opacity: 1
+
+  .sketch
+    background-image: url(partech/media/sketch.jpg)
+    @extend %background_full_centered
+    height: 800px
+    position: relative
+    overflow: hidden
+    img
+      margin-left: -231px
+      width: 462px
+      position: absolute
+      left: 50%
+
+  .partech-link
+    background: #f9f9f9
+
+  .mood
+    height: 400px
+    background-image: url(partech/media/mood_final.jpg)
+    @extend %background_full
+    background-attachment: fixed
+
   .values
     background: url(partech/media/bg_values.jpg)
     background-size: cover
@@ -106,6 +191,7 @@
     background: #17528f url(partech/media/operate.png)
     background-position: left center
     background-size: contain
+
   .third-height
     height: 33.33333vw
 
