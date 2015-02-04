@@ -29,8 +29,10 @@
     right: 0
     bottom: 0
     -webkit-transform: translate3d(0, 0, 0)
+
   .page.active
     -webkit-transform: translate3d(0, 100%, 0)
+
   .page.animate
     -webkit-transition: -webkit-transform 1s ease
 
@@ -55,23 +57,26 @@
     background-repeat: no-repeat
     background-size: contain
 
-  .spacer,
-  #contact .imprint
+  .spacer
     overflow: hidden
     position: relative
     height: 50%
     width: 100%
+
 @media screen and (min-width: 600px) and (max-width: $breakpoint-m) and (min-height: 600px)
   .wrapper > section
     position: relative
     height: 100%
+
 @media screen and (max-height: 480px)
   .content .logo
     display: none
+
 @media screen and (min-width: 961px)
   .split
     overflow: hidden
-    .split .wrapper
+
+    .wrapper
       position: fixed
       left: 0
       width: 100%
@@ -87,7 +92,8 @@
     left: 0
     height: 100%
     width: 58%
-    .visuals::after
+
+    &::after
       content: ""
       position: absolute
       top: 0
@@ -132,8 +138,10 @@
   #intro
     visibility: visible
 
-  .page.last, .page.active
+  .page.last,
+  .page.active
     visibility: visible
+
 @media screen and (max-width: $breakpoint-m)
   .spacer
     background-image: url("img/mockup_footer.png")
@@ -152,6 +160,7 @@
     top: 62%
     left: 50%
     width: 50%
+
 @media screen and (min-width: 961px)
   #contact
     position: absolute
@@ -162,21 +171,14 @@
     background: #171717
     color: white
     transform: translate3d(0, 0, 0)
-    #contact.active
+    &.active
       transform: translate3d(0, -100%, 0)
-
-  #contact .imprint
-    position: absolute
-    left: 0
-    right: 0
-    bottom: 0
-    height: 33%
-    padding: 0
 
   #contact h2
     margin: 2% 0 3%
     padding: 0 0 1%
     border-bottom: 1px solid white
+
   #contact p
     line-height: 22px
 
@@ -184,7 +186,7 @@
     overflow: hidden
     position: relative
     height: 67%
-    margin: 0 8%
+    margin: 0 auto
     background-image: url("img/mockup_footer.png")
     background-position: 75% bottom
     background-repeat: no-repeat
@@ -208,10 +210,11 @@
     left: 0
     bottom: 25%
     width: 70%
-    .contact-box h3
+
+    h3
       margin: 0
       font-size: 30px
-    .contact-box .teaser
+    .teaser
       margin: 2% 0 5%
 
   #contact .imprint h2
@@ -230,26 +233,13 @@
     margin-bottom: 30px
     line-height: 31px
 
-  #contact .social
-    float: right
-    height: 165px
-    width: 425px
-    margin-top: 3%
-    background-size: auto 100%
-    background-position: left center
-    transform: scale(0.8)
-
   .copy strong
     display: block
-@media screen and (min-width: 480px) and (min-height: 480px)
-  #contact
-    height: 100%
 
+@media screen and (min-width: 480px) and (min-height: 480px)
   .spacer
     height: 70%
 
-  #contact .imprint
-    height: 30%
 @media screen and (max-width: 768px)
   #contact .imprint h2
     display: none
@@ -270,16 +260,18 @@
 
   .rights a
     display: inline-block
+
 @media screen and (max-width: 480px)
   .contact h3
     display: none
+
 @media screen and (max-width: 480px) and (orientation: portrait)
   .address
     top: 12%
     padding: 0 20px
     text-align: center
     line-height: 40px
-    .address .icon
+    .icon
       display: block
       width: auto
       margin: 10px 0 0
@@ -290,27 +282,7 @@
   .rights a
     margin-top: 20px
 
-  #contact .social
-    position: absolute
-    bottom: 20%
-    height: 20%
-    max-height: 165px
-    width: 100%
-    background-size: auto 100%
-    background-position: center
-@media screen and (max-width: 480px) and (min-height: 481px) and (orientation: portrait)
-  #contact .social
-    bottom: 27%
 
-  .disclaimer
-    bottom: 10%
-@media only screen and (min-width: 769px) and (max-width: $breakpoint-m)
-  #contact .imprint h2, .address, .disclaimer
-    margin-left: 4%
-@media only screen and (min-width: 481px) and (max-width: $breakpoint-m)
-  #contact .social
-    float: right
-    transform: scale(0.8)
 @media only screen and (max-device-width: 480px) and (orientation: landscape)
   .about-link
     left: 30%
@@ -321,6 +293,7 @@
     width: 400px
     padding: 0
     line-height: 30px
+
 @media screen and (max-height: 480px) and (min-width: 481px)
   .address
     top: 10%
@@ -328,6 +301,7 @@
     width: 400px
     padding: 0
     line-height: 30px
+
 @media screen and (min-height: 700px) and (max-width: 768px)
   .spacer
     background-position: 20% bottom
@@ -335,7 +309,7 @@
 
   .contact-box
     left: 15%
-    .contact-box h2
+    h2
       width: auto
       margin: 0 10%
       padding: 20px 20%
@@ -365,10 +339,6 @@
     padding: 0
     line-height: 30px
 
-  #contact .social
-    float: right
-    margin-right: -50px
-
   .copy
     margin-left: 4%
     float: left
@@ -376,5 +346,6 @@
   .rights
     margin-right: 4%
     float: right
-    .rights a
+
+    a
       display: inline-block
