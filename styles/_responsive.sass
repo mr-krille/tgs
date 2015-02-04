@@ -2,7 +2,6 @@
 @media screen and (max-width: $breakpoint-m)
   .up .page.active
     z-index: 20
-    -webkit-transform: translate3d(0, 100%, 0)
     +transform(translate3d(0, 100%, 0))
 
   .up .page.last
@@ -28,10 +27,10 @@
     left: 0
     right: 0
     bottom: 0
-    -webkit-transform: translate3d(0, 0, 0)
+    +transform(translate3d(0, 0, 0))
 
   .page.active
-    -webkit-transform: translate3d(0, 100%, 0)
+    +transform(translate3d(0, 100%, 0))
 
   .page.animate
     -webkit-transition: -webkit-transform 1s ease
@@ -170,9 +169,10 @@
     width: 100%
     background: #171717
     color: white
-    transform: translate3d(0, 0, 0)
+    +transform(translate3d(0, 0, 0))
+
     &.active
-      transform: translate3d(0, -100%, 0)
+      +transform(translate3d(0, -100%, 0))
 
   #contact h2
     margin: 2% 0 3%

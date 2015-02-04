@@ -252,9 +252,10 @@ var touch = {
       }, 100);
       */
     }
+    
     var next = animation.current + step;
     // out of range
-    if (next < 0 || next >= animation.count) {
+    if (!step || next < 0 || next >= animation.count) {
       return false;
     }
     animation.last = animation.current;
@@ -273,33 +274,33 @@ var touch = {
       var deltaX = startX - touches[0].pageX;
       var deltaY = startY - touches[0].pageY;
 
-      //window.removeEventListener('touchstart', animation.touchstart);
+      window.removeEventListener('touchstart', touch.touchstart);
 
       if (deltaY >= touch.threshold) {
         //console.log("swipeUp");
-        if (window.innerWidth > 960) {
-          animation.last = animation.current;
-          animation.current += 1;
-          animation.move();
-        } else {
-          touch.touchhandler('up');
-        }
+        //if (window.innerWidth > 960) {
+        //  animation.last = animation.current;
+        //  animation.current += 1;
+        //  animation.move();
+        //} else {
+        touch.touchhandler('up');
+        //}
       }
       if (deltaY <= -touch.threshold) {
         //console.log("swipeDown");
-        if (window.innerWidth > 960) {
-          animation.last = animation.current;
-          animation.current -= 1;
-          animation.move();
-        } else {
-          touch.touchhandler('down');
-        }
+        //if (window.innerWidth > 960) {
+        //  animation.last = animation.current;
+        //  animation.current -= 1;
+        //  animation.move();
+        //} else {
+        touch.touchhandler('down');
+        //}
       }
-      /*
+
       window.setTimeout(function () {
-        window.addEventListener('touchstart', animation.touchstart);
+        window.addEventListener('touchstart', touch.touchstart);
       }, 1300);
-      */
+
       if (Math.abs(deltaX) >= touch.threshold || Math.abs(deltaY) >= touch.threshold) {
         window.removeEventListener('touchmove', touch.touchmove);
       }
