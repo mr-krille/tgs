@@ -1,5 +1,5 @@
-/* pagination */
-/* line 3, .styles/_pagination.sass */
+// pagination
+
 #pagination
   position: absolute
   right: 4%
@@ -9,25 +9,24 @@
   margin-top: -130px
 
 @media screen and (max-width: $breakpoint-m)
-  /* line 12, .styles/_pagination.sass */
   #pagination
     display: none
+
 @media screen and (min-width: 1450px)
-  /* line 16, .styles/_pagination.sass */
   #pagination
     right: 42%
     margin-right: -600px
-/* line 20, .styles/_pagination.sass */
+
 .anchors
   width: 34px
   margin: 0
   padding: 0
   list-style: none
-  /* line 25, .styles/_pagination.sass */
+
   & > li
     overflow: hidden
     display: block
-  /* line 28, .styles/_pagination.sass */
+
   a
     display: block
     position: relative
@@ -35,27 +34,26 @@
     width: 4px
     padding: 6px 10px
     margin: 5px
-  /* line 35, .styles/_pagination.sass */
+
   .bullet
     display: block
     height: 4px
     width: 4px
     border-radius: 50%
     background-color: rgba(0, 0, 0, 0.3)
-  /* line 41, .styles/_pagination.sass */
+
   .active
     height: 6px
     width: 6px
     padding: 6px 10px
     margin: 4px
-    /* line 46, .styles/_pagination.sass */
+
     .bullet
       height: 6px
       width: 6px
 
-/* line 51, .styles/_pagination.sass */
 .inverse .anchors .bullet
   background-color: rgba(255, 255, 255, 0.3)
-/* line 53, .styles/_pagination.sass */
+
 .inverse .active .bullet
   background-color: white
