@@ -2,7 +2,7 @@ body
   overflow-x: hidden
 
 .headerpic-interactio
-  background: url(interactio/media/header.jpg)
+  background-image: url(interactio/media/header.jpg)
   @extend %background_full
   // background-attachment: fixed
   min-height: 470px
@@ -26,23 +26,36 @@ body
 #c390
   +pie-clearfix
   background-color: #e7e6e2
-  .grid3ColElement
+  div
     height: 33.33333vw
     background-position-x: 50%
     background-position-y: 0
-    background-size: 343px auto
+    background-size: 280px auto
     background-repeat: no-repeat
+    text-align: center
+    img
+      margin-top: 300px
+      width: 230px
+      opacity: 0
+      +transition(opacity .4s linear)
     &:nth-child(1)
       background-image: url(interactio/media/phone_menu01.png)
     &:nth-child(2)
       background-image: url(interactio/media/phone_menu02.png)
+      img
+        +transition-delay(.2s)
     &:nth-child(3)
       background-image: url(interactio/media/phone_menu03.png)
-
+      img
+        +transition-delay(.4s)
+  &.active
+    div
+      img
+        opacity: 1
 #c394
   +pie-clearfix
   background-color: #e7e6e2
-  .grid2ColElement
+  div
     height: 33.33333vw
     position: relative
     overflow: hidden
@@ -92,35 +105,50 @@ body
       background-image: url(interactio/media/phone3_2.png)
       background-size: 100%
 #c723, #c751
-  &.active
-    .col1element
-      .elementheader,
-      .elementtext
-        +transform(translateX(0))
-        opacity: 1
-      .elementheader
-        +transition(all 1s ease-in-out)
-      .elementtext
-        +transition(all 1s ease-in-out 0.5s)
-  .col1element
-    .elementheader,
-    .elementtext
-      +transform(translateX(50px))
-      opacity: 0
-  .col2element.img9
-    height: 33.333vw
+  .text, .image
+    height: 33vw
+    background-repeat: no-repeat
+    background-position-y: center
+  .text
+    background-size: auto 220px
+
+#c723
+  .text
+    background-color: #d6c7a5
+    background-image: url(interactio/media/text/sorting.jpg)
+    background-position-x: 30px
+    +transition(all .4s linear)
+  .image
     background-color: white
     background-image: url(interactio/media/phone4.png)
     background-position: center
-    background-repeat: no-repeat
     background-size: auto 120%
-  .col2element.img10
-    height: 33.333vw
+    +transition(opacity .4s linear)
+    opacity: 0
+  &.active
+    .image
+      opacity: 1
+    .text
+      background-position-x: -20px !important
+
+#c751
+  .text
+    background-color: #e7e6e2
+    background-image: url(interactio/media/text/working.jpg)
+    background-position: center right 30px
+    +transition(all .4s linear)
+  .image
     background-color: white
     background-image: url(interactio/media/phone5.png)
-    background-position: center top 120px
-    background-repeat: no-repeat
+    background-position: center bottom -185px
     background-size: auto 120%
+    opacity: 0
+    +transition(opacity .4s linear)
+  &.active
+    .image
+      opacity: 1
+    .text
+      background-position: center right -20px
 
 #c436
   background: url(interactio/media/decide.jpg) no-repeat center
