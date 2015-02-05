@@ -253,7 +253,7 @@ var touch = {
       }, 100);
       */
     }
-    
+
     var next = animation.current + step;
     // out of range
     if (!step || next < 0 || next >= animation.count) {
@@ -394,3 +394,10 @@ var nav = {
 
 //window.addEventListener('load', app.init, false);
 document.addEventListener('DOMContentLoaded', app.init, false);
+
+
+if(window.jQuery) {
+  $(window).on('resize', function () {
+    $('.casestudies .headerpic').css('height', $(window).height()-$('.headertextwrap').outerHeight())
+  }).trigger('resize');
+}
