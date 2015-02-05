@@ -2179,7 +2179,7 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
   font-weight: 900;
   margin-top: 0;
   padding-bottom: 15px;
-  border-bottom: 2px solid #000;
+  border-bottom: 1px solid #000;
   max-width: 25%;
   margin-bottom: 50px
 }
@@ -2190,6 +2190,10 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
 
 .contact .csc-default p {
   font-size: 12px
+}
+
+.contact a {
+  color: #171717
 }
 
 .menubutton1 {
@@ -3912,7 +3916,7 @@ h2 {
 .contwrap {
   position: absolute;
   top: 68%;
-  right: 8%;
+  right: 10%;
   text-align: right
 }
 
@@ -3921,8 +3925,9 @@ h2 {
 }
 
 .contwrap .icon {
+  margin-right: -2px;
   font-size: 18px;
-  color: #d7c8a4
+  color: #d7c8a4;
 }
 
 .discover {
