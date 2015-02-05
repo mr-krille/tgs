@@ -8,6 +8,7 @@ var app = {
       animation.init();
     } else {
       nav.init();
+      $.stellar();
     }
 
     var pageLinks = document.querySelectorAll('.inlink');
