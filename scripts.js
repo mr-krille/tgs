@@ -39,6 +39,7 @@ var app = {
         if (raw.length > 1) {
           data = raw[1].split('<!--//END//-->');
           document.body.classList.add(url.replace('/', ''));
+          window.scrollTo(0, 0);
           document.getElementById('wrapper').innerHTML = data[0];
           if (!app.finish) {
             app.init();
