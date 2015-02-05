@@ -38,7 +38,7 @@ var app = {
         var raw = xhr.responseText.split('<!--//BEGIN//-->');
         if (raw.length > 1) {
           data = raw[1].split('<!--//END//-->');
-          document.body.classList.add(url.replace('/', ''));
+          document.body.classList.add((url.length > 3) ? url.replace('/', '') : 'split');
           window.scrollTo(0, 0);
           document.getElementById('wrapper').innerHTML = data[0];
           if (!app.finish) {
@@ -58,11 +58,6 @@ var app = {
 var animation = {
   current: 0,
   anchors: [],
-  pages: document.querySelectorAll('.page'),
-  slides: document.querySelectorAll('.slide'),
-  visuals: document.querySelectorAll('.visuals'),
-  pagination: document.querySelectorAll('#pagination a'),
-  overlay: document.getElementById('overlay'),
   attach: function () {
     window.addEventListener('MozMousePixelScroll', animation.handler);
     window.addEventListener('mousewheel', animation.handler);
@@ -131,6 +126,10 @@ var animation = {
     }, 1300);
   },
   init: function () {
+    animation.pages = document.querySelectorAll('.page');
+    animation.slides = document.querySelectorAll('.slide');
+    animation.visuals = document.querySelectorAll('.visuals');
+    animation.pagination = document.querySelectorAll('#pagination a');
     animation.count = animation.pages.length;
     //document.body.classList.add('split');
     // anchors
