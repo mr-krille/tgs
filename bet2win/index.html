@@ -135,29 +135,29 @@ interface for the user exceeding all expectations.
     </div>
 
     <div>
-      <div id="col1" class="bigmockup full-column-wrapper">
+      <div id="col1" class="bigmockup full-column-wrapper" data-animated="true" data-offset="300">
         <img src="bet2win/media/bigmockup.png" alt="">
       </div>
 
-      <div id="col2" class="start-playing two-column-wrapper">
+      <div id="col2" class="start-playing two-column-wrapper" data-animated="true" data-offset="300">
         <div class="text"></div>
         <div class="image"></div>
       </div>
 
-      <div id="col3" class="simple-structure two-column-wrapper">
+      <div id="col3" class="simple-structure two-column-wrapper" data-animated="true" data-offset="300">
         <div class="image"></div>
         <div class="text"></div>
       </div>
 
-      <div id="col4" class="website full-column-wrapper">
+      <div id="col4" class="website full-column-wrapper" data-animated="true" data-offset="300">
         <img src="bet2win/media/website.jpg" data-stellar-ratio="0.1" data-stellar-vertical-offset="0">
       </div>
 
-      <div id="col5" class="ipads full-column-wrapper">
+      <div id="col5" class="ipads full-column-wrapper" data-animated="true" data-offset="100">
         <div class="img"></div>
       </div>
 
-      <div id="col6" class="screenshots two-column-wrapper">
+      <div id="col6" class="screenshots two-column-wrapper" data-animated="true" data-offset="300">
         <div class="first">
           <img src="bet2win/media/konto.png" data-stellar-ratio="0.8">
         </div>
@@ -166,27 +166,27 @@ interface for the user exceeding all expectations.
         </div>
       </div>
 
-      <div id="col7" class="mockup-photo full-column-wrapper"></div>
+      <div id="col7" class="mockup-photo full-column-wrapper" data-animated="true" data-offset="600"></div>
 
-      <div id="col8" class="native full-column-wrapper"></div>
+      <div id="col8" class="native full-column-wrapper" data-animated="true" data-offset="700"></div>
 
-      <div id="col9" class="game full-column-wrapper">
+      <div id="col9" class="game full-column-wrapper" data-animated="true" data-offset="300">
         <img src="bet2win/media/game.png" data-stellar-ratio="0.8">
       </div>
 
-      <div id="col10" class="same-style two-column-wrapper">
+      <div id="col10" class="same-style two-column-wrapper" data-animated="true" data-offset="300">
         <div class="image"></div>
         <div class="text"></div>
       </div>
 
-      <div id="col11" class="ios-screens full-column-wrapper">
+      <div id="col11" class="ios-screens full-column-wrapper" data-animated="true" data-offset="300">
         <img src="bet2win/media/screen1.png" alt="">
         <img src="bet2win/media/screen2.png" alt="">
         <img src="bet2win/media/screen3.png" alt="">
       </div>
-      <div id="col12" class="another-photo full-column-wrapper"></div>
-      <div id="col13" class="logo-mockup full-column-wrapper"></div>
-      <div id="col14" class="final full-column-wrapper" data-stellar-background-ratio="0.5"></div>
+      <div id="col12" class="another-photo full-column-wrapper" data-animated="true" data-offset="600"></div>
+      <div id="col13" class="logo-mockup full-column-wrapper" data-animated="true" data-offset="700"></div>
+      <div id="col14" class="final full-column-wrapper" data-animated="true" data-offset="300" data-stellar-background-ratio="0.5"></div>
     </div>
 
     <div id="cc4">
@@ -279,32 +279,14 @@ interface for the user exceeding all expectations.
 
   </div>
 </div>
+<!--//END//-->
 <script src="js/vendor/jquery-1.11.1.min.js"></script>
 <script src="js/vendor/jquery.parallax.js"></script>
-<script src="animation.js"></script>
+<script src="scripts.js"></script>
 <script>
 $(function() {
-animation.selectors = [
-  { selector: 'col1', offset: 300 },
-  { selector: 'col2', offset: 300 },
-  { selector: 'col3', offset: 300 },
-  { selector: 'col4', offset: 300 },
-  { selector: 'col5', offset: 100 },
-  { selector: 'col6', offset: 300 },
-  { selector: 'col7', offset: 600 },
-  { selector: 'col8', offset: 700 },
-  { selector: 'col9', offset: 300 },
-  { selector: 'col10', offset: 300 },
-  { selector: 'col11', offset: 300 },
-  { selector: 'col12', offset: 600 },
-  { selector: 'col13', offset: 700 },
-  { selector: 'col14', offset: 300 }
-];
-animation.init();
-$.stellar();
+  $.stellar();
 });
 </script>
-<!--//END//-->
-<!-- <script src="scripts.js"></script> -->
 </body>
 </html>

@@ -142,7 +142,7 @@
       </div>
     </div>
 
-    <div id="c390" class="three-column-wrapper">
+    <div id="c390" class="three-column-wrapper" data-animated="true" data-offset="300">
       <div>
         <img src="interactio/media/text/agenda.png" alt="">
       </div>
@@ -164,18 +164,18 @@
       </div>
     </div>
 
-    <div id="c432" class="full-column-wrapper">
+    <div id="c432" class="full-column-wrapper" data-animated="true" data-offset="400">
       <div class="phone3"></div>
     </div>
 
-    <div id="c723" class="two-column-wrapper">
+    <div id="c723" class="two-column-wrapper" data-animated="true" data-offset="400">
       <div class="image" data-stellar-background-ratio="0.8"></div>
       <div class="text"></div>
     </div>
 
-    <div id="c436" class="full-column-wrapper"></div>
+    <div id="c436" class="full-column-wrapper" data-animated="true" data-offset="700"></div>
 
-    <div id="c751" class="two-column-wrapper">
+    <div id="c751" class="two-column-wrapper" data-animated="true" data-offset="400">
       <div class="text"></div>
       <div class="image"></div>
     </div>
@@ -270,30 +270,14 @@
     </footer>
   </div>
 </div>
+<!--//END//-->
 <script src="js/vendor/jquery-1.11.1.min.js"></script>
 <script src="js/vendor/jquery.parallax.js"></script>
-<script src="animation.js"></script>
-<script>$(function() {
-  animation.selectors = [{
-    selector: 'c432',
-    offset: 400
-  }, {
-    selector: 'c751',
-    offset: 400
-  }, {
-    selector: 'c390',
-    offset: 400
-  }, {
-    selector: 'c723',
-    offset: 400
-  }, {
-    selector: 'c436',
-    offset: 700
-  }];
-  animation.init();
+<script src="scripts.js"></script>
+<script>
+$(function() {
   $.stellar();
-});</script>
-<!--//END//-->
-<script src="nav.js"></script>
+});
+</script>
 </body>
 </html>

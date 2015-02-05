@@ -26,7 +26,6 @@
 
 <body class="uid-44">
 <!--//BEGIN//-->
-
   <div class="casestudies partech-casestudy" id="container">
     <nav id="navbar">
       <div class="navbar-show" id="topWrap">
@@ -140,7 +139,7 @@
 
       <div id="cc3">
 
-        <div id="col1" class="two-column-wrapper">
+        <div id="col1" class="two-column-wrapper" data-animated="true" data-offset="300">
           <div class="map third-height">
             <div class="dots">
               <div class="dot"></div>
@@ -151,7 +150,7 @@
           <div class="operate third-height"></div>
         </div>
 
-        <div id="col2" class="values full-column-wrapper">
+        <div id="col2" class="values full-column-wrapper" data-animated="true" data-offset="300">
           <div class="value-container">
             <div class="value value-passion"></div>
             <div class="value value-resilience"></div>
@@ -159,17 +158,17 @@
           </div>
         </div>
 
-        <div id="col3" class="mockups">
+        <div id="col3" class="mockups" data-animated="true" data-offset="200">
           <img src="partech/media/mockup_full.png" alt="">
         </div>
 
-        <div id="col4" class="screens">
+        <div id="col4" class="screens" data-animated="true" data-offset="400">
           <img src="partech/media/website1.png" alt="">
           <img src="partech/media/website2.jpg" alt="">
           <img src="partech/media/website3.jpg" alt="">
         </div>
 
-        <div id="col5" class="screenshots two-column-wrapper">
+        <div id="col5" class="screenshots two-column-wrapper" data-animated="true" data-offset="600">
           <div class="mockup-screen third-height"></div>
           <div class="layers third-height">
             <img src="partech/media/layers.png" alt="">
@@ -307,33 +306,14 @@
       </footer>
     </div>
   </div>
+<!--//END//-->
 <script src="js/vendor/jquery-1.11.1.min.js"></script>
 <script src="js/vendor/jquery.parallax.js"></script>
-<script src="animation.js"></script>
-<script>
-  window.selectors = [{
-    selector: 'col1',
-    offset: 300
-  }, {
-    selector: 'col2',
-    offset: 300
-  }, {
-    selector: 'col3',
-    offset: 200
-  }, {
-    selector: 'col4',
-    offset: 400
-  }, {
-    selector: 'col5',
-    offset: 600
-  }];
-  animation.init();
-
-  $(function() {
-    $.stellar();
-  });
-</script>
-<!--//END//-->
 <script src="scripts.js"></script>
+<script>
+$(function() {
+  $.stellar();
+});
+</script>
 </body>
 </html>

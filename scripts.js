@@ -355,9 +355,7 @@ var nav = {
       });
     }
 
-    window.addEventListener('MozMousePixelScroll', nav.handler);
-    window.addEventListener('mousewheel', nav.handler);
-    window.addEventListener('DOMMouseScroll', nav.handler);
+    window.addEventListener('scroll', nav.handler);
   },
   handler: function (evt) {
     var top = window.scrollY;
