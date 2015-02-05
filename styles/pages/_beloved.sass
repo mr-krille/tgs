@@ -1,4 +1,219 @@
-// portfolio
+.beloved-casestudy
+  .headerpic-beloved
+    background-image: url(beloved/media/headerpic.jpg)
+    @extend %background_full
+    // background-attachment: fixed
+    min-height: 470px
+
+  .brand-1
+    div
+      background-size: cover
+      background-position: center
+    > div:first-child
+      height: 40vw
+      background-image: url(beloved/media/stoff.jpg)
+    .simple
+      background-image: url(beloved/media/simple.jpg)
+    .tag
+      background-image: url(beloved/media/tag.jpg)
+
+  .brand-2
+    background: #595145
+    height: 30vw
+    position: relative
+    img
+      position: absolute
+      top: 50%
+      left: 50%
+      +transform(translateX(-50px))
+      opacity: 0
+      +transition(all .8s ease)
+      &:nth-child(1)
+        margin-top: -30px
+        margin-left: -294px
+      &:nth-child(2)
+        margin-top: -8px
+        margin-left: -136px
+        +transition-delay(.4s)
+      &:nth-child(3)
+        margin-top: -31px
+        margin-left: -32px
+        +transition-delay(.8s)
+      &:nth-child(4)
+        margin-top: -8px
+        margin-left: 128px
+        +transition-delay(1.2s)
+      &:nth-child(5)
+        margin-top: -34px
+        margin-left: 226px
+        +transition-delay(1.6s)
+
+    &.active
+      img
+        +transform(translateX(0))
+        opacity: 1
+
+  .logos
+    .black,
+    .white
+      position: relative
+      overflow: hidden
+      height: 30vw
+      img
+        position: absolute
+        top: 50%
+        left: 50%
+        margin-left: -160px
+        height: 70px
+    .white
+      background: #141b21
+      img
+        margin-top: 65px
+    .black
+      background: #e7e6e2
+      img
+        margin-top: -105px
+
+  .blueprint
+    position: relative
+    background-color: #3672b0
+    height: 50vw
+    .bg
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      bottom: 0
+      background: url(beloved/media/blueprint.jpg) no-repeat center
+      background-size: cover
+      opacity: 0
+      +transition(all .8s linear)
+
+    &.active
+      .bg
+        opacity: 1
+
+  .logo-mockups
+    div
+      height: 33.33vw
+      background: #e7e6e3 no-repeat center
+      position: relative
+      span
+        position: absolute
+        top: 30px
+        left: 0
+        bottom: 30px
+        width: 100%
+        background: #e7e6e3
+        opacity: 1
+        +transition(all .8s linear)
+
+    div:nth-child(1)
+      background-image: url(beloved/media/logo1.jpg)
+      background-size: auto 50px
+    div:nth-child(2)
+      background-image: url(beloved/media/logo2.jpg)
+      background-size: auto 90px
+      span
+        +transition-delay(.4s)
+    div:nth-child(3)
+      background-image: url(beloved/media/logo3.jpg)
+      background-size: auto 70px
+      span
+        +transition-delay(.8s)
+
+    &.active
+      div span
+        opacity: 0
+
+  .palette
+    .hidden
+      opacity: 0
+    background: #e7e6e3
+    position: relative
+    overflow: hidden
+    padding: 10vw
+    img:first-child
+      width: 80vw
+      position: absolute
+      margin-left: -40vw
+
+  .fonts
+    background: #e7e6e3
+    padding: 10vw 13vw
+    img
+      opacity: 0
+      +transition(opacity .6s linear)
+
+    &.active img
+      opacity: 1
+
+  .equipped
+    height: 20vw
+    background: #141c21 url(beloved/media/equipped.png) no-repeat center
+    background-size: auto 20vw
+    background-attachment: fixed
+
+  .stationary
+    height: 50vw
+    background: #ddd6cc url(beloved/media/stationary.jpg) no-repeat center
+    background-size: cover
+    background-attachment: fixed
+
+  .couture
+    div
+      opacity: 0
+      +transition(opacity .6s linear)
+    .couture-logo
+      background: #595145 url(beloved/media/couture.jpg) no-repeat center
+      background-size: 30vw auto
+    .clothing
+      background: url(beloved/media/clothing.jpg) no-repeat center
+      background-size: cover
+      +transition-delay(.3s)
+    .stamp
+      height: 40vw
+      background: url(beloved/media/stamp.jpg) no-repeat center
+      background-size: cover
+      +transition-delay(.6s)
+
+    &.active div
+      opacity: 1
+
+  .store
+    background: #141b21
+    padding: 7vw 14vw 0
+    text-align: center
+    img
+      &:nth-child(1)
+        width: 60vw
+        margin-bottom: 7vw
+      &:nth-child(2)
+        +transform(translateY(100px))
+        opacity: 0
+        +transition(all .6s ease)
+    &.active img:nth-child(2)
+      +transform(translateY(0))
+      opacity: 1
+
+  .store-link
+    background: #e7e6e3 url(beloved/media/beloved.png) no-repeat center
+    background-size: auto 60px
+    height: 20vw
+    position: relative
+    a
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      height: 20vw
+      width: 100%
+
+  .final
+    background: #e7e6e3 url(beloved/media/final.jpg) no-repeat center
+    background-size: cover
+    height: 40vw
+    position: relative
 
 #pagination .beloved.active .bullet
   background-color: #484236
