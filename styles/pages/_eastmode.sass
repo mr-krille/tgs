@@ -1,26 +1,23 @@
+// portfolio
 
-/* 6 - eastmode */
-/* line 3, .styles/pages/_rebate.sass */
 #pagination .eastmode.active .bullet
   background-color: #981919
 
-/* line 7, .styles/pages/_rebate.sass */
 #eastmode .visuals
   background-image: url("img/m_bg_eastmode.jpg")
   @extend %background_full
-/* line 10, .styles/pages/_rebate.sass */
+
 #eastmode .mockup
   background-image: url("img/m_mockup_eastmode.png")
-/* line 14, .styles/pages/_rebate.sass */
+
 #eastmode .logo
   width: 230px
   background-image: url("img/logo_eastmode.png")
-/* line 17, .styles/pages/_rebate.sass */
+
 #eastmode .link
   color: #b6b6b6
 
 @media screen and (max-width: $breakpoint-m)
-  /* line 21, .styles/pages/_rebate.sass */
   #eastmode .mockup
     position: absolute
     top: 23%
@@ -32,11 +29,10 @@
     background-size: contain
 
 @media screen and (min-width: $breakpoint-m)
-  /* line 37, .styles/pages/_rebate.sass */
   #eastmode .visuals
     background-image: url("img/bg_eastmode.jpg")
     background-position: left center
-  /* line 39, .styles/pages/_rebate.sass */
+
   #eastmode .mockup
     top: 23%
     right: -13%
@@ -44,20 +40,18 @@
     width: 100%
     background-image: url("img/mockup_eastmode.png")
 
-@media screen and (min-width: $breakpoint-m) and (max-height: 768px)
-  /* line 60, .styles/pages/_rebate.sass */
+//@media screen and (min-width: $breakpoint-m) and (max-height: 768px)
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
   #eastmode .mockup
     top: 15%
-  /* line 62, .styles/pages/_rebate.sass */
+
   #eastmode .content
     top: 40%
 
 @media only screen and (max-device-width: 480px) and (orientation: landscape)
-  /* line 66, .styles/pages/_rebate.sass */
   #eastmode .content h2
     margin: 0 60px 30px
 
 @media only screen and (max-device-width: 480px) and (orientation: portrait)
-  /* line 70, .styles/pages/_rebate.sass */
   #eastmode .mockup
     background-size: 100% auto

@@ -1,60 +1,58 @@
+// portfolio
 
-/* 8 - beloved */
-/* line 3, .styles/pages/_beloved.sass */
 #pagination .beloved.active .bullet
   background-color: #484236
 
-/* line 7, .styles/pages/_beloved.sass */
 #beloved .visuals
   background-image: url("img/m_bg_09_beloved.jpg")
   @extend %background_full
-/* line 10, .styles/pages/_beloved.sass */
+
 #beloved .mockup
   background-image: url("img/m_shadow_beloved.png")
-  /* line 12, .styles/pages/_beloved.sass */
+
   &::after
     background-image: url("img/m_mockup_beloved.png")
-/* line 14, .styles/pages/_beloved.sass */
+
 #beloved .logo
   width: 150px
   background-image: url("img/logo_beloved.png")
 
 @media screen and (max-width: $breakpoint-m)
-  /* line 19, .styles/pages/_beloved.sass */
   #beloved .mockup
     background-image: url("img/m_shadow_beloved.png")
     background-position: center
     background-size: auto 70%
-    /* line 23, .styles/pages/_beloved.sass */
+
     &::after
       background-image: url("img/m_mockup_beloved.png")
       background-position: center
       background-size: auto 70%
+
 @media screen and (min-width: $breakpoint-m)
-  /* line 30, .styles/pages/_beloved.sass */
   #beloved .visuals
     background-image: url("img/bg_09_beloved.jpg")
-  /* line 32, .styles/pages/_beloved.sass */
+
   #beloved .mockup
     top: 18%
     right: -14%
     height: 74%
     width: 120%
     background-image: url("img/shadow_beloved.png")
-    /* line 38, .styles/pages/_beloved.sass */
+
     &::after
       background-image: url("img/mockup_beloved.png")
-  /* line 41, .styles/pages/_beloved.sass */
+
   #beloved .content h2
     margin-right: 25%
-@media screen and (min-width: $breakpoint-m) and (max-height: 768px)
-  /* line 46, .styles/pages/_beloved.sass */
+
+//@media screen and (min-width: $breakpoint-m) and (max-height: 768px)
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
   #beloved .mockup
     top: 12%
-  /* line 48, .styles/pages/_beloved.sass */
+
   #beloved .content
     top: 41%
+
 @media only screen and (max-device-width: 480px) and (orientation: portrait)
-  /* line 52, .styles/pages/_beloved.sass */
   #beloved .content h2
     margin: 0 30px 30px
