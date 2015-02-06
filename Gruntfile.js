@@ -14,6 +14,7 @@ module.exports = function(grunt) {
         options: {
           sassDir: 'styles',
           cssDir: '.',
+          imageDir: 'img',
           outputStyle: 'nested',
           environment: 'development'
         }
