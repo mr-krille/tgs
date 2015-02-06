@@ -7,6 +7,8 @@ var app = {
       document.getElementById('curtain').classList.remove('ready');
     });
 
+    app.data = null;
+
     document.body.classList.remove('loading');
 
     // portfolio?
@@ -23,6 +25,12 @@ var app = {
     }
 
   },
+  change: function () {
+    if (app.data) {
+      document.getElementById('wrapper').innerHTML = app.data;
+      app.init();
+    }
+  },
   pageHandler: function (evt) {
     evt.preventDefault();
 
@@ -31,9 +39,9 @@ var app = {
 
     document.body.setAttribute('class', 'loading');
 
-    app.finish = window.setTimeout(app.init, 2000);
-
     animation.destroy();
+
+    app.finish = window.setTimeout(app.change, 1500);
 
     xhr = new window.XMLHttpRequest();
     xhr.open('GET', url);
@@ -46,9 +54,9 @@ var app = {
           data = raw[1].split('<!--//END//-->');
           document.body.classList.add((url.length > 3) ? url.replace('/', '') : 'split');
           window.scrollTo(0, 0);
-          document.getElementById('wrapper').innerHTML = data[0];
+          app.data = data[0];
           if (!app.finish) {
-            app.init();
+            app.change();
           }
         } else {
           // error
