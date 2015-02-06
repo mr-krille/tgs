@@ -1,8 +1,5 @@
 .headerpic-partech
   background-image: url(partech/media/partechtop.jpg)
-  @extend %background_full
-  background-attachment: fixed
-  min-height: 470px
 
 .partech-casestudy
   .full-column-wrapper,
@@ -165,12 +162,21 @@
   .map
     position: relative
     background-color: #d2232a
-    background-image: url(partech/media/map.png)
-    background-size: auto 460px
-    background-position: center
-    background-repeat: no-repeat
     .dots
+      top: 50%
+      margin-top: -250px
+      left: 0
+      position: absolute
+      width: 835px
+      height: 500px
+      background-image: url(partech/media/map.png)
+      background-size: auto 460px
+      background-position: center
+      background-repeat: no-repeat
       .dot
+        opacity: 0
+        +transform(scale(1.2))
+        +transition(all .3s ease-in-out)
         background: url(partech/media/dot_map.png)
         background-size: 16px 16px
         position: absolute
@@ -181,17 +187,52 @@
       .dot:nth-child(1)
         margin-top: -55px
         margin-left: -360px
+        &:after
+          position: absolute
+          bottom: 24px
+          left: 24px
+          content: ''
+          width: 113px
+          height: 14px
+          background: url(partech/media/sf.png) no-repeat center
+          background-size: 100% auto
       .dot:nth-child(2)
+        +transition-delay(.15s)
         margin-top: -90px
         margin-left: -15px
+        &:after
+          position: absolute
+          bottom: 20px
+          left: 20px
+          content: ''
+          width: 40px
+          height: 14px
+          background: url(partech/media/paris.png) no-repeat center
+          background-size: 100% auto
       .dot:nth-child(3)
         margin-top: -80px
         margin-left: -35px
+        +transition-delay(.3s)
+        &:after
+          position: absolute
+          top: 20px
+          right: 20px
+          content: ''
+          width: 48px
+          height: 14px
+          background: url(partech/media/berlin.png) no-repeat center
+          background-size: 100% auto
 
   .operate
     background: #17528f url(partech/media/operate.png)
     background-position: left center
     background-size: contain
+
+  .map-operate.active
+    .map .dots .dot
+      opacity: 1
+      +transform(scale(1))
+
 
   .third-height
     height: 33.33333vw

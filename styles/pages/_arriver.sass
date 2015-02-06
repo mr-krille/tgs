@@ -1,9 +1,6 @@
 .arriver-casestudy
   .headerpic-arriver
     background-image: url(arriver/media/headerpic.jpg)
-    @extend %background_full
-    background-attachment: fixed
-    min-height: 470px
 
   .map
     position: relative
@@ -96,7 +93,7 @@
         width: 120px
         height: 120px
         background-size: 120px 120px
-        +transition(all 1s ease-in-out)
+        +transition(all .6s ease-in-out)
         opacity: 0
         +transform(translateY(30px))
       .dot-stop
@@ -174,11 +171,11 @@
 
   .wewish
     .text,.image
-      height: 20vw
+      height: 24vw
     .text
       background-color: #b5ddf3
       background-image: url(arriver/media/wewish.png)
-      background-size: auto 200px
+      background-size: auto 180px
       background-position: center right
       background-repeat: no-repeat
     .image

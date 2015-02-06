@@ -1,18 +1,19 @@
 .bet2win-casestudy
   .headerpic-bet2win
     background-image: url(bet2win/media/headerpic.jpg)
-    @extend %background_full
-    background-attachment: fixed
-    min-height: 470px
 
   .bigmockup
-    padding-top: 200px
+    padding-top: 150px
+    padding-bottom: 100px
     background: #121921
     text-align: center
 
     img
       +transition(opacity .4s linear)
       opacity: 0
+
+    .copyright
+      color: rgba(white, 0.2)
 
     &.active img
       opacity: 1
@@ -180,16 +181,16 @@
     .text
       background: #e7e6e2 url(bet2win/media/same.png) center left no-repeat
       background-size: auto 220px
+      opacity: 0
+      +transition(all .4s linear)
     .image
       background: url(bet2win/media/samesame.jpg) center no-repeat
       background-size: cover
-      opacity: 0
-      +transition(all .4s linear)
 
     &.active
-      .image
+      .text
         opacity: 1
-        background-position: right 0px center
+        background-position: left 0px center
 
   .ios-screens
     position: relative
@@ -218,7 +219,7 @@
       opacity: 1
 
   .another-photo
-    height: 20vw
+    height: 24vw
     background: url(bet2win/media/mood_app.jpg)
     background-size: cover
     opacity: 0
@@ -230,19 +231,28 @@
     height: 14vw
     background: #f4c540 url(bet2win/media/logo.png) no-repeat center
     background-size: auto 20%
-    opacity: 0
-    +transition(opacity .4s linear)
-    &.active
-      opacity: 1
+    opacity: 1
+
+  .banner
+    height: 50vw
+    background: url(bet2win/media/bg_banner.jpg) no-repeat center
+    background-size: cover
+    position: relative
+    text-align: center
+    padding: 10vw
+    overflow: hidden
+    img:first-child
+      width: 40vw
+    img:last-child
+      width: 80vw
+      margin-left: -40vw
+      position: absolute
 
   .final
     height: 60vw
     background: #ffffff url(bet2win/media/soon.jpg) no-repeat center
     background-size: cover
-    opacity: 0
-    +transition(opacity .4s linear)
-    &.active
-      opacity: 1
+    opacity: 1
 
 // portfolio
 

@@ -3,25 +3,29 @@ body
 
 .headerpic-interactio
   background-image: url(interactio/media/header.jpg)
-  @extend %background_full
-  background-attachment: fixed
-  min-height: 470px
 
 #c388
-  background: url(interactio/media/bg_worktable.jpg)
+  background-image: url(interactio/media/bg_worktable.jpg)
   background-position-x: 50%
-  @extend %background_full
+  @extend %background_full_centered
   background-attachment: fixed
   height: 80vh
   position: relative
   overflow: hidden
-  img
+  img:first-child
     width: 300px
     position: absolute
     top: 50%
     left: 50%
     margin-left: -150px
+    z-index: 9
     margin-top: -250px
+  img:last-child
+    position: absolute
+    bottom: 60px
+    left: 50%
+    width: 48px
+    margin-left: -24px
 
 #c390
   +pie-clearfix
@@ -30,12 +34,13 @@ body
     height: 33.33333vw
     background-position-x: 50%
     background-position-y: 0
-    background-size: 280px auto
+    background-size: 20vw auto
     background-repeat: no-repeat
     text-align: center
     img
-      margin-top: 300px
-      width: 230px
+      margin-top: 23vw
+      max-width: 23vw
+      max-height: 6vw
       opacity: 0
       +transition(opacity .4s linear)
     &:nth-child(1)
@@ -140,8 +145,8 @@ body
   .image
     background-color: white
     background-image: url(interactio/media/phone5.png)
-    background-position: center bottom -185px
-    background-size: auto 120%
+    background-position: center bottom
+    background-size: 60% auto
     opacity: 0
     +transition(opacity .4s linear)
   &.active

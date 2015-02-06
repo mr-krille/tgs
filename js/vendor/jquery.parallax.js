@@ -11,7 +11,7 @@
       responsive: false,
       parallaxBackgrounds: true,
       parallaxElements: true,
-      hideDistantElements: true,
+      hideDistantElements: false,
       hideElement: function($elem) { $elem.hide(); },
       showElement: function($elem) { $elem.show(); }
     },

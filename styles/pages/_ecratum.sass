@@ -1,9 +1,6 @@
 .ecratum-casestudy
   .headerpic-ecratum
     background-image: url(ecratum/media/headerpic.jpg)
-    @extend %background_full
-    background-attachment: fixed
-    min-height: 470px
 
   .simple
     height: 14vw
@@ -12,7 +9,7 @@
 
   .beforeafter
     .before, .after
-      background-size: 390px auto
+      background-size: 26vw auto
       background-position: center
       background-color: #ededed
       background-repeat: no-repeat
@@ -29,10 +26,12 @@
         opacity: 1
 
   .logo-mockup
-    background-image: url(ecratum/media/logo_bg.png), url(ecratum/media/logo.png)
-    background-size: auto 100%, auto 100%
-    background-position: auto, center
-    // background-repeat: repeat-x, no-repeat
+    background-color: #bb3f17
+    background-image: url(ecratum/media/logo.png)
+    background-size: auto 50vw
+    background-position: center
+    background-attachment: fixed
+    background-repeat: no-repeat
     height: 50vw
     opacity: 0
     +transition(opacity .5s linear)
@@ -72,8 +71,8 @@
 
   .stationary-grid
     div
-      height: 400px
-      background-size: auto 460px
+      height: 30vw
+      background-size: cover
       background-repeat: no-repeat
       background-position: center
       +transition(opacity .5s linear)
@@ -126,7 +125,7 @@
   .modules
     background: url(ecratum/media/modules.jpg) no-repeat center
     background-size: cover
-    height: 14vw
+    height: 20vw
     opacity: 0
     +transition(opacity .5s linear)
     &.active
@@ -145,10 +144,8 @@
     background: url(ecratum/media/modules2.jpg) no-repeat center
     background-size: cover
     height: 30vw
-    opacity: 0
+    opacity: 1
     +transition(opacity .5s linear)
-    &.active
-      opacity: 1
 
   .help
     background: url(ecratum/media/help.png) no-repeat center
@@ -161,13 +158,22 @@
 
 
   .final
-    background: url(ecratum/media/final.jpg) no-repeat bottom center
-    background-size: cover
+    position: relative
     height: 50vw
-    opacity: 0
-    +transition(opacity .5s linear)
+    background: #ededed
+    div
+      position: absolute
+      top: 0
+      left: 0
+      height: 50vw
+      width: 100%
+      background: url(ecratum/media/final.jpg) no-repeat bottom center
+      background-size: cover
+      opacity: 0
+      +transition(opacity .5s linear)
     &.active
-      opacity: 1
+      div
+        opacity: 1
 
 // portfolio
 

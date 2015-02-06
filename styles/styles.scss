@@ -807,8 +807,11 @@ iframe {
   max-width: 350px
 }
 
-.headerpic img {
-  width: 100%;
+.headerpic {
+  @extend %background_full_centered;
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+  min-height: 470px;
 }
 
 .casetext {
@@ -1447,6 +1450,7 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
 
 .wewrap {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   z-index: 10;
   position: relative
@@ -1606,7 +1610,8 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
 .aboutfooter .textwrapabout {
   text-align: left;
   right: 0;
-  left: 0
+  left: 0;
+  padding-left: 30px
 }
 
 .aboutfooter .abouttext {
@@ -3962,11 +3967,6 @@ h2 {
   position: relative;
   height: 100%;
   min-height: 480px;
-  //-webkit-animation: fadeIn .8s linear;
-  //-moz-animation: fadeIn .8s linear;
-  //-ms-animation: fadeIn .8s linear;
-  //-o-animation: fadeIn .8s linear;
-  //animation: fadeIn .8s linear
 }
 
 .headerleft {
@@ -4015,16 +4015,13 @@ h2 {
 }
 
 .about .headerright {
-  background-image: url(img/img9.jpg);
-  background-position: bottom right;
-  -webkit-animation: backgroundZoom 10s infinite alternate linear;
-  -moz-animation: backgroundZoom 10s infinite alternate linear;
-  -ms-animation: backgroundZoom 10s infinite alternate linear;
-  -o-animation: backgroundZoom 10s infinite alternate linear;
-  animation: backgroundZoom 10s infinite alternate linear
+  background-image: url(img/studio1.jpg);
+  background-size: cover;
+  background-position-x: right !important;
 }
 
 .about .rightaboutheader {
+  background-color: rgba(black, 0.1);
   background-image: url(img/men-white.png);
   background-repeat: no-repeat;
   @extend %background_full;
@@ -4073,77 +4070,29 @@ h2 {
 
 .s2 .deviceimage {
   opacity: 0;
-  -webkit-animation: fadeOutLeft .8s ease-in-out;
-  -moz-animation: fadeOutLeft .8s ease-in-out;
-  -ms-animation: fadeOutLeft .8s ease-in-out;
-  -o-animation: fadeOutLeft .8s ease-in-out;
-  animation: fadeOutLeft .8s ease-in-out;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both
+  @include animation(fadeOutLeft .8s ease-in-out);
+  @include animation-fill-mode(both);
 }
 
 .s2 .deviceimage:nth-child(3) {
-  -webkit-animation-delay: .3s;
-  -moz-animation-delay: .3s;
-  -ms-animation-delay: .3s;
-  -o-animation-delay: .3s;
-  animation-delay: .3s
+  @include animation-delay(.3s);
 }
 
 .s2 .deviceimage:nth-child(2) {
-  -webkit-animation-delay: .6s;
-  -moz-animation-delay: .6s;
-  -ms-animation-delay: .6s;
-  -o-animation-delay: .6s;
-  animation-delay: .6s
+  @include animation-delay(.6s);
 }
 
 .s2 .deviceimage:nth-child(1) {
-  -webkit-animation-delay: .9s;
-  -moz-animation-delay: .9s;
-  -ms-animation-delay: .9s;
-  -o-animation-delay: .9s;
-  animation-delay: .9s
+  @include animation-delay(.9s);
 }
 
 .s2.active .deviceimage {
-  -webkit-animation: fadeInLeft .8s ease-in-out;
-  -moz-animation: fadeInLeft .8s ease-in-out;
-  -ms-animation: fadeInLeft .8s ease-in-out;
-  -o-animation: fadeInLeft .8s ease-in-out;
-  animation: fadeInLeft .8s ease-in-out;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both
-}
+  @include animation(fadeInLeft .4s ease-in-out);
+  @include animation-fill-mode(both);
 
-.s2.active .deviceimage:nth-child(2) {
-  -webkit-animation-delay: .3s;
-  -moz-animation-delay: .3s;
-  -ms-animation-delay: .3s;
-  -o-animation-delay: .3s;
-  animation-delay: .3s
-}
-
-.s2.active .deviceimage:nth-child(3) {
-  -webkit-animation-delay: .6s;
-  -moz-animation-delay: .6s;
-  -ms-animation-delay: .6s;
-  -o-animation-delay: .6s;
-  animation-delay: .6s
-}
-
-.s2.active .deviceimage:nth-child(4) {
-  -webkit-animation-delay: .9s;
-  -moz-animation-delay: .9s;
-  -ms-animation-delay: .9s;
-  -o-animation-delay: .9s;
-  animation-delay: .9s
+  &:nth-child(2) { @include animation-delay(.2s); }
+  &:nth-child(3) { @include animation-delay(.4s); }
+  &:nth-child(4) { @include animation-delay(.6s); }
 }
 
 @media screen and (max-width: 960px) {
@@ -4164,7 +4113,11 @@ h2 {
   display: table-cell;
   padding: 0;
   text-align: center;
-  vertical-align: middle
+  vertical-align: middle;
+}
+.s3 .s3top > div {
+  position: absolute;
+  @include transform(translateX(-50%) translateY(-25%));
 }
 
 .s3 .s3header h3 {
@@ -4208,31 +4161,20 @@ h2 {
 }
 
 .about .s6.active .wewrap .col {
-  -webkit-animation: fadeIn .6s linear;
-  -moz-animation: fadeIn .6s linear;
-  -ms-animation: fadeIn .6s linear;
-  -o-animation: fadeIn .6s linear;
-  animation: fadeIn .6s linear;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both
+  @include animation(fadeIn .6s linear);
+  @include animation-fill-mode(both);
 }
 
 .about .s6.active .wewrap .col:nth-child(2) {
-  -webkit-animation-delay: .3s;
-  -moz-animation-delay: .3s;
-  -ms-animation-delay: .3s;
-  -o-animation-delay: .3s;
-  animation-delay: .3s
+  @include animation-delay(.3s);
 }
 
-.about .s5,.about .s6 {
+.about .s5, .about .s6 {
   display: table;
   width: 100%;
-  min-height: 700px
 }
+.about .s5 { min-height: 700px; }
+.about .s6 { min-height: 800px }
 
 .about .s5 .tablecell,.about .s6 .tablecell {
   display: table-cell;
@@ -4291,61 +4233,29 @@ h2 {
 }
 
 .s4.active .stepcol1,.s4.active .stepcol2,.s4.active .stepcol3 {
-  -webkit-animation: fadeIn .8s linear;
-  -moz-animation: fadeIn .8s linear;
-  -ms-animation: fadeIn .8s linear;
-  -o-animation: fadeIn .8s linear;
-  animation: fadeIn .8s linear;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both
+  @include animation(fadeIn .8s linear);
+  @include animation-fill-mode(both);
 }
 
 .s4.active .arrowdiv {
-  -webkit-animation: fadeInRight .8s ease;
-  -moz-animation: fadeInRight .8s ease;
-  -ms-animation: fadeInRight .8s ease;
-  -o-animation: fadeInRight .8s ease;
-  animation: fadeInRight .8s ease;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both
+  @include animation(fadeInRight .8s ease);
+  @include animation-fill-mode(both);
 }
 
 .s4.active .col:nth-child(2) {
-  -webkit-animation-delay: .2s;
-  -moz-animation-delay: .2s;
-  -ms-animation-delay: .2s;
-  -o-animation-delay: .2s;
-  animation-delay: .2s
+  @include animation-delay(.2s);
 }
 
 .s4.active .col:nth-child(3) {
-  -webkit-animation-delay: .4s;
-  -moz-animation-delay: .4s;
-  -ms-animation-delay: .4s;
-  -o-animation-delay: .4s;
-  animation-delay: .4s
+  @include animation-delay(.4s);
 }
 
 .s4.active .col:nth-child(4) {
-  -webkit-animation-delay: .6s;
-  -moz-animation-delay: .6s;
-  -ms-animation-delay: .6s;
-  -o-animation-delay: .6s;
-  animation-delay: .6s
+  @include animation-delay(.6s);
 }
 
 .s4.active .col:nth-child(5) {
-  -webkit-animation-delay: .8s;
-  -moz-animation-delay: .8s;
-  -ms-animation-delay: .8s;
-  -o-animation-delay: .8s;
-  animation-delay: .8s
+  @include animation-delay(.8s);
 }
 
 @media only screen and (max-width: 640px) {
@@ -4423,61 +4333,18 @@ h2 {
 
 #s5.active .col {
   position: relative;
-  -webkit-animation: fadeIn .3s linear;
-  -moz-animation: fadeIn .3s linear;
-  -ms-animation: fadeIn .3s linear;
-  -o-animation: fadeIn .3s linear;
-  animation: fadeIn .3s linear;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both
-}
+  @include animation(fadeInTop .4s ease-in-out);
+  @include animation-fill-mode(both);
 
-#s5.active .col:nth-child(3) {
-  -webkit-animation-delay: .8s;
-  -moz-animation-delay: .8s;
-  -ms-animation-delay: .8s;
-  -o-animation-delay: .8s;
-  animation-delay: .8s
-}
-
-#s5.active .col:nth-child(4) {
-  -webkit-animation-delay: 1.4s;
-  -moz-animation-delay: 1.4s;
-  -ms-animation-delay: 1.4s;
-  -o-animation-delay: 1.4s;
-  animation-delay: 1.4s
-}
-
-#s5.active .col:nth-child(5) {
-  -webkit-animation-delay: 2.5s;
-  -moz-animation-delay: 2.5s;
-  -ms-animation-delay: 2.5s;
-  -o-animation-delay: 2.5s;
-  animation-delay: 2.5s
-}
-
-#s5.active .col:nth-child(6) {
-  -webkit-animation-delay: 3s;
-  -moz-animation-delay: 3s;
-  -ms-animation-delay: 3s;
-  -o-animation-delay: 3s;
-  animation-delay: 3s
+  &:nth-child(3) { @include animation-delay(.2s); }
+  &:nth-child(4) { @include animation-delay(.4s); }
+  &:nth-child(5) { @include animation-delay(.6s); }
+  &:nth-child(6) { @include animation-delay(.8s); }
 }
 
 #s5.active .principwrap:before {
-  -webkit-animation: principles 5s linear;
-  -moz-animation: principles 5s linear;
-  -ms-animation: principles 5s linear;
-  -o-animation: principles 5s linear;
-  animation: principles 5s linear;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both
+  @include animation(principles 5s linear);
+  @include animation-fill-mode(both);
 }
 
 .principals .principwrap {
@@ -4491,7 +4358,18 @@ h2 {
 }
 
 .we {
-  padding: 25px 0
+  padding: 25px 0;
+  position: relative;
+
+  > div {
+    position: absolute;
+    max-width: 1200px;
+    width: 100%;
+    @include breakpoint(m) {
+      @include transform(translateX(-50%));
+      margin-top: -200px;
+    }
+  }
 }
 
 @media only screen and (min-width: 961px) {
@@ -4510,10 +4388,14 @@ body,html {
 }
 }
 
+.career .headerright {
+  background: url(img/baloon.jpg);
+  background-size: cover;
+  background-position-x: right !important;
+}
 .career .rightaboutheader {
-  background-image: url(img/pocket.png);
-  background-position: 86px center;
-  background-size: auto 60%
+  background: rgba(black, 0.1) url(career/media/pocket.png) center;
+  background-size: cover
 }
 
 .row1lefttop {
@@ -4557,24 +4439,13 @@ body,html {
 
 .career .career2.active .passionwrap li {
   opacity: 0;
-  @include animation(fadeIn .8s linear);
+  @include animation(fadeIn .4s linear);
   @include animation-fill-mode(both);
-}
 
-.career .career2.active .passionwrap li:nth-child(2) {
-  @include animation-delay(.4s);
-}
-
-.career .career2.active .passionwrap li:nth-child(3) {
-  @include animation-delay(.8s);
-}
-
-.career .career2.active .passionwrap li:nth-child(4) {
-  @include animation-delay(.2s);
-}
-
-.career .career2.active .passionwrap li:nth-child(5) {
-  @include animation-delay(.6s);
+  &:nth-child(2) { @include animation-delay(.2s); }
+  &:nth-child(3) { @include animation-delay(.4s); }
+  &:nth-child(4) { @include animation-delay(.6s); }
+  &:nth-child(5) { @include animation-delay(.8s); }
 }
 
 .career .career3 {
@@ -4591,27 +4462,27 @@ body,html {
 }
 
 .career .career3.active .row1left {
-  @include animation-delay(.3s);
-}
-
-.career .career3.active .row2s {
   @include animation-delay(.6s);
 }
 
+.career .career3.active .row2s {
+  @include animation-delay(1.2s);
+}
+
 .career .career3.active .row3left {
-  @include animation-delay(.9s);
+  @include animation-delay(1.8s);
 }
 
 .career .career3.active .row3right {
-  @include animation-delay(.2s);
+  @include animation-delay(2.4s);
 }
 
 .career .career3.active .row4right {
-  @include animation-delay(.5s);
+  @include animation-delay(3.6s);
 }
 
 .career .career3.active .row4left {
-  @include animation-delay(.8s);
+  @include animation-delay(3s);
 }
 
 .career .career4 {
