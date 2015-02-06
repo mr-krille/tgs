@@ -2,10 +2,13 @@ var app = {
   init: function () {
 
     var curtain = document.getElementById('curtain');
-    curtain.classList.add('ready');
-    curtain.addEventListener('transitionend', function () {
-      document.getElementById('curtain').classList.remove('ready');
-    });
+
+    if (curtain) {
+      curtain.classList.add('ready');
+      curtain.addEventListener('transitionend', function () {
+        document.getElementById('curtain').classList.remove('ready');
+      });
+    }
 
     app.data = null;
 
