@@ -16,7 +16,7 @@
       +breakpoint-max(m)
         width: 90%
         left: 5%
-        margin-left: 5%
+        margin-left: -45%
 
 
   .contacts, .meet, .history
@@ -64,6 +64,9 @@
     background-size: auto 70px
     background-position: center
     background-repeat: no-repeat
+
+    +breakpoint-max(m)
+      background-size: 90%
 
   .photo
     height: 280px
@@ -125,6 +128,9 @@
     background-position: center
     background-repeat: no-repeat
 
+    +breakpoint-max(m)
+      background-size: 90%
+
   .screens
     background: #b6ddf2
     position: relative
@@ -170,14 +176,20 @@
       bottom: 0
 
   .wewish
-    .text,.image
+    .text,
+    .image
       height: 24vw
+
     .text
       background-color: #b5ddf3
       background-image: url(arriver/media/wewish.png)
       background-size: auto 180px
       background-position: center right
       background-repeat: no-repeat
+
+      +breakpoint-max(m)
+        background-size: contain
+
     .image
       background-size: cover
       background-position: center left
