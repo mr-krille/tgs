@@ -1,6 +1,12 @@
 var app = {
   init: function () {
 
+    var curtain = document.getElementById('curtain');
+    curtain.classList.add('ready');
+    curtain.addEventListener('transitionend', function () {
+      document.getElementById('curtain').classList.remove('ready');
+    });
+
     document.body.classList.remove('loading');
 
     // portfolio?
@@ -25,7 +31,7 @@ var app = {
 
     document.body.setAttribute('class', 'loading');
 
-    app.finish = window.setTimeout(app.init, 1000);
+    app.finish = window.setTimeout(app.init, 2000);
 
     animation.destroy();
 
