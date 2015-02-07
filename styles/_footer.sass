@@ -68,22 +68,33 @@
     #footer
       height: 100%
 
-@media screen and (max-width: 700px)
+@media screen and (max-width: 768px)
   .contact-box
     h3
       display: none
 
   #contact
+    .spacer
+      min-height: 300px
+
     #FooterWrapper
       position: relative
       height: 50%
 
-@media screen and (max-width: 700px) and (orientation: landscape)
+@media screen and (min-width: 480px) and (max-width: 768px) and (orientation: portrait)
+  #contact .spacer
+    min-height: 600px
+
+@media screen and (max-width: 768px) and (orientation: portrait)
   #contact
     height: auto
 
-    .spacer
-      min-height: 300px
+  #FooterWrapper
+    padding: 0 40px
+
+@media screen and (max-width: 700px) and (orientation: landscape)
+  #contact
+    height: auto
 
     .about-link
       left: 30%
