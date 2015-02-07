@@ -286,7 +286,6 @@ var touch = {
     //window.addEventListener('webkitTransitionEnd', touch.touchend);
   },
   touchmove: function (event) {
-    event.preventDefault();
     var touches = event.touches;
     if (touches && touches.length) {
       var deltaX = startX - touches[0].pageX;
@@ -295,6 +294,7 @@ var touch = {
       //window.removeEventListener('touchstart', touch.touchstart);
 
       if (deltaY >= touch.threshold) {
+        event.preventDefault();
         //console.log("swipeUp");
         //if (window.innerWidth > 960) {
         //  animation.last = animation.current;
@@ -305,6 +305,7 @@ var touch = {
         //}
       }
       if (deltaY <= -touch.threshold) {
+        event.preventDefault();
         //console.log("swipeDown");
         //if (window.innerWidth > 960) {
         //  animation.last = animation.current;
@@ -325,9 +326,10 @@ var touch = {
     }
   },
   touchstart: function (event) {
+    console.log(event.touches);
     var touches = event.touches;
     if (touches && touches.length) {
-      event.preventDefault();
+      //event.preventDefault();
       startX = touches[0].pageX;
       startY = touches[0].pageY;
       window.addEventListener('touchmove', touch.touchmove);

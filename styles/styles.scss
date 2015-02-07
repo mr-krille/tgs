@@ -33,7 +33,9 @@ table {
   border-spacing: 0
 }
 
-*,:after,:before {
+*,
+:after,
+:before {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -80,6 +82,7 @@ body {
 a {
   text-decoration: none;
   color: #fff;
+  z-index: 400;
 }
 
 a:hover {
