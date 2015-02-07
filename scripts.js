@@ -347,7 +347,6 @@ var touch = {
 
 var nav = {
   top: 0,
-  animated: [],
   init: function () {
     nav.elm = document.getElementById('navbar');
     nav.offset = nav.elm.offsetTop;
@@ -357,6 +356,8 @@ var nav = {
       nav.elm.setAttribute('class', 'hide');
       nav.show = false;
     }
+
+    nav.animated = [];
 
     var animated = document.querySelectorAll('[data-animated]') || [];
 
