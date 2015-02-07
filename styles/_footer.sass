@@ -14,7 +14,8 @@
       &:nth-of-type(2)
         +animation-delay(.4s)
 
-.aboutfmail, .aboutftel
+.aboutfmail,
+.aboutftel
   opacity: 0
   +animation(fadeInLeft .8s ease-in-out)
   +animation-fill-mode(both)
@@ -66,3 +67,26 @@
   #contact
     #footer
       height: 100%
+
+@media screen and (max-width: 700px)
+  .contact-box
+    h3
+      display: none
+
+  #contact
+    #FooterWrapper
+      position: relative
+      height: 50%
+
+@media screen and (max-width: 700px) and (orientation: landscape)
+  #contact
+    height: auto
+
+    .spacer
+      min-height: 300px
+
+    .about-link
+      left: 30%
+
+  #FooterWrapper
+    padding: 0 40px
