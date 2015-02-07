@@ -1,0 +1,262 @@
+// global
+.headerright
+  position: relative
+  min-height: 240px
+
+.rightaboutheader
+  position: absolute
+  width: 100%
+
+// about
+.about
+  h1
+    margin: 0 auto 24px
+
+  .headerright
+    background-image: url(img/studio1.jpg)
+    background-size: cover
+    background-position-x: right !important
+
+  .rightaboutheader
+    background-color: rgba(black, 0.1)
+    background-image: url(img/men-white.png)
+    background-repeat: no-repeat
+    background-position: bottom center
+    @extend %background_full
+
+  .steptext strong
+    font-weight: 800
+
+  .stepimg.one
+    background-image: url(img/step1.png)
+
+  .stepimg.two
+    background-image: url(img/step2.png)
+
+  .stepimg.three
+    background-image: url(img/step3.png)
+
+  .arrowdiv
+    position: relative
+
+    .arrow
+      height: 0
+      width: 0
+      margin: 0 auto
+      border-style: solid
+      border-width: 6px 10px
+      border-color: transparent transparent transparent #d7c8a4
+
+  .s2
+    min-height: 800px
+
+    .viewworktext
+      display: inline-block
+
+    .s2top .abouth2 h2 span
+      display: inline-block
+      padding-left: 5px
+      border-bottom: 2px solid #000
+      line-height: 70px
+      vertical-align: middle
+
+    .devicelink
+      display: block
+      position: relative
+      background: 0 0
+
+    .deviceheader
+      position: relative
+
+      &:before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        height: 3px
+        width: 40px
+        background: #d7c8a4
+
+  .s3
+    display: table
+    position: relative
+    height: 100%
+    width: 100%
+
+    .s3top
+      display: table-cell
+      padding: 0
+      text-align: center
+      vertical-align: middle
+
+  .s4
+    display: table
+    height: 100%
+    width: 100%
+
+    .tablecell
+      display: table-cell
+      height: 100%
+      width: 100%
+      text-align: center
+      vertical-align: middle
+
+    .stepswrap .col.arrowdiv
+      padding-top: 100px
+
+    .stepimg
+      height: 100px
+      margin: 0 20px 40px
+      background-position: center bottom
+      background-repeat: no-repeat
+      background-size: auto 100%
+
+    ul
+      padding: 0
+
+  .s5
+    display: table
+    width: 100%
+    min-height: 900px
+    background-color: #171717
+    background-image: url(img/staender.png)
+    background-position: center 130px
+    background-repeat: no-repeat
+    background-size: auto 90%
+
+    .tablecell
+      display: table-cell
+      position: relative
+      height: 100%
+      vertical-align: middle
+
+  .s5,
+  .s6
+    display: table
+    width: 100%
+
+  .s5
+    min-height: 700px
+
+  .s6
+    min-height: 800px
+
+  .s5 .tablecell,
+  .s6 .tablecell
+    display: table-cell
+    height: 100%
+    vertical-align: middle
+
+  .s6
+    overflow: hidden
+
+  .principals .principwrap
+    position: relative
+
+    &::after
+      content: ""
+      display: table
+      clear: both
+
+@media screen and (min-width: 961px)
+  .aboutsection1 .textwrapabout
+    position: absolute
+    bottom: 25%
+    height: 40%
+    margin: 0 10% 18px 20%
+    padding: 0!important
+    text-align: right
+
+@media screen and (min-width: 1025px)
+  .about
+    .s2 
+      .deviceimage
+        opacity: 0
+        +animation(fadeOutLeft .8s ease-in-out)
+        +animation-fill-mode(both)
+
+      .deviceimage:nth-child(3)
+        +animation-delay(.3s)
+
+      .deviceimage:nth-child(2)
+        +animation-delay(.6s)
+
+      .deviceimage:nth-child(1)
+        +animation-delay(.9s)
+
+      &.active .deviceimage
+        +animation(fadeInLeft .4s ease-in-out)
+        +animation-fill-mode(both)
+
+        &:nth-child(2)
+          +animation-delay(.2s)
+    
+        &:nth-child(3)
+          +animation-delay(.4s)
+    
+        &:nth-child(4)
+          +animation-delay(.6s)
+
+    .s4
+      .col
+        opacity: 0
+
+      &.active .stepcol1,
+      &.active .stepcol2,
+      &.active .stepcol3
+        +animation(fadeIn .8s linear)
+        +animation-fill-mode(both)
+
+      &.active .arrowdiv
+        +animation(fadeInRight .8s ease)
+        +animation-fill-mode(both)
+
+      &.active .col:nth-child(2)
+        +animation-delay(.2s)
+
+      &.active .col:nth-child(3)
+        +animation-delay(.4s)
+
+      &.active .col:nth-child(4)
+        +animation-delay(.6s)
+
+      &.active .col:nth-child(5)
+        +animation-delay(.8s)
+
+    .s5
+      .col
+        opacity: 0
+
+      .principwrap:before
+        bottom: 100%
+
+      &.active .col
+        position: relative
+        +animation(fadeInTop .4s ease-in-out)
+        +animation-fill-mode(both)
+
+        &:nth-child(3)
+          +animation-delay(.2s)
+
+        &:nth-child(4)
+          +animation-delay(.4s)
+        
+        &:nth-child(5)
+          +animation-delay(.6s)
+        
+        &:nth-child(6)
+          +animation-delay(.8s)
+
+      &.active .principwrap:before
+        +animation(principles 5s linear)
+        +animation-fill-mode(both)
+
+    .s6 .wewrap .col
+      opacity: 0
+
+    .s6.active .wewrap .col
+      +animation(fadeIn .6s linear)
+      +animation-fill-mode(both)
+
+      &:nth-child(2)
+        +animation-delay(.3s)

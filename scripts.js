@@ -1,4 +1,5 @@
 var app = {
+  isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
   init: function () {
 
     var curtain = document.getElementById('curtain');
@@ -19,7 +20,9 @@ var app = {
       animation.init();
     } else {
       nav.init();
-      $.stellar();
+      if (!app.isMobile) {
+        $.stellar();
+      }
     }
 
     var pageLinks = document.querySelectorAll('.inlink');
@@ -381,13 +384,15 @@ var nav = {
   handler: function (evt) {
     var top = window.scrollY;
 
-    nav.animated.forEach(function (section) {
-      if (top > section.offset) {
-        section.elm.classList.add('active');
-      } else if (top > (section.offset * 0.5)) {
-        section.elm.classList.remove('active');
-      }
-    });
+    if (!app.isMobile) {
+      nav.animated.forEach(function (section) {
+        if (top > section.offset) {
+          section.elm.classList.add('active');
+        } else if (top > (section.offset * 0.5)) {
+          section.elm.classList.remove('active');
+        }
+      });
+    }
 
     if (top < nav.offset) {
       nav.elm.setAttribute('class', '');
