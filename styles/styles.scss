@@ -3670,95 +3670,12 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
 }
 }
 
-.forecastIcon,.forecastTeaserIcon {
-  float: left;
-  width: 30%;
-  padding-right: 2%
-}
-
-.forecastInfo,.forecastTeaserInfo {
-  float: left;
-  width: 68%
-}
-
-.forecastBox {
-  float: left;
-  width: 24.5%;
-  margin-right: .5%
-}
-
-@media screen and (max-width: 1280px) {
-.forecastBox {
-  width: 48%;
-  margin-right: 2%;
-  margin-bottom: 2%
-}
-}
-
-@media screen and (max-width: 480px) {
-.forecastBox {
-  width: 100%;
-  margin-right: 0;
-  margin-bottom: 2%
-}
-}
-
 .career3 .elementheader {
   color: #fff;
   font-family: "Playfair Display",serif;
   font-size: 30px;
   font-weight: 800;
   line-height: 36px
-}
-
-h1 {
-  font-size: 50px;
-  line-height: 120%
-}
-
-h2 {
-  font-size: 40px;
-  line-height: 120%
-}
-
-@media screen and (max-width: 1440px) {
-h1 {
-  font-size: 45px
-}
-
-h2 {
-  font-size: 36px
-}
-}
-
-@media screen and (max-width: 1280px) {
-h1 {
-  font-size: 40px
-}
-
-h2 {
-  font-size: 28px
-}
-}
-
-@media screen and (max-width: 960px) {
-h1 {
-  font-size: 32px
-}
-
-h2 {
-  font-size: 30px
-}
-}
-
-@media screen and (max-width: 480px) {
-h1 {
-  font-size: 30px
-}
-
-h2 {
-  font-size: 24px
-}
 }
 
 .flag {
