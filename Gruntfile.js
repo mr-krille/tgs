@@ -5,6 +5,7 @@ module.exports = function(grunt) {
         options: {
           sassDir: 'styles',
           cssDir: '.',
+          imagesDir: 'img',
           noLineComments: true,
           outputStyle: 'compressed',
           environment: 'production'
@@ -14,7 +15,7 @@ module.exports = function(grunt) {
         options: {
           sassDir: 'styles',
           cssDir: '.',
-          imageDir: 'img',
+          imagesDir: 'img',
           outputStyle: 'nested',
           environment: 'development'
         }
