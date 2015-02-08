@@ -83,11 +83,41 @@
     height: 100%
     width: 100%
 
+
+    .s3header h3
+      font-size: 90px
+      font-weight: 200
+      line-height: 90px
+
+    .s3subheader h4
+      margin: 0 0 10px
+      font-size: 18px
+
     .s3top
       display: table-cell
       padding: 0
       text-align: center
       vertical-align: middle
+
+      h3
+        margin: 40px 0 0
+
+      > div
+        position: absolute
+        +transform(translateX(-50%) translateY(-25%))
+
+    .s3text p
+      position: relative
+
+      &::after
+        content: ""
+        position: absolute
+        bottom: -30px
+        left: 50%
+        height: 2px
+        width: 280px
+        margin-left: -140px
+        background: #fff
 
   .s4
     display: table
@@ -158,14 +188,43 @@
       display: table
       clear: both
 
+@media screen and (max-width: 640px)
+  .about
+    .s4 .stepimg
+      height: 160px
+      width: 100%
+      margin: 20px 0
+
+    .s5
+      background-position: 27% 130px
+
+@media only screen and (min-width: 641px) and (max-width: 960px)
+  .s4 .stepheader
+    position: relative
+    top: -70px
+
+@media screen and (max-width: 960px)
+  .about
+    .s2 .deviceheader::before
+      left: 50%
+      margin-left: -20px
+
+    .s5
+      background-position: -800px 130px
+
 @media screen and (min-width: 961px)
-  .aboutsection1 .textwrapabout
-    position: absolute
-    bottom: 25%
-    height: 40%
-    margin: 0 10% 18px 20%
-    padding: 0!important
-    text-align: right
+  .about
+    .aboutsection1 .textwrapabout
+      position: absolute
+      bottom: 25%
+      height: 40%
+      margin: 0 10% 18px 20%
+      padding: 0!important
+      text-align: right
+
+    .s4 .stepimg
+      height: 170px
+      width: auto
 
 @media screen and (min-width: 1025px)
   .about
