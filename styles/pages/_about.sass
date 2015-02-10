@@ -82,19 +82,27 @@
     position: relative
     height: 100%
     width: 100%
-
+    color: #fff
+    background: #171717
 
     .s3header h3
+      font-family: SouthernAire, serif
       font-size: 90px
       font-weight: 200
       line-height: 90px
 
     .s3subheader h4
       margin: 0 0 10px
+      font-family: Lato, sans-serif
       font-size: 18px
+      font-weight: 400
+      line-height: 37px
+      text-transform: uppercase
 
     .s3top
       display: table-cell
+      max-width: 1200px
+      margin: 0 auto
       padding: 0
       text-align: center
       vertical-align: middle
@@ -102,12 +110,14 @@
       h3
         margin: 40px 0 0
 
-      > div
-        position: absolute
-        +transform(translateX(-50%) translateY(-25%))
-
     .s3text p
       position: relative
+      max-width: 960px
+      margin: 0 auto
+      padding-bottom: 40px
+      font-family: Lato, sans-serif
+      font-size: 12px
+      line-height: 22px
 
       &::after
         content: ""
@@ -148,6 +158,7 @@
     display: table
     width: 100%
     min-height: 900px
+    color: #fff
     background-color: #171717
     background-image: url(img/staender.png)
     background-position: center 130px
@@ -226,6 +237,11 @@
       height: 170px
       width: auto
 
+@media screen and (min-width: 600px) and (max-width: $breakpoint-m) and (min-height: 600px)
+  .devicetextwrap,
+  .deviceimage .deviceimgsingle img
+    margin-left: 0
+
 @media screen and (min-width: 1025px)
   .about
     .s2 
@@ -255,6 +271,11 @@
     
         &:nth-child(4)
           +animation-delay(.6s)
+
+    .s3
+      .s3top > div
+        position: absolute
+        +transform(translateX(-50%) translateY(-25%))
 
     .s4
       .col
