@@ -7,6 +7,24 @@
   position: absolute
   width: 100%
 
+.weheader
+  position: relative
+  margin-top: 30px
+  margin-bottom: 30px
+  font-family: "Playfair Display", serif
+  font-size: 40px
+  font-weight: 800
+  color: #000
+
+  &::before
+    content: ""
+    position: absolute
+    bottom: -8px
+    left: 0
+    height: 3px
+    width: 40px
+    background: #d7c8a4
+
 // about
 .about
   h1
@@ -23,6 +41,18 @@
     background-repeat: no-repeat
     background-position: bottom center
     @extend %background_full
+
+  .deviceheader
+    position: relative
+
+    &:before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      height: 3px
+      width: 40px
+      background: #d7c8a4
 
   .steptext strong
     font-weight: 800
@@ -65,18 +95,6 @@
       position: relative
       background: 0 0
 
-    .deviceheader
-      position: relative
-
-      &:before
-        content: ""
-        position: absolute
-        top: 0
-        left: 0
-        height: 3px
-        width: 40px
-        background: #d7c8a4
-
   .s3
     display: table
     position: relative
@@ -87,17 +105,16 @@
 
     .s3header h3
       font-family: SouthernAire, serif
-      font-size: 90px
+      font-size: 150px
       font-weight: 200
-      line-height: 90px
+      line-height: 100px
 
     .s3subheader h4
       margin: 0 0 10px
-      font-family: Lato, sans-serif
+      font-family: "Playfair Display", serif
       font-size: 18px
       font-weight: 400
-      line-height: 37px
-      text-transform: uppercase
+      line-height: 34px
 
     .s3top
       display: table-cell
@@ -110,7 +127,7 @@
       h3
         margin: 40px 0 0
 
-    .s3text p
+    .s3text
       position: relative
       max-width: 960px
       margin: 0 auto
@@ -179,9 +196,6 @@
   .s5
     min-height: 700px
 
-  .s6
-    min-height: 800px
-
   .s5 .tablecell,
   .s6 .tablecell
     display: table-cell
@@ -190,6 +204,7 @@
 
   .s6
     overflow: hidden
+    height: 100%
 
   .principals .principwrap
     position: relative
@@ -213,15 +228,107 @@
   .s4 .stepheader
     position: relative
     top: -70px
+    width: 43%
+    margin-left: 0
 
 @media screen and (max-width: 960px)
   .about
-    .s2 .deviceheader::before
+    .weheader::before,
+    .deviceheader::before
       left: 50%
       margin-left: -20px
 
+    .s4
+      .stepswrap .col.arrowdiv
+        padding-top: 60px
+
+      .steptext ul,
+      .steptext div
+        margin: 0 15px
+
+      .arrowdiv .arrow
+        +transform(rotate(90deg))
+
     .s5
       background-position: -800px 130px
+
+    .wewrap .col
+      margin: 0
+
+    .wewrap .col:first-child
+      margin: 0 0 50px
+
+    .aboutfooter .aboutfootertop .footerleft
+      padding: 10% 4%
+
+    .aboutftel,
+    .aboutfmail
+      display: none
+
+    .pictop
+      height: 300px
+
+    .picbottom
+      display: none
+
+@media screen and (min-width: 769px) and (max-width: 1024px)
+  .about
+    .s2top .abouth2 h2 br
+      display: none
+
+    .s2bottomwrap .deviceimage
+      text-align: left
+      margin-right: 8%
+
+    .deviceimage:first-of-type
+      width: 11%
+      img
+        width: 98px
+
+    .s2bottomwrap .deviceimage:nth-of-type(2)
+      width: 12%
+      margin-right: 6%
+
+      .deviceimgsingle img
+        width: 88px
+
+      .devicetext
+        width: 80px
+
+    .s2bottomwrap .deviceimage:nth-of-type(3)
+      width: 13%
+
+    .s2bottomwrap .deviceimage:nth-of-type(4)
+      width: 33%
+      margin-right: 0
+
+    .s3 .s3text
+      max-width: 715px
+
+    .s4
+      .stepcol2,
+      .stepcol3
+        .stepheader
+          margin-left: 10px
+          margin-right: 10px
+
+    .weheader
+      padding-bottom: 5px
+
+@media screen and (min-width: 961px) and (max-width: 1024px)
+  .about
+    .s2top .abouth2
+      width: 46%
+
+      h2
+        max-width: none
+
+      br
+        display: none
+
+    .s2top .abouttext2
+      width: 50%
+      padding-left: 40px
 
 @media screen and (min-width: 961px)
   .about
@@ -238,9 +345,40 @@
       width: auto
 
 @media screen and (min-width: 600px) and (max-width: $breakpoint-m) and (min-height: 600px)
-  .devicetextwrap,
-  .deviceimage .deviceimgsingle img
-    margin-left: 0
+  .about
+    .headerright
+      background-image: none
+
+    .rightaboutheader
+      background-color: #fff
+      background-image: url(img/mobile_men.png)
+      background-size: auto 90%
+
+    .weheader
+      margin-bottom: 30px
+
+    .devicetextwrap,
+    .deviceimage .deviceimgsingle img
+      margin-left: 0
+
+    .s2leftwrap,
+    .s3 .s3top .s3text
+      max-width: 620px
+
+    .s2
+      .s2top .abouth2 h2
+        float: none
+        line-height: 30px
+
+        span
+          line-height: 50px
+
+    .s4
+      min-height: 1000px
+
+    .s5
+      height: 108%
+      background-position: -1020px 145px
 
 @media screen and (min-width: 1025px)
   .about

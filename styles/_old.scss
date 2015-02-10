@@ -1215,28 +1215,6 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
   margin-right: 0
 }
 
-.weheader {
-  position: relative;
-  font-family: "Playfair Display",serif;
-  font-size: 40px;
-  line-height: 70px;
-  font-weight: 800;
-  color: #000;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  width: 62%
-}
-
-.weheader:before {
-  content: "";
-  position: absolute;
-  bottom: -18px;
-  left: 0;
-  height: 3px;
-  width: 40px;
-  background: #d7c8a4
-}
-
 .wetext {
   font-size: 13px;
   line-height: 16px;
@@ -1964,203 +1942,203 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
 }
 
 @media screen and (max-width: 1420px) {
-.career2 .passion,.career4,.casestudies #topWrap {
-  padding-left: 2%;
-  padding-right: 2%
-}
+  .career2 .passion,.career4,.casestudies #topWrap {
+    padding-left: 2%;
+    padding-right: 2%
+  }
 
-#pageNavi {
-  width: 25%
-}
+  #pageNavi {
+    width: 25%
+  }
 
-.passionwrap li {
-  width: 18%
-}
+  .passionwrap li {
+    width: 18%
+  }
 
-.career2 .success.passion {
-  padding-left: 0;
-  padding-right: 0
-}
+  .career2 .success.passion {
+    padding-left: 0;
+    padding-right: 0
+  }
 }
 
 @media screen and (max-width: 1220px) {
-.textelement .elementheader {
-  font-size: 35px;
-  line-height: 38px
-}
+  .textelement .elementheader {
+    font-size: 35px;
+    line-height: 38px
+  }
 
-.textelement .elementtext {
-  margin-top: 15px
-}
+  .textelement .elementtext {
+    margin-top: 15px
+  }
 
-.colcontainer2.lefttext .textelement .elementtext {
-  max-width: 85%
-}
+  .colcontainer2.lefttext .textelement .elementtext {
+    max-width: 85%
+  }
 }
 
 @media screen and (max-width: 1200px) {
-.s2bottomwrap {
-  margin-top: 25px
-}
+  .s2bottomwrap {
+    margin-top: 25px
+  }
 
-.s2top {
-  padding: 160px 2%
-}
+  .s2top {
+    padding: 160px 2%
+  }
 
-.deviceimage:nth-of-type(4) {
-  width: 40%
-}
+  .deviceimage:nth-of-type(4) {
+    width: 40%
+  }
 
-.stepswrap .col.arrowdiv {
-  width: 6%
-}
+  .stepswrap .col.arrowdiv {
+    width: 6%
+  }
 
-.principwrap .col.left {
-  padding-left: 10%;
-  padding-right: 2%
-}
+  .principwrap .col.left {
+    padding-left: 10%;
+    padding-right: 2%
+  }
 
-.principwrap .col.right {
-  padding-right: 8%;
-  padding-left: 2%
-}
+  .principwrap .col.right {
+    padding-right: 8%;
+    padding-left: 2%
+  }
 
-.prinheader {
-  line-height: 40px;
-  padding-bottom: 15px
-}
+  .prinheader {
+    line-height: 40px;
+    padding-bottom: 15px
+  }
 
-#footer.aboutfooterbottom {
-  padding: 35px 0
-}
+  #footer.aboutfooterbottom {
+    padding: 35px 0
+  }
 
-.aboutfooter .textwrapabout {
-  padding-left: 10%
-}
+  .aboutfooter .textwrapabout {
+    padding-left: 10%
+  }
 
-.aboutfooterbottom .footerleft,.aboutfootertop .footerright {
-  width: 50%
-}
+  .aboutfooterbottom .footerleft,.aboutfootertop .footerright {
+    width: 50%
+  }
 
-.aboutfooterbottom .footerright {
-  float: right
-}
+  .aboutfooterbottom .footerright {
+    float: right
+  }
 
-.fixed {
-  width: 48%
-}
+  .fixed {
+    width: 48%
+  }
 
-.deviceimgwrap {
-  height: 280px
-}
+  .deviceimgwrap {
+    height: 280px
+  }
 
-#footer {
-  padding-left: 2%;
-  padding-right: 2%
-}
+  #footer {
+    padding-left: 2%;
+    padding-right: 2%
+  }
 
-.careerfooter .footerleft {
-  display: block;
-  width: 50%
-}
+  .careerfooter .footerleft {
+    display: block;
+    width: 50%
+  }
 
-#c858 {
-  padding-left: 4%;
-  padding-right: 4%
-}
+  #c858 {
+    padding-left: 4%;
+    padding-right: 4%
+  }
 
-.headertextwrap .headertitle h1 br {
-  display: none
-}
+  .headertextwrap .headertitle h1 br {
+    display: none
+  }
 }
 
 @media screen and (max-width: 1150px) {
-.headertextwrap {
-  padding-left: 10%;
-  padding-right: 10%
-}
+  .headertextwrap {
+    padding-left: 10%;
+    padding-right: 10%
+  }
 
-.headersub {
-  padding-left: 30px
-}
+  .headersub {
+    padding-left: 30px
+  }
 
-#cc2,.casenext {
-  padding-left: 2%;
-  padding-right: 2%
-}
+  #cc2,.casenext {
+    padding-left: 2%;
+    padding-right: 2%
+  }
 
-.contactheader .rightaboutheader {
-  background-size: auto 43%;
-  background-position: 45px center
-}
+  .contactheader .rightaboutheader {
+    background-size: auto 43%;
+    background-position: 45px center
+  }
 
-.aboutfmail a,.aboutfmail a:hover {
-  font-size: 19px;
-  line-height: 32px
-}
+  .aboutfmail a,.aboutfmail a:hover {
+    font-size: 19px;
+    line-height: 32px
+  }
 
-.contactheader .aboutfmail a:hover {
-  font-size: 25px;
-  line-height: 25px
-}
+  .contactheader .aboutfmail a:hover {
+    font-size: 25px;
+    line-height: 25px
+  }
 }
 
 @media screen and (max-width: 1050px) {
-.firstItem .textwrap .title,.itemright .textwrap .title,.s2top .abouth2 h2 {
-  font-size: 40px;
-  line-height: 52px
-}
+  .firstItem .textwrap .title,.itemright .textwrap .title,.s2top .abouth2 h2 {
+    font-size: 40px;
+    line-height: 52px
+  }
 
-.weheader {
-  line-height: 52px;
-  font-size: 35px
-}
+  .weheader {
+    line-height: 52px;
+    font-size: 35px
+  }
 
-.aboutfmail a,.aboutfmail a:hover,.aboutftel a,.aboutftel a:hover {
-  font-size: 20px
-}
+  .aboutfmail a,.aboutfmail a:hover,.aboutftel a,.aboutftel a:hover {
+    font-size: 20px
+  }
 
-.contactheader .aboutfmail a:hover,.contactheader .aboutftel a:hover {
-  font-size: 25px;
-  line-height: 25px
-}
+  .contactheader .aboutfmail a:hover,.contactheader .aboutftel a:hover {
+    font-size: 25px;
+    line-height: 25px
+  }
 
-.navi li {
-  margin-left: 4%
-}
+  .navi li {
+    margin-left: 4%
+  }
 
-.firstItem .textwrap,.textwrapabout {
-  padding-right: 35px
-}
+  .firstItem .textwrap,.textwrapabout {
+    padding-right: 35px
+  }
 
-.s3top,.we {
-  padding: 0 3%
-}
+  .s3top,.we {
+    padding: 0 3%
+  }
 
-.principwrap {
-  padding-top: 50px
-}
+  .principwrap {
+    padding-top: 50px
+  }
 
-.we {
-  padding-top: 25px
-}
+  .we {
+    padding-top: 25px
+  }
 
-#footer.aboutfooterbottom {
-  padding-left: 3%;
-  padding-right: 3%
-}
+  #footer.aboutfooterbottom {
+    padding-left: 3%;
+    padding-right: 3%
+  }
 
-.aboutheader .abouttext {
-  max-width: 320px
-}
+  .aboutheader .abouttext {
+    max-width: 320px
+  }
 
-.navi li.bullet {
-  line-height: 21px!important
-}
+  .navi li.bullet {
+    line-height: 21px!important
+  }
 
-.deviceheader,.devicetext {
-  width: 100%
-}
+  .deviceheader,.devicetext {
+    width: 100%
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -2267,7 +2245,6 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
   .weheader {
     border: none;
     padding-bottom: 15px;
-    margin-bottom: 15px!important
   }
 
   .career .rightaboutheader {
@@ -2318,1159 +2295,1159 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
 }
 
 @media screen and (max-width: 950px) {
-.mainnav {
-  text-align: center
-}
+  .mainnav {
+    text-align: center
+  }
 
-.mainnav li {
-  margin-left: 5%
-}
+  .mainnav li {
+    margin-left: 5%
+  }
 
-#overview {
-  width: 15%
-}
+  #overview {
+    width: 15%
+  }
 
-#overview a {
-  padding-left: 22px
-}
+  #overview a {
+    padding-left: 22px
+  }
 
-#pageNavi .prev a {
-  padding-left: 25px
-}
+  #pageNavi .prev a {
+    padding-left: 25px
+  }
 
-#pageNavi .next a {
-  padding-right: 25px
-}
+  #pageNavi .next a {
+    padding-right: 25px
+  }
 
-.textelement .elementheader {
-  font-size: 28px;
-  line-height: 30px
-}
+  .textelement .elementheader {
+    font-size: 28px;
+    line-height: 30px
+  }
 
-.colcontainer2.lefttext .textelement .elementtext,.colcontainer2.righttext .textelement .elementtext {
-  max-width: 95%
-}
+  .colcontainer2.lefttext .textelement .elementtext,.colcontainer2.righttext .textelement .elementtext {
+    max-width: 95%
+  }
 
-.tx-dce-pi1 .bgtext.align-center {
-  height: 200px!important
-}
+  .tx-dce-pi1 .bgtext.align-center {
+    height: 200px!important
+  }
 }
 
 @media screen and (max-width: 960px) {
-.aboutsection1 .headerleft,.aboutsection1 .headerright,.contactheader .headerleft,.contactheader .headerright {
-  width: 100%;
-  height: 50%
-}
-
-.aboutsection1 .textwrapabout,.contactheader .textwrapabout {
-  width: 100%;
-  right: 0;
-  padding: 0;
-  text-align: center
-}
-
-.aboutsection1 .aboutheader .abouttext,.contactheader .abouttext {
-  margin: 0 auto
-}
-
-.aboutsection1 .navi,.contactheader .navi {
-  max-width: 1000px;
-  float: none
-}
-
-.aboutsection1 #menu,.contactheader #menu {
-  max-width: 190px;
-  margin: 0 auto
-}
-
-.aboutsection1 .rightaboutheader,.contactheader .rightaboutheader {
-  background-position: center bottom
-}
-
-.s2top .abouth2,.s2top .abouttext2 {
-  width: 100%;
-  float: none;
-  text-align: center;
-  padding: 0 2%
-}
-
-.s2top .abouth2 {
-  padding-bottom: 35px
-}
-
-.s2leftwrap,.s3text {
-  max-width: 470px;
-  padding: 0 20px;
-  margin: 0 auto;
-  background-size: 67% auto
-}
-
-.s2top .abouth2 {
-  background: 0 0
-}
-
-.s2top .abouth2 span {
-  display: block
-}
-
-.s2top .abouth2 h2 {
-  font-size: 35px;
-  line-height: 40px
-}
-
-.s3subheader h4 {
-  font-size: 17px;
-  line-height: 26px
-}
-
-.deviceimage {
-  width: 49%!important;
-  text-align: center;
-  margin: 0
-}
-
-.deviceimage:first-of-type img {
-  max-width: 86px;
-  max-height: 126px
-}
-
-.deviceimage:nth-of-type(2) img {
-  max-width: 75px;
-  max-height: 132px;
-  margin-left: 10%
-}
-
-.deviceimage:nth-of-type(3) img {
-  max-width: 111px;
-  max-height: 152px;
-  margin-left: 9%
-}
-
-.deviceimage:nth-of-type(4) img {
-  max-width: 288px;
-  max-height: 177px;
-  margin-left: 9%
-}
-
-.devicelink {
-  margin: 0 auto;
-  padding: 0
-}
-
-.deviceimgwrap {
-  width: 100%;
-  padding: 0;
-  height: 206px
-}
-
-.devicelink {
-  background-position: 90% center;
-  cursor: pointer
-}
-
-.viewworktext {
-  display: inline-block
-}
-
-.deviceheader {
-  background-position: top center
-}
-
-.grid4ColElement {
-  float: none;
-  width: 100%;
-  margin-right: 0
-}
-
-.stepswrap .col {
-  display: inline-block;
-  vertical-align: top;
-  width: 100%;
-  margin-right: 0
-}
-
-.stepimg {
-  width: 15%;
-  display: inline-block
-}
-
-.stepheader {
-  width: 42%;
-  display: inline-block;
-  font-size: 30px;
-  line-height: 33px;
-  background-size: 40% auto;
-  text-align: left;
-  margin-left: 5%;
-  margin-bottom: 0;
-  padding-bottom: 12px
-}
-
-.stepheader br {
-  display: none
-}
-
-.steptext {
-  text-align: center
-}
-
-.steptext br {
-  display: none
-}
-
-.steptext div,.steptext ul {
-  display: inline-block;
-  width: auto
-}
-
-.stepswrap {
-  text-align: center;
-  padding-top: 12%
-}
-
-.stepswrap col {
-  display: inline-block
-}
-
-.s5 .principals {
-  background: 0 0;
-  padding: 0!important
-}
-
-.principwrap {
-  width: 70%;
-  float: left;
-  padding: 0
-}
-
-.principals .principwrap {
-  text-align: left
-}
-
-.principals .principwrap .col {
-  float: none;
-  text-align: left;
-  padding: 0;
-  margin: 0;
-  display: block;
-  width: 100%
-}
-
-.printext {
-  display: inline-block;
-  max-width: 80%;
-  padding-bottom: 19px
-}
-
-.prinheader {
-  display: inline-block;
-  width: 100%;
-  font-size: 30px;
-  padding-bottom: 10px
-}
-
-.respprincimg {
-  display: block;
-  float: left;
-  width: 30%;
-  height: 480px;
-  margin-top: 14px;
-  min-height: 400px
-}
-
-.prinh3 {
-  line-height: 75px;
-  font-size: 60px;
-  padding-bottom: 15px
-}
-
-.wewrap .col {
-  width: 100%;
-  text-align: center;
-  margin: 0 0 30px
-}
-
-.weimg,.wetitle {
-  max-width: 60%;
-  margin: 0 auto -1%;
-  font-size: 65px
-}
-
-.weheader {
-  margin: 0 auto 10px;
-  border: none;
-  padding-bottom: 8px;
-  font-size: 30px
-}
-
-.aboutfootertop {
-  overflow: visible;
-  height: inherit
-}
-
-.aboutfooter .aboutfootertop .footerleft,.aboutfooter .aboutfootertop .footerright {
-  width: 100%;
-  float: none;
-  position: inherit
-}
-
-.aboutfooter .aboutfootertop .footerright {
-  height: 200px
-}
-
-.pictop {
-  width: 66.66%;
-  float: left;
-  height: 100%
-}
-
-.picbottom {
-  width: 33.33%;
-  float: left;
-  height: 100%
-}
-
-.aboutfooter .textwrapabout {
-  text-align: center
-}
-
-.aboutfooter .textwrapabout div {
-  margin: 0 auto
-}
-
-.aboutfh {
-  margin-bottom: 18px!important
-}
-
-.aboutfh h3,.footerh3 h3 {
-  font-size: 30px
-}
-
-#footer {
-  padding-top: 4%;
-  padding-bottom: 4%
-}
-
-#footer .fr {
-  display: none
-}
-
-#footer .fl {
-  width: 100%
-}
-
-.footerh3 h3 {
-  padding-bottom: 0
-}
-
-.footerco {
-  display: block;
-  clear: both;
-  padding-top: 40px
-}
-
-.footerco .copyright {
-  display: inline
-}
-
-.copyrightwrap {
-  float: left
-}
-
-.imprint {
-  float: none
-}
-
-.imprint a,.imprint div {
-  display: inline-block!important
-}
-
-.headertextwrap .headertitle .quotes {
-  float: none;
-  margin-left: 0;
-  line-height: 15px;
-  margin-top: 20px
-}
-
-.headersub {
-  padding-left: 0
-}
-
-.headertextwrap .headertitle h1 {
-  font-size: 31px
-}
-
-.colcontainer2.lefttext .col1element,.colcontainer2.lefttext .col2element,.colcontainer2.righttext .col1element,.colcontainer2.righttext .col2element,.colcontainer2.righttext .col3element,.credits,.nextcase {
-  width: 100%
-}
-
-.colcontainer2.lefttext .col2element {
-  border-left: none;
-  border-right: none
-}
-
-.colcontainer2.lefttext .col1element,.colcontainer2.righttext .col2element {
-  border-bottom: 10px solid #fff;
-  border-left: none;
-  border-right: none
-}
-
-.textelement {
-  padding-top: 15%;
-  padding-bottom: 15%
-}
-
-.colcontainer2.righttext .col3element {
-  display: block
-}
-
-.colcontainer2.righttext .col1element {
-  display: none
-}
-
-.casetext {
-  max-width: 750px;
-  padding: 75px 0;
-}
-
-.credits {
-  margin-bottom: 25px
-}
-
-#footer .footerright {
-  margin-bottom: 0;
-  padding: 0
-}
-
-.casenexttext {
-  padding-left: 4%;
-  padding-right: 4%
-}
-
-.casenexttext .abouttext {
-  max-width: 100%
-}
-
-.casestudies #pageNavi {
-  display: none
-}
-
-.casestudies .menubutton1 {
-  display: block;
-  text-align: right;
-  color: #fff;
-  text-decoration: underline;
-  cursor: pointer
-}
-
-.casestudies #mainNavi {
-  float: right
-}
-
-.casestudies .mainnav {
-  display: none
-}
-
-.casestudies .mainnav li {
-  display: block;
-  text-align: right
-}
-
-.casestudies .mainnav li.bullet {
-  display: none
-}
-
-.row1right .elementtext {
-  width: 80%
-}
-
-.career .rightaboutheader,.contactheader .rightaboutheader {
-  background-size: auto 88%;
-  background-position: center center
-}
-
-.careerfooter .biggerpic {
-  width: 50%;
-  margin: 0 auto;
-  max-width: 30%;
-  padding-top: 33px
-}
-
-.careerfooter .devicetextwrap {
-  margin: 0 auto;
-  width: auto;
-  max-width: 50%;
-  padding-top: 25px;
-  text-align: center
-}
-
-.aboutfooter .aboutfootertop .footerright {
-  background: #fff
-}
-
-.aboutheader .navi {
-  width: 100%;
-  margin-right: 0
-}
-
-.abouth1 h1 {
-  line-height: 40px;
-  margin-bottom: 25px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto
-}
-
-.aboutsection1 .navi,.contactheader .navi {
-  padding: 0
-}
-
-.rightaboutheader {
-  background-size: auto 96%
-}
-
-.s2top .abouth2 h2 {
-  max-width: 1000px;
-  border: none;
-  margin-bottom: 15px
-}
-
-.s2bottomwrap {
-  text-align: center;
-  max-width: 80%;
-  margin: 0 auto
-}
-
-.s2bottomwrap .deviceimage {
-  margin-right: 0;
-  text-align: center
-}
-
-.deviceheader,.devicetext {
-  width: 100%!important;
-  max-width: 1000px!important
-}
-
-.arrowdiv.lastdivider {
-  display: none
-}
-
-.wecontact {
-  width: 50%;
-  float: left;
-  margin-left: 13%
-}
-
-.wesocial {
-  width: 26%;
-  float: left
-}
-
-.weimg {
-  margin-bottom: 12px
-}
-
-.wetext {
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto
-}
-
-.passioncareer {
-  padding: 0
-}
-
-.career2 .elementheader {
-  font-size: 20px;
-  line-height: 25px
-}
-
-.career2 .elementheader .detail {
-  font-size: 70px;
-  line-height: 24px
-}
-
-.row1right {
-  background-position: -87px
-}
-
-.careerfooter .devicetextwrap {
-  display: none
-}
-
-.careerfooter .aboutfootertop {
-  display: block
-}
-
-.s4 .fp-tableCell {
-  padding-bottom: 100px
-}
-
-.aboutfooter .aboutfootertop .footerleft {
-  padding: 10% 4% 1%!important
-}
-
-.accordion-module {
-  max-width: 650px
-}
-
-.tabwrap {
-  min-height: 120px
-}
-
-.stepimg img {
-  margin-top: -25px
-}
-
-.steptext div,.steptext ul {
-  margin-right: 12px
-}
-
-.aboutfooter .aboutfmail {
-  text-align: left;
-  max-width: 345px
-}
-
-.aboutfooter .aboutftel {
-  max-width: 343px;
-  text-align: left
-}
-
-.careerfooter .biggerpic img {
-  max-width: 250px
-}
-
-.plustext {
-  margin-bottom: 50px
-}
-
-.casetitle {
-  margin-top: -16px
-}
+  .aboutsection1 .headerleft,.aboutsection1 .headerright,.contactheader .headerleft,.contactheader .headerright {
+    width: 100%;
+    height: 50%
+  }
+
+  .aboutsection1 .textwrapabout,.contactheader .textwrapabout {
+    width: 100%;
+    right: 0;
+    padding: 0;
+    text-align: center
+  }
+
+  .aboutsection1 .aboutheader .abouttext,.contactheader .abouttext {
+    margin: 0 auto
+  }
+
+  .aboutsection1 .navi,.contactheader .navi {
+    max-width: 1000px;
+    float: none
+  }
+
+  .aboutsection1 #menu,.contactheader #menu {
+    max-width: 190px;
+    margin: 0 auto
+  }
+
+  .aboutsection1 .rightaboutheader,.contactheader .rightaboutheader {
+    background-position: center bottom
+  }
+
+  .s2top .abouth2,.s2top .abouttext2 {
+    width: 100%;
+    float: none;
+    text-align: center;
+    padding: 0 2%
+  }
+
+  .s2top .abouth2 {
+    padding-bottom: 35px
+  }
+
+  .s2leftwrap,.s3text {
+    max-width: 470px;
+    padding: 0 20px;
+    margin: 0 auto;
+    background-size: 67% auto
+  }
+
+  .s2top .abouth2 {
+    background: 0 0
+  }
+
+  .s2top .abouth2 span {
+    display: block
+  }
+
+  .s2top .abouth2 h2 {
+    font-size: 35px;
+    line-height: 40px
+  }
+
+  .s3subheader h4 {
+    font-size: 17px;
+    line-height: 26px
+  }
+
+  .deviceimage {
+    width: 49%!important;
+    text-align: center;
+    margin: 0
+  }
+
+  .deviceimage:first-of-type img {
+    max-width: 86px;
+    max-height: 126px
+  }
+
+  .deviceimage:nth-of-type(2) img {
+    max-width: 75px;
+    max-height: 132px;
+    margin-left: 10%
+  }
+
+  .deviceimage:nth-of-type(3) img {
+    max-width: 111px;
+    max-height: 152px;
+    margin-left: 9%
+  }
+
+  .deviceimage:nth-of-type(4) img {
+    max-width: 288px;
+    max-height: 177px;
+    margin-left: 9%
+  }
+
+  .devicelink {
+    margin: 0 auto;
+    padding: 0
+  }
+
+  .deviceimgwrap {
+    width: 100%;
+    padding: 0;
+    height: 206px
+  }
+
+  .devicelink {
+    background-position: 90% center;
+    cursor: pointer
+  }
+
+  .viewworktext {
+    display: inline-block
+  }
+
+  .deviceheader {
+    background-position: top center
+  }
+
+  .grid4ColElement {
+    float: none;
+    width: 100%;
+    margin-right: 0
+  }
+
+  .stepswrap .col {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    margin-right: 0
+  }
+
+  .stepimg {
+    width: 15%;
+    display: inline-block
+  }
+
+  .stepheader {
+    width: 42%;
+    display: inline-block;
+    font-size: 30px;
+    line-height: 33px;
+    background-size: 40% auto;
+    text-align: left;
+    margin-left: 5%;
+    margin-bottom: 0;
+    padding-bottom: 12px
+  }
+
+  .stepheader br {
+    display: none
+  }
+
+  .steptext {
+    text-align: center
+  }
+
+  .steptext br {
+    display: none
+  }
+
+  .steptext div,.steptext ul {
+    display: inline-block;
+    width: auto
+  }
+
+  .stepswrap {
+    text-align: center;
+    padding-top: 12%
+  }
+
+  .stepswrap col {
+    display: inline-block
+  }
+
+  .s5 .principals {
+    background: 0 0;
+    padding: 0!important
+  }
+
+  .principwrap {
+    width: 70%;
+    float: left;
+    padding: 0
+  }
+
+  .principals .principwrap {
+    text-align: left
+  }
+
+  .principals .principwrap .col {
+    float: none;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 100%
+  }
+
+  .printext {
+    display: inline-block;
+    max-width: 80%;
+    padding-bottom: 19px
+  }
+
+  .prinheader {
+    display: inline-block;
+    width: 100%;
+    font-size: 30px;
+    padding-bottom: 10px
+  }
+
+  .respprincimg {
+    display: block;
+    float: left;
+    width: 30%;
+    height: 480px;
+    margin-top: 14px;
+    min-height: 400px
+  }
+
+  .prinh3 {
+    line-height: 75px;
+    font-size: 60px;
+    padding-bottom: 15px
+  }
+
+  .wewrap .col {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 30px
+  }
+
+  .weimg,.wetitle {
+    max-width: 60%;
+    margin: 0 auto -1%;
+    font-size: 65px
+  }
+
+  .weheader {
+    margin: 0 auto 10px;
+    border: none;
+    padding-bottom: 8px;
+    font-size: 30px
+  }
+
+  .aboutfootertop {
+    overflow: visible;
+    height: inherit
+  }
+
+  .aboutfooter .aboutfootertop .footerleft,.aboutfooter .aboutfootertop .footerright {
+    width: 100%;
+    float: none;
+    position: inherit
+  }
+
+  .aboutfooter .aboutfootertop .footerright {
+    height: 200px
+  }
+
+  .pictop {
+    width: 66.66%;
+    float: left;
+    height: 100%
+  }
+
+  .picbottom {
+    width: 33.33%;
+    float: left;
+    height: 100%
+  }
+
+  .aboutfooter .textwrapabout {
+    text-align: center
+  }
+
+  .aboutfooter .textwrapabout div {
+    margin: 0 auto
+  }
+
+  .aboutfh {
+    margin-bottom: 18px!important
+  }
+
+  .aboutfh h3,.footerh3 h3 {
+    font-size: 30px
+  }
+
+  #footer {
+    padding-top: 4%;
+    padding-bottom: 4%
+  }
+
+  #footer .fr {
+    display: none
+  }
+
+  #footer .fl {
+    width: 100%
+  }
+
+  .footerh3 h3 {
+    padding-bottom: 0
+  }
+
+  .footerco {
+    display: block;
+    clear: both;
+    padding-top: 40px
+  }
+
+  .footerco .copyright {
+    display: inline
+  }
+
+  .copyrightwrap {
+    float: left
+  }
+
+  .imprint {
+    float: none
+  }
+
+  .imprint a,.imprint div {
+    display: inline-block!important
+  }
+
+  .headertextwrap .headertitle .quotes {
+    float: none;
+    margin-left: 0;
+    line-height: 15px;
+    margin-top: 20px
+  }
+
+  .headersub {
+    padding-left: 0
+  }
+
+  .headertextwrap .headertitle h1 {
+    font-size: 31px
+  }
+
+  .colcontainer2.lefttext .col1element,.colcontainer2.lefttext .col2element,.colcontainer2.righttext .col1element,.colcontainer2.righttext .col2element,.colcontainer2.righttext .col3element,.credits,.nextcase {
+    width: 100%
+  }
+
+  .colcontainer2.lefttext .col2element {
+    border-left: none;
+    border-right: none
+  }
+
+  .colcontainer2.lefttext .col1element,.colcontainer2.righttext .col2element {
+    border-bottom: 10px solid #fff;
+    border-left: none;
+    border-right: none
+  }
+
+  .textelement {
+    padding-top: 15%;
+    padding-bottom: 15%
+  }
+
+  .colcontainer2.righttext .col3element {
+    display: block
+  }
+
+  .colcontainer2.righttext .col1element {
+    display: none
+  }
+
+  .casetext {
+    max-width: 750px;
+    padding: 75px 0;
+  }
+
+  .credits {
+    margin-bottom: 25px
+  }
+
+  #footer .footerright {
+    margin-bottom: 0;
+    padding: 0
+  }
+
+  .casenexttext {
+    padding-left: 4%;
+    padding-right: 4%
+  }
+
+  .casenexttext .abouttext {
+    max-width: 100%
+  }
+
+  .casestudies #pageNavi {
+    display: none
+  }
+
+  .casestudies .menubutton1 {
+    display: block;
+    text-align: right;
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer
+  }
+
+  .casestudies #mainNavi {
+    float: right
+  }
+
+  .casestudies .mainnav {
+    display: none
+  }
+
+  .casestudies .mainnav li {
+    display: block;
+    text-align: right
+  }
+
+  .casestudies .mainnav li.bullet {
+    display: none
+  }
+
+  .row1right .elementtext {
+    width: 80%
+  }
+
+  .career .rightaboutheader,.contactheader .rightaboutheader {
+    background-size: auto 88%;
+    background-position: center center
+  }
+
+  .careerfooter .biggerpic {
+    width: 50%;
+    margin: 0 auto;
+    max-width: 30%;
+    padding-top: 33px
+  }
+
+  .careerfooter .devicetextwrap {
+    margin: 0 auto;
+    width: auto;
+    max-width: 50%;
+    padding-top: 25px;
+    text-align: center
+  }
+
+  .aboutfooter .aboutfootertop .footerright {
+    background: #fff
+  }
+
+  .aboutheader .navi {
+    width: 100%;
+    margin-right: 0
+  }
+
+  .abouth1 h1 {
+    line-height: 40px;
+    margin-bottom: 25px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto
+  }
+
+  .aboutsection1 .navi,.contactheader .navi {
+    padding: 0
+  }
+
+  .rightaboutheader {
+    background-size: auto 96%
+  }
+
+  .s2top .abouth2 h2 {
+    max-width: 1000px;
+    border: none;
+    margin-bottom: 15px
+  }
+
+  .s2bottomwrap {
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto
+  }
+
+  .s2bottomwrap .deviceimage {
+    margin-right: 0;
+    text-align: center
+  }
+
+  .deviceheader,.devicetext {
+    width: 100%!important;
+    max-width: 1000px!important
+  }
+
+  .arrowdiv.lastdivider {
+    display: none
+  }
+
+  .wecontact {
+    width: 50%;
+    float: left;
+    margin-left: 13%
+  }
+
+  .wesocial {
+    width: 26%;
+    float: left
+  }
+
+  .weimg {
+    margin-bottom: 12px
+  }
+
+  .wetext {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto
+  }
+
+  .passioncareer {
+    padding: 0
+  }
+
+  .career2 .elementheader {
+    font-size: 20px;
+    line-height: 25px
+  }
+
+  .career2 .elementheader .detail {
+    font-size: 70px;
+    line-height: 24px
+  }
+
+  .row1right {
+    background-position: -87px
+  }
+
+  .careerfooter .devicetextwrap {
+    display: none
+  }
+
+  .careerfooter .aboutfootertop {
+    display: block
+  }
+
+  .s4 .fp-tableCell {
+    padding-bottom: 100px
+  }
+
+  .aboutfooter .aboutfootertop .footerleft {
+    padding: 10% 4% 1%
+  }
+
+  .accordion-module {
+    max-width: 650px
+  }
+
+  .tabwrap {
+    min-height: 120px
+  }
+
+  .stepimg img {
+    margin-top: -25px
+  }
+
+  .steptext div,.steptext ul {
+    margin-right: 12px
+  }
+
+  .aboutfooter .aboutfmail {
+    text-align: left;
+    max-width: 345px
+  }
+
+  .aboutfooter .aboutftel {
+    max-width: 343px;
+    text-align: left
+  }
+
+  .careerfooter .biggerpic img {
+    max-width: 250px
+  }
+
+  .plustext {
+    margin-bottom: 50px
+  }
+
+  .casetitle {
+    margin-top: -16px
+  }
 }
 
 @media screen and (max-width: 640px) {
-.s3 {
-  min-height: 102px;
-  padding: 0
-}
-
-.deviceimage {
-  width: 100%!important;
-  margin-left: 0
-}
-
-.deviceimage .devicetextwrap {
-  margin-left: 8%!important
-}
-
-.deviceimage:first-of-type img {
-  margin-left: 8%
-}
-
-.respprincimg {
-  display: none
-}
-
-.principwrap {
-  width: 100%;
-  float: none;
-  margin: 0 auto;
-  padding: 0 13%
-}
-
-#footer .fl {
-  overflow: hidden;
-  float: none
-}
-
-#footer .footerleft,#footer .footerright,.footerco {
-  width: 100%;
-  max-width: 360px;
-  margin-bottom: 25px;
-  margin-left: auto;
-  margin-right: auto;
-  float: none
-}
-
-#footer .overlay {
-  display: none
-}
-
-.imprint {
-  float: none
-}
-
-.stepswrap {
-  padding-left: 0
-}
-
-.stepheader,.stepimg,.steptext div,.steptext ul {
-  display: block;
-  margin-bottom: 18px;
-  text-align: center;
-  background-position: bottom center;
-  margin-left: auto;
-  margin-right: auto
-}
-
-.stepswrap .col.arrowdiv {
-  display: none
-}
-
-.s3header h3 {
-  font-size: 86px;
-  line-height: 83px
-}
-
-.stepimg img {
-  min-width: 60px;
-  margin-left: -10px
-}
-
-.s2top {
-  padding-top: 18%
-}
-
-.challenge,.facts {
-  width: 100%
-}
-
-.abouttext.chall {
-  max-width: 100%!important
-}
-
-#cc2 {
-  padding-left: 4%;
-  padding-right: 4%
-}
-
-.row1s {
-  height: auto
-}
-
-.row1left,.row1right,.row3left,.row3right,.row4left,.row4right {
-  width: 100%!important;
-  display: block!important;
-  float: none;
-  position: relative!important;
-  border-right: none;
-  border-left: none
-}
-
-.readmore,.tabicon {
-  display: block;
-  margin: 0 auto;
-  min-width: 120px
-}
-
-.passionsubheader {
-  margin-bottom: 40px
-}
-
-.passionheader {
-  margin-top: 40px!important
-}
-
-.tabheaderwrap {
-  text-align: center;
-  margin-bottom: 25px
-}
-
-.passionimg img {
-  max-width: 200px
-}
-
-.passionwrap li {
-  display: block;
-  width: 60%;
-  margin: 0 auto
-}
-
-.plustext {
-  margin-bottom: 20%;
-  margin-top: 20%
-}
-
-.tabHeadline {
-  font-size: 22px;
-  line-height: 22px
-}
-
-.careerfooter .biggerpic,.careerfooter .devicetextwrap {
-  margin: 0 auto
-}
-
-.devicetextwrap {
-  text-align: center
-}
-
-.successwrap .textwrapsteps {
-  padding: 8%
-}
-
-.row1rightresp {
-  background-position: right top;
-  background-repeat: no-repeat;
-  background-color: #ff4c14
-}
-
-.career2 .elementheader {
-  font-size: 20px;
-  line-height: 24px
-}
-
-.career2 .elementheader .detail {
-  font-size: 68px;
-  padding-left: 3px
-}
-
-.row1rightresp .textwrapsteps {
-  max-width: 60%;
-  display: block;
-  text-align: left!important
-}
-
-.row1rightresp .elementtext {
-  margin: 0
-}
-
-.row1lefttop {
-  height: 200px;
-  border-top: 5px solid #fff
-}
-
-.row2s {
-  background-position: 32% center
-}
-
-.row2s .textwrapsteps {
-  display: initial
-}
-
-.row2s .elementicon {
-  display: block;
-  width: 90%;
-  text-align: right;
-  padding-left: 8%;
-  margin-bottom: 5px
-}
-
-.row2s .wrappp {
-  display: block;
-  text-align: right;
-  width: 90%
-}
-
-.row2s .elementtext {
-  float: right
-}
-
-.row3rightresp,.row4left {
-  display: block!important;
-  height: 200px;
-  width: 100%!important;
-  border-bottom: 5px solid #fff;
-  background-position: bottom center
-}
-
-.row3s .elementicon {
-  width: 14%
-}
-
-.careerfooter .footerright {
-  background: #fff;
-  padding-top: 6%!important
-}
-
-.contact .csc-default h2 {
-  font-size: 30px;
-  line-height: 34.2px
-}
-
-.contact .csc-default p {
-  font-size: 14px
-}
-
-.about .is-sticky .navi,.career .is-sticky .navi,.contact .is-sticky .navi {
-  display: none
-}
-
-.section.s3 {
-  min-height: 150px!important
-}
-
-.row1rightresp,.row3rightresp {
-  display: block!important
-}
-
-.row1s .row1right {
-  display: none!important
-}
-
-.tabicon {
-  margin-bottom: 15px
-}
-
-.career2 .success.passion {
-  padding: 10% 0
-}
-
-.careerfooter .biggerpic {
-  max-width: 1000px;
-  margin: 0 auto
-}
-
-.careerfooter .biggerpic img {
-  max-width: 1000px;
-  margin: 0 auto;
-  width: 100%
-}
-
-.careerfooter .aboutfootertop {
-  background: none!important
-}
-
-.s2top .abouth2 h2 span {
-  line-height: 44px
-}
-
-.deviceimage .devicetextwrap,.deviceimage img {
-  margin-left: 0!important
-}
-
-.s2bottomwrap {
-  padding-right: 0!important
-}
-
-.stepimg {
-  width: 30%
-}
-
-.weheader {
-  width: auto
-}
-
-#FooterWrapper {
-  text-align: center
-}
-
-.footerAbout .footerh3 h3 {
-  max-width: 100%
-}
-
-.footerAbout #footer .footerright {
-  text-align: center
-}
-
-.passionsubheader {
-  font-size: 75px
-}
-
-.passionwrap li {
-  min-width: 200px
-}
-
-.readmore {
-  margin-bottom: 40px
-}
-
-.tabHeadlinetext,.tabicon {
-  margin-top: 15px
-}
-
-.career .rightaboutheader {
-  background-size: auto 78%;
-  background-position: center 24px
-}
-
-#FooterWrapper #footer .footerh3 h3 {
-  display: none
-}
-
-.adr p,.tel p {
-  padding-left: 0;
-  background-position: center top;
-  background-size: auto 15px;
-  padding-top: 21px;
-  margin-top: 16px
-}
-
-.email p {
-  padding-left: 0;
-  background-position: center top;
-  padding-top: 21px;
-  margin-top: 16px;
-  background-size: auto 10px
-}
-
-.tel p {
-  background-size: auto 10px
-}
-
-.copyrightwrap,.footerco {
-  text-align: center!important;
-  float: none!important
-}
-
-#footer .footerright {
-  margin-top: 40px;
-  margin-bottom: 0
-}
+  .s3 {
+    min-height: 102px;
+    padding: 0
+  }
+
+  .deviceimage {
+    width: 100%!important;
+    margin-left: 0
+  }
+
+  .deviceimage .devicetextwrap {
+    margin-left: 8%!important
+  }
+
+  .deviceimage:first-of-type img {
+    margin-left: 8%
+  }
+
+  .respprincimg {
+    display: none
+  }
+
+  .principwrap {
+    width: 100%;
+    float: none;
+    margin: 0 auto;
+    padding: 0 13%
+  }
+
+  #footer .fl {
+    overflow: hidden;
+    float: none
+  }
+
+  #footer .footerleft,#footer .footerright,.footerco {
+    width: 100%;
+    max-width: 360px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    float: none
+  }
+
+  #footer .overlay {
+    display: none
+  }
+
+  .imprint {
+    float: none
+  }
+
+  .stepswrap {
+    padding-left: 0
+  }
+
+  .stepheader,.stepimg,.steptext div,.steptext ul {
+    display: block;
+    margin-bottom: 18px;
+    text-align: center;
+    background-position: bottom center;
+    margin-left: auto;
+    margin-right: auto
+  }
+
+  .stepswrap .col.arrowdiv {
+    display: none
+  }
+
+  .s3header h3 {
+    font-size: 86px;
+    line-height: 83px
+  }
+
+  .stepimg img {
+    min-width: 60px;
+    margin-left: -10px
+  }
+
+  .s2top {
+    padding-top: 18%
+  }
+
+  .challenge,.facts {
+    width: 100%
+  }
+
+  .abouttext.chall {
+    max-width: 100%!important
+  }
+
+  #cc2 {
+    padding-left: 4%;
+    padding-right: 4%
+  }
+
+  .row1s {
+    height: auto
+  }
+
+  .row1left,.row1right,.row3left,.row3right,.row4left,.row4right {
+    width: 100%!important;
+    display: block!important;
+    float: none;
+    position: relative!important;
+    border-right: none;
+    border-left: none
+  }
+
+  .readmore,.tabicon {
+    display: block;
+    margin: 0 auto;
+    min-width: 120px
+  }
+
+  .passionsubheader {
+    margin-bottom: 40px
+  }
+
+  .passionheader {
+    margin-top: 40px!important
+  }
+
+  .tabheaderwrap {
+    text-align: center;
+    margin-bottom: 25px
+  }
+
+  .passionimg img {
+    max-width: 200px
+  }
+
+  .passionwrap li {
+    display: block;
+    width: 60%;
+    margin: 0 auto
+  }
+
+  .plustext {
+    margin-bottom: 20%;
+    margin-top: 20%
+  }
+
+  .tabHeadline {
+    font-size: 22px;
+    line-height: 22px
+  }
+
+  .careerfooter .biggerpic,.careerfooter .devicetextwrap {
+    margin: 0 auto
+  }
+
+  .devicetextwrap {
+    text-align: center
+  }
+
+  .successwrap .textwrapsteps {
+    padding: 8%
+  }
+
+  .row1rightresp {
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-color: #ff4c14
+  }
+
+  .career2 .elementheader {
+    font-size: 20px;
+    line-height: 24px
+  }
+
+  .career2 .elementheader .detail {
+    font-size: 68px;
+    padding-left: 3px
+  }
+
+  .row1rightresp .textwrapsteps {
+    max-width: 60%;
+    display: block;
+    text-align: left!important
+  }
+
+  .row1rightresp .elementtext {
+    margin: 0
+  }
+
+  .row1lefttop {
+    height: 200px;
+    border-top: 5px solid #fff
+  }
+
+  .row2s {
+    background-position: 32% center
+  }
+
+  .row2s .textwrapsteps {
+    display: initial
+  }
+
+  .row2s .elementicon {
+    display: block;
+    width: 90%;
+    text-align: right;
+    padding-left: 8%;
+    margin-bottom: 5px
+  }
+
+  .row2s .wrappp {
+    display: block;
+    text-align: right;
+    width: 90%
+  }
+
+  .row2s .elementtext {
+    float: right
+  }
+
+  .row3rightresp,.row4left {
+    display: block!important;
+    height: 200px;
+    width: 100%!important;
+    border-bottom: 5px solid #fff;
+    background-position: bottom center
+  }
+
+  .row3s .elementicon {
+    width: 14%
+  }
+
+  .careerfooter .footerright {
+    background: #fff;
+    padding-top: 6%!important
+  }
+
+  .contact .csc-default h2 {
+    font-size: 30px;
+    line-height: 34.2px
+  }
+
+  .contact .csc-default p {
+    font-size: 14px
+  }
+
+  .about .is-sticky .navi,.career .is-sticky .navi,.contact .is-sticky .navi {
+    display: none
+  }
+
+  .section.s3 {
+    min-height: 150px!important
+  }
+
+  .row1rightresp,.row3rightresp {
+    display: block!important
+  }
+
+  .row1s .row1right {
+    display: none!important
+  }
+
+  .tabicon {
+    margin-bottom: 15px
+  }
+
+  .career2 .success.passion {
+    padding: 10% 0
+  }
+
+  .careerfooter .biggerpic {
+    max-width: 1000px;
+    margin: 0 auto
+  }
+
+  .careerfooter .biggerpic img {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%
+  }
+
+  .careerfooter .aboutfootertop {
+    background: none!important
+  }
+
+  .s2top .abouth2 h2 span {
+    line-height: 44px
+  }
+
+  .deviceimage .devicetextwrap,.deviceimage img {
+    margin-left: 0!important
+  }
+
+  .s2bottomwrap {
+    padding-right: 0!important
+  }
+
+  .stepimg {
+    width: 30%
+  }
+
+  .weheader {
+    width: auto
+  }
+
+  #FooterWrapper {
+    text-align: center
+  }
+
+  .footerAbout .footerh3 h3 {
+    max-width: 100%
+  }
+
+  .footerAbout #footer .footerright {
+    text-align: center
+  }
+
+  .passionsubheader {
+    font-size: 75px
+  }
+
+  .passionwrap li {
+    min-width: 200px
+  }
+
+  .readmore {
+    margin-bottom: 40px
+  }
+
+  .tabHeadlinetext,.tabicon {
+    margin-top: 15px
+  }
+
+  .career .rightaboutheader {
+    background-size: auto 78%;
+    background-position: center 24px
+  }
+
+  #FooterWrapper #footer .footerh3 h3 {
+    display: none
+  }
+
+  .adr p,.tel p {
+    padding-left: 0;
+    background-position: center top;
+    background-size: auto 15px;
+    padding-top: 21px;
+    margin-top: 16px
+  }
+
+  .email p {
+    padding-left: 0;
+    background-position: center top;
+    padding-top: 21px;
+    margin-top: 16px;
+    background-size: auto 10px
+  }
+
+  .tel p {
+    background-size: auto 10px
+  }
+
+  .copyrightwrap,.footerco {
+    text-align: center!important;
+    float: none!important
+  }
+
+  #footer .footerright {
+    margin-top: 40px;
+    margin-bottom: 0
+  }
 }
 
 @media screen and (max-width: 480px) {
-.wetitle {
-  max-width: 60%
-}
+  .wetitle {
+    max-width: 60%
+  }
 
-.abouth1 h1 {
-  font-size: 40px;
-  line-height: 40px;
-  padding-left: 1%;
-  padding-right: 1%
-}
+  .abouth1 h1 {
+    font-size: 40px;
+    line-height: 40px;
+    padding-left: 1%;
+    padding-right: 1%
+  }
 
-.navi li {
-  display: block;
-  margin-left: 0
-}
+  .navi li {
+    display: block;
+    margin-left: 0
+  }
 
-#discover,.working li a {
-  margin-bottom: 15px
-}
+  #discover,.working li a {
+    margin-bottom: 15px
+  }
 
-.careerfooter .aboutfmail,.careerfooter .aboutftel {
-  display: none
-}
+  .careerfooter .aboutfmail,.careerfooter .aboutftel {
+    display: none
+  }
 
-.powermail_fieldwrap input,.powermail_fieldwrap label {
-  float: none;
-  width: 100%
-}
+  .powermail_fieldwrap input,.powermail_fieldwrap label {
+    float: none;
+    width: 100%
+  }
 
-.powermail_captcha_outer,.powermail_field {
-  width: 250px!important
-}
+  .powermail_captcha_outer,.powermail_field {
+    width: 250px!important
+  }
 
-.powermail_captcha,.powermail_captchaimage {
-  width: 242px!important
-}
+  .powermail_captcha,.powermail_captchaimage {
+    width: 242px!important
+  }
 
-.aboutheader .navi li {
-  width: auto;
-  display: inline-block;
-  vertical-align: middle
-}
+  .aboutheader .navi li {
+    width: auto;
+    display: inline-block;
+    vertical-align: middle
+  }
 
-.aboutheader .navi li.bullet {
-  margin-left: 6px
-}
+  .aboutheader .navi li.bullet {
+    margin-left: 6px
+  }
 
-.aboutheader .navi li a {
-  font-size: 12px
-}
+  .aboutheader .navi li a {
+    font-size: 12px
+  }
 
-.aboutsection1 .navi {
-  padding: 0
-}
+  .aboutsection1 .navi {
+    padding: 0
+  }
 
-.s2top .abouth2 h2 {
-  font-size: 30px;
-  line-height: 33px
-}
+  .s2top .abouth2 h2 {
+    font-size: 30px;
+    line-height: 33px
+  }
 
-.devicelink {
-  font-size: 12px
-}
+  .devicelink {
+    font-size: 12px
+  }
 
-.principals .principwrap .col {
-  margin-bottom: 20px
-}
+  .principals .principwrap .col {
+    margin-bottom: 20px
+  }
 
-.s4,.s5,.s6 {
-  padding: 20% 0!important
-}
+  .s4,.s5,.s6 {
+    padding: 20% 0!important
+  }
 
-.wecontact,.wesocial {
-  width: 100%;
-  margin-left: 0
-}
+  .wecontact,.wesocial {
+    width: 100%;
+    margin-left: 0
+  }
 
-.wewrap .col {
-  margin-bottom: 18%
-}
+  .wewrap .col {
+    margin-bottom: 18%
+  }
 
-.barre {
-  display: none
-}
+  .barre {
+    display: none
+  }
 
-.wetel {
-  display: block;
-  width: 100%
-}
+  .wetel {
+    display: block;
+    width: 100%
+  }
 
-.aboutfooter .textwrapabout {
-  padding: 0
-}
+  .aboutfooter .textwrapabout {
+    padding: 0
+  }
 
-.aboutfmail a,.aboutfmail a:hover {
-  padding-left: 20px;
-  font-size: 17px
-}
+  .aboutfmail a,.aboutfmail a:hover {
+    padding-left: 20px;
+    font-size: 17px
+  }
 
-.aboutftel a {
-  font-size: 17px;
-  padding: 18px
-}
+  .aboutftel a {
+    font-size: 17px;
+    padding: 18px
+  }
 
-.aboutftel a:hover {
-  padding-left: 20px;
-  font-size: 17px
-}
+  .aboutftel a:hover {
+    padding-left: 20px;
+    font-size: 17px
+  }
 
-.row1rightresp {
-  background-size: auto 70%!important;
-  background-position: 125% top!important
-}
+  .row1rightresp {
+    background-size: auto 70%!important;
+    background-position: 125% top!important
+  }
 
-.contactheader .aboutfmail a,.contactheader .aboutfmail a:hover,.contactheader .aboutftel a,.contactheader .aboutftel a:hover {
-  font-size: 18px;
-  line-height: 18px;
-  padding-left: 0
-}
+  .contactheader .aboutfmail a,.contactheader .aboutfmail a:hover,.contactheader .aboutftel a,.contactheader .aboutftel a:hover {
+    font-size: 18px;
+    line-height: 18px;
+    padding-left: 0
+  }
 
-.contactheader .abouth1 h1 {
-  font-size: 30px;
-  line-height: 30px
-}
+  .contactheader .abouth1 h1 {
+    font-size: 30px;
+    line-height: 30px
+  }
 
-.contactheader .navi {
-  margin-bottom: 12px
-}
+  .contactheader .navi {
+    margin-bottom: 12px
+  }
 
-.aboutftel a {
-  background-size: 14px auto
-}
+  .aboutftel a {
+    background-size: 14px auto
+  }
 }
 
 @media screen and (max-width: 380px) {
-.abouth1 h1,.passionheader {
-  font-size: 30px;
-  line-height: 30px
-}
+  .abouth1 h1,.passionheader {
+    font-size: 30px;
+    line-height: 30px
+  }
 
-.weheader,.weimg,.wetitle {
-  max-width: 90%
-}
+  .weheader,.weimg,.wetitle {
+    max-width: 90%
+  }
 
-.aboutheader .navi li {
-  margin-left: 2%
-}
+  .aboutheader .navi li {
+    margin-left: 2%
+  }
 
-.navbar-show {
-  height: 55px
-}
+  .navbar-show {
+    height: 55px
+  }
 }
 
 .career3 .elementheader {
@@ -3497,16 +3474,16 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
 }
 
 @media screen and (max-width: 640px) {
-.fl .icon {
-  float: none;
-  display: block;
-  margin: 15px 0 10px
-}
+  .fl .icon {
+    float: none;
+    display: block;
+    margin: 15px 0 10px
+  }
 
-.adr p,.email p,.tel p {
-  padding: 0;
-  margin: 0
-}
+  .adr p,.email p,.tel p {
+    padding: 0;
+    margin: 0
+  }
 }
 
 .devicelink {
@@ -3602,17 +3579,17 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
 }
 
 @media screen and (max-width: 960px) {
-.discover {
-  position: absolute;
-  left: 0;
-  bottom: 10%;
-  width: 100%;
-  text-align: center
-}
+  .discover {
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+    width: 100%;
+    text-align: center
+  }
 
-.discover .triangle {
-  float: none;
-  display: block;
-  margin: 10px auto 0
-}
+  .discover .triangle {
+    float: none;
+    display: block;
+    margin: 10px auto 0
+  }
 }

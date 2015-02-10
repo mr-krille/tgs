@@ -1,6 +1,5 @@
 @import "compass";
 
-@import "old";
 
 @import "variables";
 @import "helpers/animation";
@@ -30,6 +29,9 @@
 @import "pages/partech";
 @import "pages/eastmode";
 @import "pages/about";
+
+
+@import "old";
 
 .itemleft {
   @extend %background_full;
@@ -211,7 +213,7 @@
   @include animation(fadeIn .8s linear);
   @include animation-fill-mode(both);
 }
-
+/*
 .footer {
   min-height: 450px
 }
@@ -221,7 +223,7 @@
   max-height: 580px
 }
 }
-
+*/
 .aboutfooter,.aboutfootertop {
   height: 100%;
   max-height: none
