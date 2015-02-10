@@ -1,12 +1,12 @@
-/* arrows */
-/* line 3, .styles/_arrows.sass */
+// arrows
+
 .triangle
   position: relative
   width: 16px
   height: 16px
   border-radius: 50%
   background: #d7c8a4
-  /* line 9, .styles/_arrows.sass */
+
   &::after
     content: ""
     position: absolute
@@ -14,27 +14,57 @@
     height: 0
     border-style: solid
 
-/* line 16, .styles/_arrows.sass */
+.discover
+  position: absolute
+  right: 10%
+  top: 68%
+  z-index: 600
+  padding: 2em 0 2em 2em
+  font-size: 12px
+  line-height: 16px
+  text-decoration: none
+  color: #d7c8a4
+
+  .triangle
+    float: right
+    margin-left: 2em
+
+.discover:hover
+  text-decoration: none
+  color: #d5b057
+
+.discover:hover .triangle
+  background: #d5b057
+
 .discover .triangle::after
   top: 5px
   left: 3px
   border-width: 8px 5px
   border-color: black transparent transparent
 
-/* line 22, .styles/_arrows.sass */
 .link .triangle
   float: right
   margin-left: 2em
 
-/* line 26, .styles/_arrows.sass */
 .about-link .triangle
   float: left
   margin-top: 1em
 
-/* line 30, .styles/_arrows.sass */
 .link .triangle::after,
 .about-link .triangle::after
   top: 3px
   left: 5px
   border-width: 5px 8px
   border-color: transparent transparent transparent white
+
+@media screen and (max-width: 960px)
+  .discover
+    position: absolute
+    left: 0
+    bottom: 10%
+    text-align: center
+
+    .triangle
+      float: none
+      display: block
+      margin: 10px auto 0

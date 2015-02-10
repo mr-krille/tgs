@@ -3541,32 +3541,6 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
   color: #d7c8a4;
 }
 
-.discover {
-  position: absolute;
-  right: 10%;
-  top: 68%;
-  z-index: 600;
-  padding: 2em 0 2em 2em;
-  font-size: 12px;
-  line-height: 16px;
-  text-decoration: none;
-  color: #d7c8a4
-}
-
-.discover .triangle {
-  float: right;
-  margin-left: 2em
-}
-
-.discover:hover {
-  text-decoration: none;
-  color: #d5b057
-}
-
-.discover:hover .triangle {
-  background: #d5b057
-}
-
 .aboutsection1 {
   overflow: hidden;
   position: relative;
@@ -3576,20 +3550,4 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
 
 .headerleft {
   position: relative
-}
-
-@media screen and (max-width: 960px) {
-  .discover {
-    position: absolute;
-    left: 0;
-    bottom: 10%;
-    width: 100%;
-    text-align: center
-  }
-
-  .discover .triangle {
-    float: none;
-    display: block;
-    margin: 10px auto 0
-  }
 }

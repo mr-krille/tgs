@@ -214,6 +214,81 @@
       display: table
       clear: both
 
+@media only screen and (max-device-width: 480px) and (orientation: portrait)
+  .about
+    .headerleft .textwrapabout
+      position: absolute
+      top: 20%
+      left: 0
+      width: auto
+      margin: 0
+      padding: 0 40px
+
+      br
+        display: none
+
+    .s2
+      .s2top
+        padding: 50px 2%
+
+      .s2bottomwrap2
+        .deviceimage:last-child
+          margin-top: 20px
+
+    .s2top .abouth2 h2
+      font-size: 28px
+
+    .s2top .abouth2 h2 span
+      font-size: 55px
+
+    .s3
+      height: 118%
+
+    .s5
+      .printext
+        max-width: none
+
+    .s6
+      .weheader
+        margin-bottom: 25px
+
+    .aboutfooter,
+    .aboutfootertop
+      min-height: 240px
+
+    .aboutfooter .abouttext br
+      display: none
+
+@media only screen and (max-width: 640px)
+  .about
+    .s4
+      min-height: 1400px !important
+
+@media only screen and (max-device-width: 480px) and (orientation: landscape)
+  .about
+    .s5
+      background-image: none
+
+      .tablecell
+        padding: 30px 0
+
+    .s6
+      padding: 40px 0
+
+      .weheader
+        margin-bottom: 25px
+
+      .wecontact
+        width: 62%
+        margin-left: 4%
+
+      .wesocial
+        width: 30%
+
+    .aboutfooter,
+    .aboutfootertop
+      min-height: 240px
+
 @media screen and (max-width: 640px)
   .about
     .s4 .stepimg
@@ -224,21 +299,39 @@
     .s5
       background-position: 27% 130px
 
-@media only screen and (min-width: 641px) and (max-width: 960px)
-  .s4 .stepheader
-    position: relative
-    top: -70px
-    width: 43%
-    margin-left: 0
-
 @media screen and (max-width: 960px)
   .about
+    .headerleft .textwrapabout
+      top: 15%
+
+    .aboutsection1 .abouth1
+      margin: 0
+
+    .headerright
+      background-image: none
+
+    .rightaboutheader
+      background-color: #fff
+      background-image: url(img/mobile_men.png)
+      background-size: auto 90%
+
     .weheader::before,
     .deviceheader::before
       left: 50%
       margin-left: -20px
 
+    .s3
+      .s3header h3
+        font-size: 80px
+        line-height: 80px
+
     .s4
+      .stepheader
+        width: 60%
+
+      .steptext br
+        display: block
+
       .stepswrap .col.arrowdiv
         padding-top: 60px
 
@@ -270,6 +363,24 @@
 
     .picbottom
       display: none
+
+@media only screen and (min-width: 641px) and (max-width: 960px)
+  .about
+    .s4
+      min-height: 920px
+      padding-top: 30px
+
+      .stepheader
+        position: relative
+        top: -70px
+        width: 50%
+        margin-left: 0
+
+      .steptext
+        overflow: hidden
+
+        br
+          display: none
 
 @media screen and (min-width: 769px) and (max-width: 1024px)
   .about
@@ -346,14 +457,6 @@
 
 @media screen and (min-width: 600px) and (max-width: $breakpoint-m) and (min-height: 600px)
   .about
-    .headerright
-      background-image: none
-
-    .rightaboutheader
-      background-color: #fff
-      background-image: url(img/mobile_men.png)
-      background-size: auto 90%
-
     .weheader
       margin-bottom: 30px
 
