@@ -14,7 +14,6 @@ body, html
   bottom: 0
   left: 0
   z-index: 999
-  background transparent
 
   &::after
     content: ''
@@ -23,10 +22,12 @@ body, html
     left: 0
     height: 100%
     width: 100%
-    background: #fff no-repeat center image-url('badge.svg')
-    background-size: 100px 100px
+    background: #fff
+    //background: #fff no-repeat center image-url('badge.svg')
+    //background-size: 100px 100px
     +transform(translate3d(100%, 0, 0))
-    +animation(backgroundZoom 1s ease alternate infinite)
+    +transition(transform 1s ease)
+    //+animation(backgroundZoom 1s ease alternate infinite)
 
   &.ready
     visibility: visible
