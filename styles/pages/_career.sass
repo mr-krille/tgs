@@ -1,0 +1,136 @@
+// career
+
+.career
+  .headerright
+    background: url(img/baloon.jpg)
+    background-size: cover
+    background-position-x: right !important
+
+  .rightaboutheader
+    background: rgba(black, .1) url(career/media/pocket.png) center
+    background-size: cover
+
+  .career2
+    display: table
+    width: 100%
+    min-height: 850px
+
+    .tablecell
+      display: table-cell
+      height: 100%
+      vertical-align: middle
+
+@media only screen and (max-device-width: 1024px) and (orientation: portrait)
+  .career
+    .career3
+      padding-top: 100px
+
+      .elementheader
+        font-size: 24px
+        line-height: 30px
+
+    .career4
+      padding: 100px 0
+
+    .biggerpic
+      height: 300px
+
+@media screen and (max-width: 960px)
+  .career
+    .headerright
+      background-image: none
+
+    .rightaboutheader
+      background-color: #fff
+      background-image: url(img/mobile_pocket.png)
+      background-size: auto 70% !important
+      background-position: center !important
+
+@media screen and (min-width: 1025px)
+  .career
+    .career2
+      .passionwrap li
+        opacity: 0
+
+      &.active .passionwrap li
+        +animation(fadeIn .4s linear)
+        +animation-fill-mode(both)
+
+        &:nth-child(2)
+          +animation-delay(.2s)
+
+        &:nth-child(3)
+          +animation-delay(.4s)
+    
+        &:nth-child(4)
+          +animation-delay(.6s)
+    
+        &:nth-child(5)
+          +animation-delay(.8s)
+
+    .career3
+      min-height: 1750px
+
+      .row1left,
+      .row1right,
+      .row2s,
+      .row3left,
+      .row3right,
+      .row4left,
+      .row4right
+        opacity: 0
+
+      &.active
+        .row1left,
+        .row1right,
+        .row2s,
+        .row3left,
+        .row3right,
+        .row4left,
+        .row4right
+          +animation(fadeIn .6s linear)
+          +animation-fill-mode(both)
+
+        .row1left
+          +animation-delay(.6s)
+
+        .row2s
+          +animation-delay(1.2s)
+
+        .row3left
+          +animation-delay(1.8s)
+
+        .row3right
+          +animation-delay(2.4s)
+
+        .row4right
+          +animation-delay(3.6s)
+
+        .row4left
+          +animation-delay(3s)
+
+    .career4
+      min-height: 1000px
+
+      .tabwrap
+        opacity: 0
+
+      &.active
+        .tabwrap
+          +animation(fadeInTop .6s ease)
+          +animation-fill-mode(both)
+
+        .tabwrap:nth-child(2)
+          +animation-delay(.3s)
+
+        .tabwrap:nth-child(3)
+          +animation-delay(.6s)
+
+        .tabwrap:nth-child(4)
+          +animation-delay(.9s)
+
+        .tabwrap:nth-child(5)
+          +animation-delay(.2s)
+
+        .tabwrap:nth-child(6)
+          +animation-delay(.5s)

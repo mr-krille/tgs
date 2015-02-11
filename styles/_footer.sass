@@ -111,12 +111,19 @@
     height: 480px
 
 @media screen and (max-width: $breakpoint-m)
+  .aboutftel,
+  .aboutfmail
+    display: none
+
   .imprint > div
     padding-left: 10px
 
 @media only screen and (max-device-width: 480px) and (orientation: portrait)
   .footer
-    height: 240px
+    height: 550px
+
+  .footerleft
+    height: 250px
 
 @media only screen and (max-device-width: 480px) and (orientation: landscape)
   .footer
