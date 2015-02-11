@@ -222,65 +222,10 @@ var touch = {
     // up
     if (direction === 'up' && animation.current < animation.pages.length - 1) {
       step = 1;
-      /*
-      if (animation.last !== undefined) {
-        animation.pages[animation.last].removeAttribute('style');
-        animation.pages[animation.last].classList.remove('animate');
-        animation.pages[animation.last].classList.remove('active');
-        animation.pages[animation.last].classList.remove('last');
-      }
-
-      animation.last = animation.current;
-      animation.current += 1;
-
-      // direction
-      document.body.classList.remove('down');
-      document.body.classList.add('up');
-
-      animation.pages[animation.last].classList.add('last');
-      animation.pages[animation.last].classList.remove('active');
-
-
-      animation.pages[animation.current].classList.add('active');
-      animation.pages[animation.current].classList.add('animate');
-
-
-      touch.touchhandler();
-
-      window.setTimeout(function () {
-        animation.pages[animation.current].setAttribute('style', '-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)');
-      }, 100);
-      */
     }
     // down
     if (direction === 'down' && animation.current > 0) {
       step = -1;
-      /*
-      if (animation.last !== undefined) {
-        animation.pages[animation.last].removeAttribute('style');
-        animation.pages[animation.last].classList.remove('animate');
-        animation.pages[animation.current].classList.remove('active');
-        animation.pages[animation.last].classList.remove('last');
-      }
-
-      animation.last = animation.current;
-      animation.current -= 1;
-
-      // direction
-      document.body.classList.remove('up');
-      document.body.classList.add('down');
-
-      animation.pages[animation.last].classList.add('last');
-      animation.pages[animation.last].classList.add('animate');
-
-      animation.pages[animation.current].classList.add('active');
-
-      touch.touchhandler();
-
-      window.setTimeout(function () {
-        animation.pages[animation.last].setAttribute('style', '-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)');
-      }, 100);
-      */
     }
 
     var next = animation.current + step;
@@ -307,25 +252,11 @@ var touch = {
 
       if (deltaY >= touch.threshold) {
         event.preventDefault();
-        //console.log("swipeUp");
-        //if (window.innerWidth > 960) {
-        //  animation.last = animation.current;
-        //  animation.current += 1;
-        //  animation.move();
-        //} else {
         touch.touchhandler('up');
-        //}
       }
       if (deltaY <= -touch.threshold) {
         event.preventDefault();
-        //console.log("swipeDown");
-        //if (window.innerWidth > 960) {
-        //  animation.last = animation.current;
-        //  animation.current -= 1;
-        //  animation.move();
-        //} else {
         touch.touchhandler('down');
-        //}
       }
       /*
       window.setTimeout(function () {

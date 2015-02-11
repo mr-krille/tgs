@@ -21,6 +21,7 @@
     left: 0
     right: 0
     bottom: 0
+    +transform(translate3d(0, 100%, 0))
 
   .page.last
     position: absolute
@@ -29,9 +30,6 @@
     right: 0
     bottom: 0
     +transform(translate3d(0, 0, 0))
-
-  .page.active
-    +transform(translate3d(0, 100%, 0))
 
   .page.animate
     -webkit-transition: -webkit-transform 1s ease
