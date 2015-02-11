@@ -30,6 +30,15 @@ var app = {
       pageLinks[i].addEventListener('click', app.pageHandler);
     }
 
+    var svgs = document.querySelectorAll('[data-inline-svg]');
+    for(var i = 0; i < svgs.length; i++) {
+      var svg = svgs[i];
+
+      $.get(svg.getAttribute('src'), function(data) {
+        var div = svg.parentElement;
+        div.innerHTML = new XMLSerializer().serializeToString(data.documentElement);
+      });
+    }
   },
   change: function () {
     if (app.data) {

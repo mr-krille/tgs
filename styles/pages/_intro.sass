@@ -13,10 +13,40 @@
   left: 0
   height: 100%
   width: 100%
-  background-image: url("img/badge.png")
-  background-size: auto 50%
-  background-position: center
-  background-repeat: no-repeat
+  // background-image: url("img/badge.png")
+  // background-size: auto 50%
+  // background-position: center
+  // background-repeat: no-repeat
+  svg
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 21vw
+    height: 21vw
+    margin-top: -10.5vw
+    margin-left: -13vw
+
+    #url, #hat, #gentleman, #annotation
+      *
+        +animation(dashAndFill 2s linear)
+        fill: transparent
+        stroke: black
+        stroke-dasharray: 1000
+        stroke-dashoffset: 1000
+        +animation-fill-mode(both)
+        +animation-delay(0)
+
+    #outer-lines, #inner-lines
+      *
+        fill: transparent
+        stroke: black
+        stroke-dasharray: 3500
+        stroke-dashoffset: 3500
+        +animation(dash 3s linear)
+        +animation-fill-mode(both)
+        +animation-delay(2s)
+    #outer-lines *
+      +animation-duration(1.5s)
 
 .discover
   font-size: 12px
@@ -26,7 +56,7 @@
 
 @media screen and (min-width: 961px)
   .badge
-    background-position: 30% center
+    // background-position: 30% center
 
   #intro .content
     position: absolute
@@ -56,7 +86,7 @@
     margin: 0 10% 18px 9%
 
   .badge
-    background-size: auto 38%
+    // background-size: auto 38%
 
 @media screen and (min-width: 480px) and (max-width: 768px)
   #intro .content
@@ -67,11 +97,11 @@
     margin-left: -200px
 
   .badge
-    background-size: auto 60%
+    // background-size: auto 60%
 
-@media screen and (min-width: 1600px)
-  .badge
-    background-size: auto 400px
+// @media screen and (min-width: 1600px)
+//   .badge
+//     background-size: auto 400px
 
 @media screen and (min-width: 481px) and (max-width: $breakpoint-m)
   .discover
