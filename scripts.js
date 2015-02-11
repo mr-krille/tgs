@@ -100,7 +100,7 @@ var animation = {
     window.removeEventListener('touchstart', touch.touchstart);
   },
   move: function () {
-    // special footer
+    // not footer
     if (animation.current !== animation.count - 1 && animation.last !== undefined) {
       document.getElementById('pagination').classList.remove('inverse');
       animation.pages[animation.last].classList.add('last');
@@ -110,6 +110,7 @@ var animation = {
         animation.pages[animation.last].classList.remove('last');
       }, 1300);
     }
+    // footer
     if (animation.current === animation.count - 1) {
       if (animation.last !== undefined) {
         animation.pagination[animation.last].classList.remove('active');
