@@ -426,12 +426,11 @@ var nav = {
   }
 };
 
-//window.addEventListener('load', app.init, false);
-document.addEventListener('DOMContentLoaded', app.init, false);
-
+window.addEventListener('load', app.init, false);
+//document.addEventListener('DOMContentLoaded', app.init, false);
 
 if(window.jQuery) {
   $(window).on('resize', function () {
-    $('.casestudies .headerpic').css('height', $(window).height()-$('.headertextwrap').outerHeight())
+    $('.casestudies .headerpic').css('height', $(window).height()-$('.headertextwrap').outerHeight());
   }).trigger('resize');
 }
