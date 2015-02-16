@@ -11,6 +11,8 @@ var app = {
       });
     }
 
+    $('.casestudies .headerpic').css('height', $(window).height() - $('.headertextwrap').outerHeight());
+
     app.data = null;
 
     document.body.classList.remove('loading');
