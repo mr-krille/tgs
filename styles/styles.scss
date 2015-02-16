@@ -72,7 +72,7 @@
 .headerpic {
   @extend %background_full_centered;
   background-repeat: no-repeat;
-  // background-attachment: fixed;
+  background-attachment: fixed;
   @include breakpoint(m) { min-height: 470px; }
   @include breakpoint-max(m) { height: 40vh !important; }
 }
