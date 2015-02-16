@@ -1,6 +1,5 @@
 @import "compass";
 
-
 @import "variables";
 @import "helpers/animation";
 @import "helpers/background";
@@ -90,7 +89,9 @@
 
 .successwrap .row1right {
   background-color: #ff4c14;
-  background-image: url(img/img5.jpg);
+  @include breakpoint(xl) {
+    background-image: url(img/img5.jpg);
+  }
   background-position: 380px 0;
   background-repeat: no-repeat;
   background-size: auto 100%

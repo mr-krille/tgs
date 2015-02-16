@@ -1,31 +1,31 @@
 =breakpoint($class)
   @if $class == s
-    @media (max-width: $breakpoint-s)
+    @media (max-width: ($breakpoint-s + 1))
       @content
   @else if $class == m
-    @media (min-width: $breakpoint-m)
+    @media (min-width: ($breakpoint-m + 1))
       @content
   @else if $class == l
-    @media (min-width: $breakpoint-l)
+    @media (min-width: ($breakpoint-l + 1))
       @content
   @else if $class == xl
-    @media (min-width: $breakpoint-xl)
+    @media (min-width: ($breakpoint-xl + 1))
       @content
   @else
     @warn "Breakpoint mixin supports: s, m, l, xl"
 
 =breakpoint-max($class)
   @if $class == s
-    @media (max-width: ($breakpoint-s - 1))
+    @media (max-width: $breakpoint-s)
       @content
   @else if $class == m
-    @media (max-width: ($breakpoint-m - 1))
+    @media (max-width: $breakpoint-m)
       @content
   @else if $class == l
-    @media (max-width: ($breakpoint-l - 1))
+    @media (max-width: $breakpoint-l)
       @content
   @else if $class == xl
-    @media (max-width: ($breakpoint-xl - 1))
+    @media (max-width: $breakpoint-xl)
       @content
   @else
     @warn "Breakpoint mixin supports: s, m, l, xl"

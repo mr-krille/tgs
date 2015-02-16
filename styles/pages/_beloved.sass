@@ -67,10 +67,14 @@
       background: #141b21
       img
         margin-top: 65px
+        +breakpoint-max(xl)
+          margin-top: -35px
     .black
       background: #e7e6e2
       img
         margin-top: -105px
+        +breakpoint-max(xl)
+          margin-top: -35px
 
   .blueprint
     position: relative
@@ -80,7 +84,7 @@
     .bg
       position: absolute
       top: 0
-      left: 0
+      left: 50%
       width: 100%
       height: 50vw
       background: url(beloved/media/blueprint.jpg) no-repeat center
@@ -113,7 +117,7 @@
         +transition-delay(.4s)
     div:nth-child(3)
       background-image: url(beloved/media/logo3.jpg)
-      background-size: auto 70px
+      background-size: auto 60px
       span
         +transition-delay(.8s)
 
@@ -131,6 +135,7 @@
     img:first-child
       width: 80vw
       position: absolute
+      left: 50%
       margin-left: -40vw
 
   .fonts
@@ -147,7 +152,8 @@
     height: 20vw
     background: #141c21 url(beloved/media/equipped.png) no-repeat center
     background-size: auto 20vw
-    background-attachment: fixed
+    +breakpoint(xl)
+      background-attachment: fixed
 
   .stationary
     height: 50vw

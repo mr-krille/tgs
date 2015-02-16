@@ -26,8 +26,11 @@
     overflow: hidden
     padding: 10vw
     background: #dbe1e7
+    +breakpoint-max(xl)
+      padding: 10vw 20vw
     img
       max-width: 1270px
+      width: 100%
       opacity: 0
       +transition(opacity 1s linear)
     &.active img
@@ -96,6 +99,8 @@
     background-image: url(partech/media/sketch.jpg)
     @extend %background_full_centered
     height: 800px
+    +breakpoint-max(xl)
+      height: 600px !important
     position: relative
     overflow: hidden
     img
@@ -103,6 +108,10 @@
       width: 462px
       position: absolute
       left: 50%
+      +breakpoint-max(xl)
+        width: auto
+        height: 600px
+        margin-left: -185px
 
   .partech-link
     background: #f9f9f9
@@ -114,12 +123,12 @@
     background-attachment: fixed
 
   .values
-    background: url(partech/media/bg_values.jpg)
+    background: url(partech/media/bg_values.jpg) center
     background-size: cover
     height: 360px
     position: relative
     .value-container
-      overflow: hidden
+      // overflow: hidden
       position: absolute
       top: 50%
       left: 0
