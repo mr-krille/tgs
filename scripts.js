@@ -22,6 +22,11 @@ var app = {
       nav.init();
       if (!app.isMobile) {
         $.stellar();
+      } else {
+        var animated = document.querySelectorAll('[data-animated]')
+        for(var i = 0; i < animated.length; i++) {
+          animated[i].classList.add('active')
+        }
       }
     }
 
