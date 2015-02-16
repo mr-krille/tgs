@@ -6,17 +6,30 @@
 
 .two-column-wrapper
   & > div
-    width: 50%
-    border-width: 0
-    border-color: white
-    border-style: solid
-    +box-sizing(border-box)
-    &:first-child
-      float: left
-      border-right-width: 5px
-    &:last-child
-      float: right
-      border-left-width: 5px
+    +breakpoint-max(l)
+      width: 100%
+      border-bottom: 10px solid white
+      height: 100vw !important
+      &.text
+        height: 50vw !important
+        background-size: auto 30vw !important
+        background-repeat: no-repeat !important
+      &:last-child
+        border-bottom: 0
+    +breakpoint(l)
+      width: 50%
+      border-width: 0
+      border-color: white
+      border-style: solid
+      +box-sizing(border-box)
+      &:first-child
+        +breakpoint(l)
+          float: left
+        border-right-width: 5px
+      &:last-child
+        +breakpoint(l)
+          float: right
+        border-left-width: 5px
 
     &.two-size
       & > div
@@ -29,17 +42,22 @@
 
 .three-column-wrapper
   & > div
-    width: 33.33333%
-    border-width: 0
-    border-color: white
-    border-style: solid
+    border: 0 solid white
     +box-sizing(border-box)
-    float: left
-    &:first-child
-      border-right-width: 10px
-    &:last-child
-      float: right
-      border-left-width: 10px
+    +breakpoint-max(l)
+      border-bottom-width: 10px
+      width: 100%
+      float: none
+      &:last-child
+        border-bottom-width: 0
+    +breakpoint(l)
+      width: 33.33333%
+      float: left
+      &:first-child
+        border-right-width: 10px
+      &:last-child
+        float: right
+        border-left-width: 10px
 
 
 // mockup

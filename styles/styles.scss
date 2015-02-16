@@ -73,7 +73,8 @@
   @extend %background_full_centered;
   background-repeat: no-repeat;
   // background-attachment: fixed;
-  min-height: 470px;
+  @include breakpoint(m) { min-height: 470px; }
+  @include breakpoint-max(m) { height: 40vh !important; }
 }
 
 .row1lefttop {

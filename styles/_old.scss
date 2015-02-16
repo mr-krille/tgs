@@ -638,9 +638,13 @@ iframe {
   font-weight: 800
 }
 
-.challenge,.facts {
-  width: 50%;
-  float: left
+@include breakpoint(l) {
+  .challenge, .facts {
+    width: 50%;
+    float: left; }
+}
+@include breakpoint-max(l) {
+  .facts { margin-top: 30px; }
 }
 
 .abouttext.chall {

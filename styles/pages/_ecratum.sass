@@ -6,16 +6,24 @@
     height: 14vw
     background: #ededed url(ecratum/media/simple.png) no-repeat center
     background-size: 30%
+    +breakpoint-max(m)
+      height: 30vw
+      background-size: 80vw auto
 
   .beforeafter
     .before, .after
-      background-size: 26vw auto
+      +breakpoint(l)
+        background-size: 26vw auto
+      +breakpoint-max(l)
+        background-size: 60vw auto
       background-position: center
       background-color: #ededed
       background-repeat: no-repeat
       height: 33vw
       opacity: 0
       +transition(opacity .5s linear)
+      +breakpoint-max(l)
+        height: 40vh !important
     .before
       background-image: url(ecratum/media/before.jpg)
     .after
@@ -30,7 +38,8 @@
     background-image: url(ecratum/media/logo.png)
     background-size: auto 50vw
     background-position: center
-    background-attachment: fixed
+    +breakpoint(l)
+      background-attachment: fixed
     background-repeat: no-repeat
     height: 50vw
     opacity: 0
@@ -42,6 +51,10 @@
     div
       +transition(all .8s linear)
       opacity: 0
+      +breakpoint-max(l)
+        img
+          width: 100%
+          height: 90px
     div:nth-child(2)
       +transition-delay(.4s)
     div:nth-child(3)
@@ -51,9 +64,14 @@
         opacity: 1
 
   .font
+    +breakpoint-max(m)
+      display: none
     height: 400px
     background: white url(ecratum/media/font.png) no-repeat center
-    background-size: auto 200px
+    +breakpoint(l)
+      background-size: auto 200px
+    +breakpoint-max(l)
+      background-size: 80vw auto
     opacity: 0
     +transition(opacity .5s linear)
     &.active
@@ -62,7 +80,8 @@
   .stationary1
     background: url(ecratum/media/stationary1.jpg) no-repeat center
     background-size: cover
-    background-attachment: fixed
+    +breakpoint(l)
+      background-attachment: fixed
     height: 740px
     opacity: 0
     +transition(opacity .5s linear)
@@ -97,6 +116,8 @@
 
   .mockup-image
     padding: 100px 0
+    +breakpoint-max(m)
+      padding: 50px 0 0
     background: white
     text-align: center
     img
@@ -109,6 +130,8 @@
     position: relative
     overflow: hidden
     height: 1400px
+    +breakpoint-max(m)
+      height: 600px
     background: url(ecratum/media/bg_website.jpg) no-repeat center bottom
     background-size: cover
     img
@@ -119,6 +142,8 @@
         z-index: 2
         margin-top: 100px
         margin-left: -400px
+        +breakpoint-max(m)
+          margin-left: -180px
       &:nth-child(2)
         width: 560px
         z-index: 1
@@ -138,6 +163,8 @@
     background: url(ecratum/media/easy.png) no-repeat center
     background-size: cover
     height: 14vw
+    +breakpoint-max(m)
+      height: 24vw
     opacity: 0
     +transition(opacity .5s linear)
     &.active
@@ -155,6 +182,8 @@
     height: 30vw
     +breakpoint-max(xl)
       height: 40vw
+    +breakpoint-max(m)
+      height: 80vw
     padding: 0 20vw
     position: relative
     overflow: hidden
@@ -170,12 +199,16 @@
   .final
     position: relative
     height: 50vw
+    +breakpoint-max(m)
+      height: 120vw
     background: #ededed
     div
       position: absolute
       top: 0
       left: 0
       height: 50vw
+      +breakpoint-max(m)
+        height: 120vw
       width: 100%
       background: url(ecratum/media/final.jpg) no-repeat bottom center
       background-size: cover

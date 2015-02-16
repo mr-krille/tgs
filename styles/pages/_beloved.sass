@@ -4,6 +4,8 @@
 
   .brand-1
     div
+      +breakpoint-max(l)
+        height: auto !important
       background-size: cover
       background-position: center
     > div:first-child
@@ -61,8 +63,9 @@
         position: absolute
         top: 50%
         left: 50%
-        margin-left: -160px
-        height: 70px
+        +transform(translateX(-50%))
+        max-height: 70px
+        max-width: 80%
     .white
       background: #141b21
       img
@@ -95,6 +98,8 @@
   .logo-mockups
     div
       height: 33.33vw
+      +breakpoint-max(m)
+        height: 50vw !important
       background: #e7e6e3 no-repeat center
       position: relative
       span
@@ -165,15 +170,21 @@
     div
       opacity: 0
       +transition(opacity .6s linear)
+    .two-size
+      +breakpoint-max(l)
+        height: auto !important
     .couture-logo
       background: #595145 url(beloved/media/couture.jpg) no-repeat center
       background-size: 30vw auto
+      +breakpoint-max(m)
+        background-size: 70vw auto
+        height: 90vw !important
     .clothing
       background: url(beloved/media/clothing.jpg) no-repeat center
       background-size: cover
       +transition-delay(.3s)
     .stamp
-      height: 40vw
+      height: 40vw !important
       background: url(beloved/media/stamp.jpg) no-repeat center
       background-size: cover
       +transition-delay(.6s)
@@ -200,6 +211,8 @@
   .store-link
     background: #e7e6e3 url(beloved/media/beloved.png) no-repeat center
     background-size: auto 60px
+    +breakpoint-max(m)
+      background-size: auto 12vw
     height: 20vw
     position: relative
     a

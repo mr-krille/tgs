@@ -31,16 +31,31 @@ body
   +pie-clearfix
   background-color: #e7e6e2
   div
-    height: 33.33333vw
     background-position-x: 50%
     background-position-y: 0
-    background-size: 20vw auto
+    +breakpoint-max(m)
+      background-position-y: -10vw
+    +breakpoint(l)
+      height: 33.33333vw
+      background-size: 20vw auto
+    +breakpoint-max(l)
+      height: 100vw
+      background-size: 70vw auto
     background-repeat: no-repeat
     text-align: center
     img
-      margin-top: 23vw
-      max-width: 290px
-      max-height: 6vw
+      +breakpoint(l)
+        margin-top: 23vw
+        max-width: 290px
+        max-height: 6vw
+      +breakpoint-max(l)
+        margin-top: 75vw
+        max-width: 290px
+        max-height: 80vw
+      +breakpoint-max(m)
+        margin-top: 65vw
+        max-width: 80vw
+        max-height: 20vw
       opacity: 0
       +transition(opacity .4s linear)
     &:nth-child(1)
@@ -69,14 +84,24 @@ body
       left: 50%
     &:nth-child(1)
       img
-        width: 30vw
-        top: -10vh
-        margin-left: -15vw
+        +breakpoint(l)
+          width: 30vw
+          top: -10vh
+          margin-left: -15vw
+        +breakpoint-max(l)
+          width: 80vw
+          top: -10vw
+          margin-left: -40vw
     &:nth-child(2)
       img
-        width: 20vw
-        top: -5vh
-        margin-left: -10vw
+        +breakpoint(l)
+          width: 20vw
+          top: -5vh
+          margin-left: -10vw
+        +breakpoint-max(l)
+          width: 70vw
+          top: -10vw
+          margin-left: -35vw
 
 #c432
   background: #e7e6e2
@@ -118,7 +143,10 @@ body
     background-repeat: no-repeat
     background-position-y: center
   .text
-    background-size: auto 18vw
+    +breakpoint(l)
+      background-size: auto 18vw
+    +breakpoint-max(l)
+      background-size: 80vw auto
 
 #c723
   .text
@@ -162,20 +190,30 @@ body
   background: url(interactio/media/decide.jpg) no-repeat center
   background-size: auto 100%
   height: 300px
+  +breakpoint-max(m)
+    height: 150px
   position: relative
 
   &.active
     &:after
       margin-top: -145px
       margin-left: 80px
+      +breakpoint-max(m)
+        margin-top: -85px
+        margin-left: 0px
       opacity: 1
     &:before
       margin-top: 36px
       margin-left: -310px
+      +breakpoint-max(m)
+        margin-top: -12px
+        margin-left: -195px
       opacity: 1
 
   &:after,
   &:before
+    +breakpoint-max(m)
+      +transform(scale(0.5))
     content: ''
     position: absolute
     top: 50%

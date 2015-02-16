@@ -2,26 +2,6 @@
   background-image: url(partech/media/partechtop.jpg)
 
 .partech-casestudy
-  .full-column-wrapper,
-  .three-column-wrapper,
-  .two-column-wrapper
-    border-bottom: 10px solid white
-    +pie-clearfix
-
-  .two-column-wrapper
-    & > div
-      width: 50%
-      border-width: 0
-      border-color: white
-      border-style: solid
-      +box-sizing(border-box)
-      &:first-child
-        float: left
-        border-right-width: 5px
-      &:last-child
-        float: right
-        border-left-width: 5px
-
   .mockups
     overflow: hidden
     padding: 10vw
@@ -75,6 +55,8 @@
           margin-left: 0
 
   .screenshots
+    .mockup-screen, .layers
+      height: 50vw !important
     .mockup-screen
       background-image: url(partech/media/mockup.jpg)
       @extend %background_full_centered
@@ -126,6 +108,8 @@
     background: url(partech/media/bg_values.jpg) center
     background-size: cover
     height: 360px
+    +breakpoint-max(m)
+      height: 240px
     position: relative
     .value-container
       // overflow: hidden
@@ -141,6 +125,8 @@
         width: 160px
         height: 160px
         +transition(all 1s linear)
+        +breakpoint-max(m)
+          +transform(scale(0.7))
       .value-passion
         background-image: url(partech/media/passion.png)
         margin-left: -300px
@@ -162,20 +148,28 @@
       .value-container
         .value-passion
           margin-left: -330px
+          +breakpoint-max(m)
+            margin-left: -160px
           opacity: 1
         .value-resilience
           opacity: 1
         .value-integrity
           margin-left: 170px
+          +breakpoint-max(m)
+            margin-left: 0px
           opacity: 1
 
   .map, .operate
     height: 460px
+    +breakpoint-max(m)
+      height: 70vw !important
   .map
     overflow: hidden
     position: relative
     background-color: #d2232a
     .dots
+      +breakpoint-max(m)
+        +transform(translateX(-19%) scale(0.6))
       top: 50%
       margin-top: -250px
       left: 0
@@ -237,9 +231,11 @@
           background-size: 100% auto
 
   .operate
-    background: #17528f url(partech/media/operate.png)
+    background: #17528f url(partech/media/operate.png) no-repeat
     background-position: left center
     background-size: contain
+    +breakpoint-max(m)
+      background-size: auto 120%
 
   .map-operate.active
     .map .dots .dot
