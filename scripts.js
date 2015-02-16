@@ -66,6 +66,8 @@ var app = {
     xhr = new window.XMLHttpRequest();
     xhr.open('GET', url);
 
+    history.pushState(null, null, url);
+
     xhr.onreadystatechange = function () {
       if (xhr.readyState == 4) {
         var data;
