@@ -9,11 +9,11 @@
     padding: 100px 0
     img:first-child
       position: absolute
-      +breakpoint(m)
+      +breakpoint-cs-min(m)
         width: 900px
         left: 50%
         margin-left: -450px
-      +breakpoint-max(m)
+      +breakpoint-cs(480px)
         width: 90%
         left: 5%
 
@@ -66,7 +66,7 @@
     background-position: center
     background-repeat: no-repeat
 
-    +breakpoint-max(m)
+    +breakpoint-cs(480px)
       background-size: 90%
 
   .photo
@@ -101,38 +101,38 @@
         opacity: 0
         +transform(translateY(30px))
       .dot-stop
-        +breakpoint(l)
+        +breakpoint-cs-min(768px)
           margin-left: -420px
-        +breakpoint-max(l)
+        +breakpoint-cs(768px)
           margin-left: -340px
-        +breakpoint-max(m)
+        +breakpoint-cs(480px)
           margin-left: -165px
         +transition-delay(.3s)
         background-image: url(arriver/media/icon_stop.png)
       .dot-start
-        +breakpoint(l)
+        +breakpoint-cs-min(768px)
           margin-left: -180px
-        +breakpoint-max(l)
+        +breakpoint-cs(768px)
           margin-left: -150px
-        +breakpoint-max(m)
+        +breakpoint-cs(480px)
           margin-left: -95px
         +transition-delay(.6s)
         background-image: url(arriver/media/icon_start.png)
       .dot-location
-        +breakpoint(l)
+        +breakpoint-cs-min(768px)
           margin-left: 60px
-        +breakpoint-max(l)
+        +breakpoint-cs(768px)
           margin-left: 30px
-        +breakpoint-max(m)
+        +breakpoint-cs(480px)
           margin-left: -25px
         +transition-delay(.9s)
         background-image: url(arriver/media/icon_location.png)
       .dot-cross
-        +breakpoint(l)
+        +breakpoint-cs-min(768px)
           margin-left: 300px
-        +breakpoint-max(l)
+        +breakpoint-cs(768px)
           margin-left: 220px
-        +breakpoint-max(m)
+        +breakpoint-cs(480px)
           margin-left: 45px
         +transition-delay(1.2s)
         background-image: url(arriver/media/stop.png)
@@ -140,7 +140,7 @@
       .dots .dot
         opacity: 1
         +transform(translateY(0))
-        +breakpoint-max(m)
+        +breakpoint-cs(480px)
           +transform(scale(0.5) translateY(0px))
 
   .noregistration
@@ -151,16 +151,17 @@
     background-position: center
     background-repeat: no-repeat
 
-    +breakpoint-max(m)
+    +breakpoint-cs(480px)
       background-size: 90%
 
   .screens
     background: #b6ddf2
     position: relative
     overflow: hidden
-    +breakpoint-max(l)
+    +breakpoint-cs(768px)
       height: 370px
-    +breakpoint-max(m)
+    +breakpoint-cs(480px)
+      width: 100%
       height: auto !important
       padding: 40px 0
       img
@@ -168,14 +169,14 @@
         margin-bottom: 30px
         &:last-child
           margin-bottom: 0
-    +breakpoint(m)
+    +breakpoint-cs-min(768px)
       height: 575px
       img
         position: absolute
         display: block
         float: left
         width: 240px
-        +breakpoint-max(l)
+        +breakpoint-cs(768px)
           width: 180px
         opacity: 0
         left: 50%
@@ -194,7 +195,7 @@
           &:nth-child(4)
             +transition-delay(.9s)
             margin-left: 310px
-        +breakpoint-max(l)
+        +breakpoint-cs(768px)
           &:nth-child(1)
             margin-left: -360px
           &:nth-child(2)
@@ -232,14 +233,14 @@
       background-position: center right
       background-repeat: no-repeat
 
-      +breakpoint-max(m)
+      +breakpoint-cs(480px)
         background-size: contain
 
     .image
       background-size: cover
       background-position: center left
       background-image: url(arriver/media/final1.jpg)
-      +breakpoint-max(l)
+      +breakpoint-cs(768px)
         height: 50vw !important
 
   .watches
@@ -268,7 +269,7 @@
     background-repeat: no-repeat
     background-position: bottom center
     height: 85vh
-    +breakpoint-max(l)
+    +breakpoint-cs(768px)
       height: 50vh
     position: relative
     overflow: hidden
@@ -289,7 +290,7 @@
     +breakpoint(m)
       width: 900px
       margin: 0 auto
-    +breakpoint-max(m)
+    +breakpoint-cs(480px)
       width: 90%
       margin: 0 5%
 

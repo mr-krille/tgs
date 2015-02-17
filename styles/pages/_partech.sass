@@ -6,7 +6,7 @@
     overflow: hidden
     padding: 10vw
     background: #dbe1e7
-    +breakpoint-max(xl)
+    +breakpoint-cs(1024px)
       padding: 10vw 20vw
     img
       max-width: 1270px
@@ -81,7 +81,7 @@
     background-image: url(partech/media/sketch.jpg)
     @extend %background_full_centered
     height: 800px
-    +breakpoint-max(xl)
+    +breakpoint-cs(1024px)
       height: 600px !important
     position: relative
     overflow: hidden
@@ -90,7 +90,7 @@
       width: 462px
       position: absolute
       left: 50%
-      +breakpoint-max(xl)
+      +breakpoint-cs(1024px)
         width: auto
         height: 600px
         margin-left: -185px
@@ -108,7 +108,7 @@
     background: url(partech/media/bg_values.jpg) center
     background-size: cover
     height: 360px
-    +breakpoint-max(m)
+    +breakpoint-cs(480px)
       height: 240px
     position: relative
     .value-container
@@ -125,7 +125,7 @@
         width: 160px
         height: 160px
         +transition(all 1s linear)
-        +breakpoint-max(m)
+        +breakpoint-cs(480px)
           +transform(scale(0.7))
       .value-passion
         background-image: url(partech/media/passion.png)
@@ -148,27 +148,27 @@
       .value-container
         .value-passion
           margin-left: -330px
-          +breakpoint-max(m)
+          +breakpoint-cs(480px)
             margin-left: -160px
           opacity: 1
         .value-resilience
           opacity: 1
         .value-integrity
           margin-left: 170px
-          +breakpoint-max(m)
+          +breakpoint-cs(480px)
             margin-left: 0px
           opacity: 1
 
   .map, .operate
     height: 460px
-    +breakpoint-max(m)
+    +breakpoint-cs(480px)
       height: 70vw !important
   .map
     overflow: hidden
     position: relative
     background-color: #d2232a
     .dots
-      +breakpoint-max(m)
+      +breakpoint-cs(480px)
         +transform(translateX(-19%) scale(0.6))
       top: 50%
       margin-top: -250px
@@ -234,7 +234,7 @@
     background: #17528f url(partech/media/operate.png) no-repeat
     background-position: left center
     background-size: contain
-    +breakpoint-max(m)
+    +breakpoint-cs(480px)
       background-size: auto 120%
 
   .map-operate.active

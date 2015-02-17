@@ -74,7 +74,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   @include breakpoint(m) { min-height: 470px; }
-  @include breakpoint-max(m) { height: 40vh !important; }
+  @include breakpoint-cs(480px) { height: 40vh !important; }
 }
 
 .row1lefttop {

@@ -643,7 +643,7 @@ iframe {
     width: 50%;
     float: left; }
 }
-@include breakpoint-max(l) {
+@include breakpoint-cs(768px) {
   .facts { margin-top: 30px; }
 }
 

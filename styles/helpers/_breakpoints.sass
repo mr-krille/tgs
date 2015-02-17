@@ -29,3 +29,11 @@
       @content
   @else
     @warn "Breakpoint mixin supports: s, m, l, xl"
+
+=breakpoint-cs($size)
+  @media (max-width: $size)
+    @content
+
+=breakpoint-cs-min($size)
+  @media (min-width: $size)
+    @content

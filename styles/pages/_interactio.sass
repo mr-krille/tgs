@@ -33,12 +33,12 @@ body
   div
     background-position-x: 50%
     background-position-y: 0
-    +breakpoint-max(m)
+    +breakpoint-cs(480px)
       background-position-y: -10vw
     +breakpoint(l)
       height: 33.33333vw
       background-size: 20vw auto
-    +breakpoint-max(l)
+    +breakpoint-cs(768px)
       height: 100vw
       background-size: 70vw auto
     background-repeat: no-repeat
@@ -48,11 +48,11 @@ body
         margin-top: 23vw
         max-width: 290px
         max-height: 6vw
-      +breakpoint-max(l)
+      +breakpoint-cs(768px)
         margin-top: 75vw
         max-width: 290px
         max-height: 80vw
-      +breakpoint-max(m)
+      +breakpoint-cs(480px)
         margin-top: 65vw
         max-width: 80vw
         max-height: 20vw
@@ -88,7 +88,7 @@ body
           width: 30vw
           top: -10vh
           margin-left: -15vw
-        +breakpoint-max(l)
+        +breakpoint-cs(768px)
           width: 80vw
           top: -10vw
           margin-left: -40vw
@@ -98,7 +98,7 @@ body
           width: 20vw
           top: -5vh
           margin-left: -10vw
-        +breakpoint-max(l)
+        +breakpoint-cs(768px)
           width: 70vw
           top: -10vw
           margin-left: -35vw
@@ -145,7 +145,7 @@ body
   .text
     +breakpoint(l)
       background-size: auto 18vw
-    +breakpoint-max(l)
+    +breakpoint-cs(768px)
       background-size: 80vw auto
 
 #c723
@@ -190,7 +190,7 @@ body
   background: url(interactio/media/decide.jpg) no-repeat center
   background-size: auto 100%
   height: 300px
-  +breakpoint-max(m)
+  +breakpoint-cs(480px)
     height: 150px
   position: relative
 
@@ -198,21 +198,21 @@ body
     &:after
       margin-top: -145px
       margin-left: 80px
-      +breakpoint-max(m)
+      +breakpoint-cs(480px)
         margin-top: -85px
         margin-left: 0px
       opacity: 1
     &:before
       margin-top: 36px
       margin-left: -310px
-      +breakpoint-max(m)
+      +breakpoint-cs(480px)
         margin-top: -12px
         margin-left: -195px
       opacity: 1
 
   &:after,
   &:before
-    +breakpoint-max(m)
+    +breakpoint-cs(480px)
       +transform(scale(0.5))
     content: ''
     position: absolute
