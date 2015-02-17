@@ -25,9 +25,9 @@ var app = {
       if (!app.isMobile) {
         $.stellar();
       } else {
-        var animated = document.querySelectorAll('[data-animated]')
+        var animated = document.querySelectorAll('[data-animated]');
         for(var i = 0; i < animated.length; i++) {
-          animated[i].classList.add('active')
+          animated[i].classList.add('active');
         }
       }
     }
@@ -47,10 +47,21 @@ var app = {
       });
     }
   },
+  preload: function (evt) {
+    app.preloading.splice(app.preloading.indexOf(evt.target), 1);
+    if (app.preloading.length === 0) {
+      app.init();
+    }
+  },
   change: function () {
     if (app.data) {
       document.getElementById('wrapper').innerHTML = app.data;
-      app.init();
+      var images = document.querySelectorAll('img');
+      app.preloading = [];
+      for (var i = 0; i < images.length; i ++) {
+        app.preloading.push(images[i]);
+        app.preloading[i].addEventListener('load', app.preload);
+      }
     }
   },
   pageHandler: function (evt) {
