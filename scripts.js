@@ -50,7 +50,7 @@ var app = {
   preload: function (evt) {
     app.preloading.splice(app.preloading.indexOf(evt.target), 1);
     if (app.preloading.length === 0) {
-      app.init();
+      setTimeout(function() { app.init(); }, 2000)
     }
   },
   change: function () {
