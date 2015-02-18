@@ -56,6 +56,7 @@ var app = {
   change: function () {
     if (app.data) {
       document.getElementById('wrapper').innerHTML = app.data;
+      window.scrollTo(0, 0);
       var images = document.querySelectorAll('img');
       app.preloading = [];
       for (var i = 0; i < images.length; i ++) {
@@ -88,7 +89,6 @@ var app = {
         if (raw.length > 1) {
           data = raw[1].split('<!--//END//-->');
           document.body.classList.add((url.length > 3) ? url.replace('/', '') : 'split');
-          window.scrollTo(0, 0);
           app.data = data[0];
           if (!app.finish) {
             app.change();
