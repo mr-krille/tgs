@@ -1,22 +1,38 @@
 var app = {
+  preloading: [],
   isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
   init: function () {
-
+    // first load?
+    if (app.initial) {
+      app.getImages();
+    } else {
+      app.initial = true;
+    }
+    // extract the bg images
+    var preload = document.getElementById('preload');
+    if (preload) {
+      app.preload(preload.childNodes[0].nodeValue);
+    }
+    // nothing to load?
+    if (app.preloading.length === 0) {
+      app.loaded();
+    }
+  },
+  ready: function () {
+    // loading animation
     var curtain = document.getElementById('curtain');
-
     if (curtain) {
       curtain.classList.add('ready');
       curtain.addEventListener('transitionend', function () {
         document.getElementById('curtain').classList.remove('ready');
       });
     }
-
+    // header image sizing
     $('.casestudies .headerpic').css('height', $(window).height() - $('.headertextwrap').outerHeight());
-
+    // reset ajax
     app.data = null;
-
+    // body ready
     document.body.classList.remove('loading');
-
     // portfolio?
     if (document.body.classList.contains('split')) {
       animation.init();
@@ -47,10 +63,24 @@ var app = {
       });
     }
   },
-  preload: function (evt) {
-    app.preloading.splice(app.preloading.indexOf(evt.target), 1);
+  preload: function (data) {
+    if (!data) return;
+    var pattern = /url\(([\w\/\.-]*)\)/g,
+        styles = data.split('/*MOBILE*/');
+    data = (window.innerWidth > 960) ? styles[0] : styles[1];
+    
+    while (match = pattern.exec(data)) {
+      var img = new Image();
+      app.preloading.push(match[1]);
+      img.onload = app.loaded;
+      img.src = match[1];
+    }
+  },
+  loaded: function (evt) {
+    app.preloading.pop();
     if (app.preloading.length === 0) {
-      setTimeout(function() { app.init(); }, 2000)
+      document.body.classList.add('ready');
+      app.ready();
     }
   },
   change: function () {
@@ -63,6 +93,14 @@ var app = {
         app.preloading.push(images[i]);
         app.preloading[i].addEventListener('load', app.preload);
       }
+      app.init();
+    }
+  },
+  getImages: function () {
+    var images = document.querySelectorAll('img');
+    for (var i = 0; i < images.length; i ++) {
+      images[i].addEventListener('load', app.loaded);
+      app.preloading.push(images[i]);
     }
   },
   pageHandler: function (evt) {
@@ -75,7 +113,7 @@ var app = {
 
     animation.destroy();
 
-    app.finish = window.setTimeout(app.change, 1500);
+    //app.finish = window.setTimeout(app.change, 1500);
 
     xhr = new window.XMLHttpRequest();
     xhr.open('GET', url);
@@ -84,18 +122,22 @@ var app = {
 
     xhr.onreadystatechange = function () {
       if (xhr.readyState == 4) {
-        var data;
-        var raw = xhr.responseText.split('<!--//BEGIN//-->');
-        if (raw.length > 1) {
-          data = raw[1].split('<!--//END//-->');
+        var data,
+            raw = xhr.responseText,
+            begin = raw.split('<!--//BEGIN//-->'),
+            preload = raw.split('/*PRELOAD*/');
+
+        app.preload(preload[1]);
+
+        if (begin.length > 1) {
+          data = begin[1].split('<!--//END//-->');
+          app.url = url.replace('/', '');
           document.body.classList.add((url.length > 3) ? url.replace('/', '') : 'split');
           app.data = data[0];
-          if (!app.finish) {
-            app.change();
-          }
+          app.change();
         } else {
           // error
-          window.clearTimeout(app.finish);
+          //window.clearTimeout(app.finish);
         }
       }
     };
@@ -290,7 +332,6 @@ var touch = {
     }
   },
   touchstart: function (event) {
-    console.log(event.touches);
     var touches = event.touches;
     if (touches && touches.length) {
       //event.preventDefault();

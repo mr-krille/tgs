@@ -19,6 +19,45 @@
     <link href="img/apple-touch-icon-114.png" rel="apple-touch-icon" sizes="114x114">
     <link href="img/apple-touch-icon-144.png" rel="apple-touch-icon" sizes="144x144">
     <link href="styles.css" media="all" rel="stylesheet" type="text/css">
+<style id="preload" type="text/css">
+/*PRELOAD*/
+.ready.about .stepimg.one {
+  background-image: url(img/step1.png);
+}
+.ready.about .stepimg.two {
+  background-image: url(img/step2.png);
+}
+.ready.about .stepimg.three {
+  background-image: url(img/step3.png);
+}
+.ready.about .s5 {
+  background-image: url(img/staender.png);
+}
+.ready.about .footerright .picone {
+  background-image: url('about/media/img1.jpg');
+}
+.ready.about .footerright .pictwo {
+  background-image: url('about/media/img2.png');
+}
+.ready.about .footerright .picbig {
+  background-image: url('about/media/img3.jpg');
+}
+@media screen and (min-width: 961px) {
+.ready.about .headerright {
+  background-image: url(img/studio1.jpg);
+}
+.ready.about .rightaboutheader {
+  background-image: url(img/men-white.png);
+}
+}
+/*MOBILE*/
+@media screen and (max-width: 961px) {
+.ready.about .rightaboutheader {
+  background-image: url(img/mobile_men.png);
+}
+}
+/*PRELOAD*/
+</style>
   </head>
   <body class="about">
     <div id="wrapper">
@@ -444,11 +483,11 @@
             </div>
             <div class="footerright">
               <div class="pictop">
-                <div class="picone" style="background-image:url('about/media/img1.jpg');"></div>
-                <div class="pictwo" style="background-image:url('about/media/img2.png');"></div>
+                <div class="picone"></div>
+                <div class="pictwo"></div>
               </div>
               <div class="picbottom">
-                <div class="picbig" style="background-image:url('about/media/img3.jpg');"></div>
+                <div class="picbig"></div>
               </div>
             </div>
           </div>
