@@ -28,6 +28,11 @@ body
     width: 48px
     margin-left: -24px
 
++iphone
+  #c635 .bgtext
+    background-size: 70vw auto !important
+
+
 #c390
   +pie-clearfix
   background-color: #e7e6e2
@@ -36,7 +41,7 @@ body
     background-position-y: 0
     +breakpoint-cs(480px)
       background-position-y: -10vw
-    +breakpoint(l)
+    +breakpoint-cs-min(769px)
       height: 33.33333vw
       background-size: 20vw auto
     +breakpoint-cs(768px)
@@ -51,6 +56,8 @@ body
         border-left: 10px solid white
       &:first-child
         border-right: 10px solid white
+    +iphone
+      background-size: 80vw auto
     background-repeat: no-repeat
     text-align: center
     img
@@ -137,6 +144,8 @@ body
 #c432
   background: #e7e6e2
   min-height: 500px
+  +iphone
+    min-height: 300px
   position: relative
   overflow: hidden
   &.active
@@ -157,6 +166,8 @@ body
     +transition(all 1s ease-in-out)
     background-image: url(interactio/media/phone3.png)
     background-size: 100%
+    +iphone
+      +transform(scale(0.6))
     &:after
       content: ''
       position: absolute
@@ -188,6 +199,9 @@ body
     background-image: url(interactio/media/text/sorting.png)
     background-position-x: 30px
     +transition(all .4s linear)
+    +iphone
+      height: 60vw !important
+      background-size: 80vw auto !important
   .image
     background-color: white
     background-image: url(interactio/media/phone4.png)
@@ -207,6 +221,9 @@ body
     background-image: url(interactio/media/text/working.png)
     // background-position: center right 30px
     +transition(all .4s linear)
+    +iphone
+      height: 60vw !important
+      background-size: 80vw auto !important
   .image
     background-color: white
     background-image: url(interactio/media/phone5.png)
@@ -282,6 +299,8 @@ body
   background-image: url(interactio/media/stack.jpg)
   @extend %background_full
   background-position-x: 50%
+  +iphone
+    height: 300px !important
 
 #c443
   background-image: url(interactio/media/final.png)
@@ -292,6 +311,7 @@ body
   img
     display: block
     margin: 20px auto
+    max-width: 90%
     &:first-child
       width: 80px
     &:nth-child(2)

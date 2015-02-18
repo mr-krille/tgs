@@ -79,6 +79,7 @@
   @include breakpoint-cs-min(1025px) { background-attachment: fixed; }
   @include breakpoint(m) { min-height: 470px; }
   @include breakpoint-cs(480px) { height: 40vh !important; }
+  @include iphone { height: 100vh !important; }
 }
 
 .row1lefttop {
@@ -174,6 +175,14 @@
   background: 0 0
 }
 
+@include iphone {
+  .casestudies {
+    .abouth3, .challengeh3, .factsh3, .creditsh3, .nextcaseh3, .nextimg {
+      margin-left: 35px
+    }
+  }
+}
+
 .challengeh3 h3:after,.creditsh3 h3:after,.factsh3 h3:after,.nextcaseh3 h3:after {
   content: "";
   position: absolute;
@@ -197,9 +206,9 @@
   vertical-align: top
 }
 
-.aboutsection1 .abouth1 {
-  margin-top: 10%
-}
+// .aboutsection1 .abouth1 {
+//   margin-top: 10%
+// }
 
 .aboutsection1 .headerleft,.aboutsection1 .headerright,.contactheader .headerleft,.contactheader .headerright {
   position: relative;

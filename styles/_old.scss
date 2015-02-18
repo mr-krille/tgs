@@ -1,3 +1,9 @@
+@include breakpoint-cs-min(769px) {
+  .challenge, .facts {
+    width: 50%;
+    float: left; }
+}
+
 
 table {
   border-collapse: collapse;
@@ -618,6 +624,10 @@ iframe {
     padding-left: 90px;
     .facts { margin-top: 30px; }
   }
+  @include portrait-ipad {
+    padding-left: 60px !important;
+    .facts { margin-top: 30px; }
+  }
 
 }
 
@@ -646,11 +656,6 @@ iframe {
   font-weight: 800
 }
 
-@include breakpoint(l) {
-  .challenge, .facts {
-    width: 50%;
-    float: left; }
-}
 @include breakpoint-cs(768px) {
   .facts { margin-top: 30px; }
 }
@@ -1746,6 +1751,7 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
 
 .row4s .elementicon {
   width: 10%;
+  @include iphone { width: 50%; }
   display: inline-block;
   vertical-align: middle
 }
@@ -1861,7 +1867,7 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
   line-height: 16px;
   font-weight: 800;
   text-decoration: underline;
-  padding-right: 40px
+  @include breakpoint-cs-min(768px) {padding-right: 40px;}
 }
 
 .tabHeadline {

@@ -8,6 +8,8 @@
     background: #dbe1e7
     +breakpoint-cs(1024px)
       padding: 10vw 20vw
+    +iphone
+      padding: 10vw !important
     img
       max-width: 1270px
       width: 100%
@@ -45,6 +47,10 @@
         opacity: 0
         margin-left: -280px
 
+    +iphone
+      img:not(:first-child)
+        display: none
+
     &.active
       img
         opacity: 1
@@ -77,6 +83,8 @@
     &.active
       .layers img
         bottom: -170px
+        +iphone
+          bottom: -120px !important
         opacity: 1
 
   .sketch
@@ -233,12 +241,16 @@
           background: url(partech/media/paris.png) no-repeat center
           background-size: 100% auto
 
-  .operate
-    background: #17528f url(partech/media/operate.png) no-repeat
-    // background-position: left center
-    background-size: contain
-    +breakpoint-cs(480px)
-      background-size: auto 120%
+  .two-column-wrapper
+    .operate
+      background: #17528f url(partech/media/operate.png) no-repeat
+      // background-position: left center
+      background-size: contain
+      +breakpoint-cs(480px)
+        background-size: auto 120%
+      +iphone
+        height: 70vw !important
+        background-size: 80vw auto !important
 
   .map-operate.active
     .map .dots .dot
