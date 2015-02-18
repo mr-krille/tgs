@@ -127,7 +127,11 @@ var app = {
             begin = raw.split('<!--//BEGIN//-->'),
             preload = raw.split('/*PRELOAD*/');
 
-        app.preload(preload[1]);
+        // chenge syles and preload
+        if (preload[1]) {
+          document.getElementById('preload').childNodes[0].nodeValue = preload[1];
+          app.preload(preload[1]);
+        }
 
         if (begin.length > 1) {
           data = begin[1].split('<!--//END//-->');
