@@ -7,6 +7,17 @@
     background-repeat: no-repeat !important
 
 .two-column-wrapper
+  .text
+    background-size: 70% auto !important
+    &:first-child
+      background-position: right 8vw center !important
+    &:last-child
+      background-position: 8vw center !important
+  &.active .text
+    &:first-child
+      background-position: right 6vw center !important
+    &:last-child
+      background-position: 6vw center !important
   & > div
     +landscape-ipad
       width: 50%
