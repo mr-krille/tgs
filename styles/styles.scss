@@ -72,6 +72,10 @@
 .headerpic {
   @extend %background_full_centered;
   background-repeat: no-repeat;
+  @include landscape-ipad {
+    background-size: 120% auto;
+    background-position: top center !important;
+  }
   @include breakpoint-cs-min(1025px) { background-attachment: fixed; }
   @include breakpoint(m) { min-height: 470px; }
   @include breakpoint-cs(480px) { height: 40vh !important; }

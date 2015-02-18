@@ -24,7 +24,8 @@
       height: 30vw
     .text
       background: #f4c540 url(bet2win/media/start.png) center right no-repeat
-      background-size: auto 16vw
+      +landscape-ipad
+        background-size: auto 17vw !important
     .image
       background: #e7e6e2 url(bet2win/media/start2.jpg) left -50px center no-repeat
       background-size: contain
@@ -46,7 +47,7 @@
       background-size: auto 16vw
     .image
       background: #e7e6e2 url(bet2win/media/structure.png) right -50px center no-repeat
-      +breakpoint(l)
+      +breakpoint-cs-min(769px)
         background-size: auto 25vw
       +breakpoint-cs(768px)
         height: 50vh !important
@@ -68,6 +69,8 @@
     +box-sizing(initial)
     +breakpoint-cs(768px)
       padding: 0 10vw
+    +landscape-ipad
+      height: 400px
 
     img
       position: absolute
@@ -76,6 +79,9 @@
       display: block
       width: 910px
       +transform(translateX(-50%))
+      +landscape-ipad
+        top: 60px
+        width: 700px
 
     &:after
       position: absolute
@@ -86,8 +92,8 @@
       +background-image(linear-gradient(rgba(black, 0), rgba(black, 0.2)))
 
   .ipads
-    background: url(bet2win/media/actual.png) no-repeat top center
-    background-size: 100% auto
+    background: url(bet2win/media/actual.png) no-repeat center 70px
+    background-size: 60vw auto
     +breakpoint-cs(480px)
       background-size: 180% auto
       height: 270px !important
@@ -165,7 +171,7 @@
         padding: 10vw
         img
           width: 100%
-    +breakpoint(l)
+    +breakpoint-cs-min(769px)
       div
         height: 40vw
         position: relative
@@ -193,7 +199,7 @@
   .native
     height: 18vw
     background: #121920 url(bet2win/media/native.png) center no-repeat
-    background-size: auto 10vw
+    background-size: 80vw auto
     opacity: 0
     +transition(opacity .4s linear)
     &.active

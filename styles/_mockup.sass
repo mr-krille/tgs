@@ -44,19 +44,17 @@
         background-repeat: no-repeat !important
       &:last-child
         border-bottom: 0
-    +breakpoint(l)
+    +breakpoint-cs-min(769px)
       width: 50%
       border-width: 0
       border-color: white
       border-style: solid
       +box-sizing(border-box)
       &:first-child
-        +breakpoint(l)
-          float: left
+        float: left
         border-right-width: 5px
       &:last-child
-        +breakpoint(l)
-          float: right
+        float: right
         border-left-width: 5px
 
     &.two-size
@@ -78,7 +76,7 @@
       float: none
       &:last-child
         border-bottom-width: 0
-    +breakpoint(l)
+    +breakpoint-cs-min(769px)
       width: 33.33333%
       float: left
       &:first-child

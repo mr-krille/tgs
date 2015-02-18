@@ -38,6 +38,9 @@
   @media (min-width: $size)
     @content
 
+=breakpoint-minmax($size1, $size2)
+  @media (min-width: $size1) and (max-width: $size2)
+    @content
 
 =general-ipad
   @media (device-width: 768px)
