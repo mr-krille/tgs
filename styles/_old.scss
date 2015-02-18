@@ -224,7 +224,7 @@ iframe {
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
-  max-width: 425px
+  max-width: 425px;
 }
 
 .firstItem .textwrap .text b {
@@ -631,7 +631,10 @@ iframe {
 .abouttext {
   font-family: Lato,sans-serif;
   font-size: 12px;
-  line-height: 16px
+  line-height: 16px;
+  @include iphone {
+    padding: 0 10% !important;
+  }
 }
 
 .abouttext b {
@@ -1126,9 +1129,22 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
   line-height: 45px;
   font-weight: 800;
   padding-bottom: 24px;
-  border-bottom: 2px solid #000;
+  position: relative;
   margin-bottom: 20px;
-  color: #000
+  color: #000;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: black;
+    left: 0;
+    bottom: -2px;
+    @include portrait-ipad {
+      width: 50%;
+    }
+  }
 }
 
 .steptext {
@@ -1231,7 +1247,7 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
 }
 
 .wecontact {
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
 
 .wecontact a,.wecontact span {
@@ -1274,7 +1290,11 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
   line-height: 23px;
   vertical-align: top;
   color: #171717;
-  z-index: 5
+  z-index: 5;
+
+  @include portrait-ipad {
+    top: -3px;
+  }
 }
 
 .wetitle span {
@@ -1567,6 +1587,7 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
 
 .textwrapsteps .elementtext {
   max-width: 80%;
+  @include iphone { max-width: 100%; }
   margin: 0 auto;
   font-size: 12px;
   line-height: 16px;
@@ -2765,7 +2786,8 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
 
   .career .rightaboutheader,.contactheader .rightaboutheader {
     background-size: auto 88%;
-    background-position: center center
+    @include iphone { background-size: auto 50%; }
+    background-position: center center;
   }
 
   .careerfooter .biggerpic {
@@ -3102,6 +3124,7 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
 
   .row1rightresp .textwrapsteps {
     max-width: 60%;
+    @include iphone { max-width: 100%; }
     display: block;
     text-align: left!important
   }
@@ -3294,6 +3317,13 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
   }
 }
 
+@include iphone {
+  .abouth1 h1 {
+    padding-left: 12% !important;
+    padding-right: 12% !important;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .wetitle {
     max-width: 60%
@@ -3303,7 +3333,7 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
     font-size: 40px;
     line-height: 40px;
     padding-left: 1%;
-    padding-right: 1%
+    padding-right: 1%;
   }
 
   .navi li {
@@ -3436,9 +3466,13 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
   }
 
   .weheader,.weimg,.wetitle {
-    max-width: 90%
+    max-width: 90%;
   }
 
+  @include iphone {
+    .weimg { max-width: 100%; padding: 0 15px !important; }
+    .weimg img { width: 100%; }
+  }
   .aboutheader .navi li {
     margin-left: 2%
   }

@@ -36,7 +36,7 @@
 
   .split section
     position: relative
-    height: 200%
+    height: 200vh
     width: 100%
 
   .content
@@ -70,6 +70,10 @@
     position: relative
     height: 100%
 
++portrait-ipad
+  .split section
+    height: 100vh !important
+
 @media screen and (max-height: 480px)
   .content .logo
     display: none
@@ -89,7 +93,7 @@
   .section
     overflow: hidden
     position: relative
-    height: 100%
+    min-height: 100%
 
   .split
     overflow: hidden

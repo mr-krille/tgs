@@ -40,13 +40,17 @@
 
 
 =general-ipad
-  @media only screen and (device-width: 768px)
+  @media (device-width: 768px)
     @content
 
 =portrait-ipad
-  @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)
+  @media (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)
     @content
 
 =landscape-ipad
-  @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)
+  @media (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)
+    @content
+
+=iphone
+  @media (max-width: 540px)
     @content

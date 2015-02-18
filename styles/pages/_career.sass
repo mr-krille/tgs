@@ -20,6 +20,22 @@
       height: 100%
       vertical-align: middle
 
+  +iphone
+    .footer,
+    .careerfooter
+      height: 100vh
+      .footerleft,
+      .footerright
+        height: 50vh !important
+
+    .aboutfooter .abouttext,
+    .aboutfh
+      max-width: 90%
+
++iphone
+  .career4
+    padding: 100px 5% 80px !important
+
 @media only screen and (max-device-width: 1024px) and (orientation: portrait)
   .career
     .career3
@@ -61,10 +77,10 @@
 
         &:nth-child(3)
           +animation-delay(.4s)
-    
+
         &:nth-child(4)
           +animation-delay(.6s)
-    
+
         &:nth-child(5)
           +animation-delay(.8s)
 

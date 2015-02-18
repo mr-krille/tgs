@@ -13,11 +13,17 @@
 .vertical-space
   width: 100%
   height: 80px
+  +landscape-ipad
+    height: 40px
+  +iphone
+    height: 160px
   display: block
 
 .weheader
   position: relative
   margin-top: 20px
+  +landscape-ipad
+    margin-top: 0
   margin-bottom: 30px
   font-family: "Playfair Display", serif
   font-size: 46px
@@ -32,6 +38,10 @@
     height: 3px
     width: 40px
     background: #d7c8a4
+
++iphone
+  .aboutfooter
+    height: 50vh !important
 
 // about
 .about
@@ -153,6 +163,8 @@
         width: 280px
         margin-left: -140px
         background: #fff
+        +iphone
+          display: none
 
   .s4
     display: table
@@ -317,6 +329,8 @@
     .s3
       .s3header h3
         font-size: 80px
+        +portrait-ipad
+          font-size: 140px
         line-height: 80px
 
     .s4

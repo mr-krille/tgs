@@ -83,6 +83,9 @@
 
 .successwrap .row1rightresp {
   background-image: url(img/img5.jpg);
+  @include iphone {
+    background-image: none !important;
+  }
   background-repeat: no-repeat;
   background-position: top right;
   background-size: auto 100%
