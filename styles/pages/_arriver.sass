@@ -29,6 +29,10 @@
       opacity: 0
       +transition(all .4s linear)
       background-size: contain
+      +landscape-ipad
+        background-size: auto 15vw
+        &.biggertext
+          background-size: auto 18vw
     .image
       background-color: #fcd182
       background-repeat: no-repeat
@@ -145,7 +149,7 @@
 
   .noregistration
     height: 20vw
-    background-color: #fbd187
+    background-color: #ffd37a
     background-image: url(arriver/media/noregistration.png)
     background-size: auto 6vw
     background-position: center
@@ -204,7 +208,31 @@
             margin-left: 0
           &:nth-child(4)
             margin-left: 180px
-
+    +landscape-ipad
+      height: 575px
+      img
+        position: absolute
+        display: block
+        float: left
+        width: 240px
+        +breakpoint-cs(768px)
+          width: 180px
+        opacity: 0
+        left: 50%
+        bottom: -80px
+        +transform(translateY(80px))
+        +transition(all .8s ease-in-out)
+        &:nth-child(1)
+          margin-left: -560px
+        &:nth-child(2)
+          +transition-delay(.3s)
+          margin-left: -270px
+        &:nth-child(3)
+          +transition-delay(.6s)
+          margin-left: 20px
+        &:nth-child(4)
+          +transition-delay(.9s)
+          margin-left: 310px
     &.active
       img
         opacity: 1

@@ -8,7 +8,8 @@ body
   background-image: url(interactio/media/bg_worktable.jpg)
   background-position-x: 50%
   @extend %background_full_centered
-  background-attachment: fixed
+  @include breakpoint-cs-min(1025px)
+    background-attachment: fixed
   height: 80vh
   position: relative
   overflow: hidden
@@ -41,6 +42,15 @@ body
     +breakpoint-cs(768px)
       height: 100vw
       background-size: 70vw auto
+    +landscape-ipad
+      float: left
+      width: 33.3333% !important
+      height: 33.33333vw !important
+      background-size: 20vw auto !important
+      &:last-child
+        border-left: 10px solid white
+      &:first-child
+        border-right: 10px solid white
     background-repeat: no-repeat
     text-align: center
     img
@@ -56,6 +66,10 @@ body
         margin-top: 65vw
         max-width: 80vw
         max-height: 20vw
+      +landscape-ipad
+        margin-top: 22vw
+        max-width: 26vw
+        max-height: 8vw
       opacity: 0
       +transition(opacity .4s linear)
     &:nth-child(1)
@@ -103,6 +117,23 @@ body
           top: -10vw
           margin-left: -35vw
 
+  +landscape-ipad
+    div
+      width: 50%
+      height: 50vw
+      float: left
+      &:nth-child(1)
+        border-right: 10px solid white
+        img
+          width: 40vw
+          top: -10vh
+          margin-left: -20vw
+      &:nth-child(2)
+        img
+          width: 30vw
+          top: -5vh
+          margin-left: -15vw
+
 #c432
   background: #e7e6e2
   min-height: 500px
@@ -137,12 +168,15 @@ body
       height: 500px
       background-image: url(interactio/media/phone3_2.png)
       background-size: 100%
+
 #c723, #c751
   .text, .image
     height: 33vw
     background-repeat: no-repeat
     background-position-y: center
   .text
+    +landscape-ipad
+      background-size: auto 18vw
     +breakpoint(l)
       background-size: auto 18vw
     +breakpoint-cs(768px)

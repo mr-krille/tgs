@@ -3,9 +3,26 @@
 .two-column-wrapper
   border-bottom: 10px solid white
   +pie-clearfix
+  .text
+    background-repeat: no-repeat !important
 
 .two-column-wrapper
   & > div
+    +landscape-ipad
+      width: 50%
+      float: left
+      border-width: 0
+      border-color: white
+      border-style: solid
+      +box-sizing(border-box)
+      &:first-child
+        +breakpoint(l)
+          float: left
+        border-right-width: 5px
+      &:last-child
+        +breakpoint(l)
+          float: right
+        border-left-width: 5px
     +breakpoint-cs(768px)
       width: 100%
       border-bottom: 10px solid white

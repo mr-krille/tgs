@@ -37,3 +37,16 @@
 =breakpoint-cs-min($size)
   @media (min-width: $size)
     @content
+
+
+=general-ipad
+  @media only screen and (device-width: 768px)
+    @content
+
+=portrait-ipad
+  @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)
+    @content
+
+=landscape-ipad
+  @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)
+    @content

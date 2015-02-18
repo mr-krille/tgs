@@ -16,6 +16,8 @@
         background-size: 26vw auto
       +breakpoint-cs(768px)
         background-size: 60vw auto
+      +landscape-ipad
+        background-size: 30vw auto
       background-position: center
       background-color: #ededed
       background-repeat: no-repeat
@@ -55,6 +57,10 @@
         img
           width: 100%
           height: 90px
+      +landscape-ipad
+        img
+          width: 100%
+          height: 90px
     div:nth-child(2)
       +transition-delay(.4s)
     div:nth-child(3)
@@ -71,6 +77,8 @@
     +breakpoint(l)
       background-size: auto 200px
     +breakpoint-cs(768px)
+      background-size: 80vw auto
+    +landscape-ipad
       background-size: 80vw auto
     opacity: 0
     +transition(opacity .5s linear)
