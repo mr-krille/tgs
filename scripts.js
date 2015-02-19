@@ -24,7 +24,6 @@ var app = {
       nav.init();
       if (!app.isMobile) {
         $.stellar();
-        $(window).data('plugin_stellar').init();
       } else {
         var animated = document.querySelectorAll('[data-animated]');
         for(var i = 0; i < animated.length; i++) {
@@ -84,7 +83,6 @@ var app = {
     history.pushState(null, null, url);
 
     xhr.onreadystatechange = function () {
-      $(window).data('plugin_stellar').destroy();
       if (xhr.readyState == 4) {
         var data;
         var raw = xhr.responseText.split('<!--//BEGIN//-->');
