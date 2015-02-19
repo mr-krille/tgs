@@ -37,6 +37,8 @@
       .image
         opacity: 1
         background-position: left 0px center
+        +iphone
+          background-position: 35px center
 
   .simple-structure
     background: #e7e6e2
@@ -59,6 +61,8 @@
       .image
         opacity: 1
         background-position: right 0px center
+        +iphone
+          background-position: right 30px center
 
   .website
     position: relative
@@ -97,6 +101,9 @@
     +breakpoint-cs(480px)
       background-size: 180% auto
       height: 270px !important
+      +iphone
+        background-size: 80% auto
+        height: 290px !important
     position: relative
     overflow: hidden
     padding-top: 10vw
@@ -114,6 +121,9 @@
       position: absolute
       display: block
       top: 240px
+      +iphone
+        width: 100%
+        margin-left: -35px
       +breakpoint-cs(1024px)
         top: 150px
       +breakpoint-cs(480px)
@@ -130,7 +140,8 @@
         background-size: 237px 237px
         opacity: 0
         +transform(scale(1.3))
-        +transition(all .6s cubic-bezier(.2,.1,.1,1))
+        +iphone
+          display: none
       &:after
         +transition-delay(.4s)
         background-image: url(bet2win/media/ipad_detail2.png)
@@ -216,8 +227,13 @@
       width: 80vw
       margin-top: 80px
       margin-left: -40vw
+      +iphone
+        margin-top: 10px
       +breakpoint-cs(480px)
         margin-top: 20px
+      +iphone
+        width: 120vw
+        margin-left: -52vw
 
 
   .same-style
@@ -298,19 +314,28 @@
     text-align: center
     padding: 10vw
     overflow: hidden
+    +iphone
+      height: 60vw
     img:first-child
       width: 40vw
+      +iphone
+        width: 60vw
     img:last-child
       position: absolute
       width: 80vw
       left: 50%
       margin-left: -40vw
+      +iphone
+        width: 100vw
+        margin-left: -50vw
 
   .final
     height: 60vw
     background: #ffffff url(bet2win/media/soon.jpg) no-repeat center
     background-size: cover
     opacity: 1
+    +iphone
+      height: 95vw
 
 // portfolio
 

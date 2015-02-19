@@ -1,6 +1,8 @@
 .ecratum-casestudy
   .headerpic-ecratum
     background-image: url(ecratum/media/headerpic.jpg)
+    +iphone
+      background-image: url(ecratum/media/headerpic-phone.jpg)
 
   .simple
     height: 14vw
@@ -57,9 +59,13 @@
       width: 33.3333%
       float: left
       height: 90px
+      +iphone
+        height: 45px
       img
         width: 100%
         height: 90px
+        +iphone
+          height: 45px
       +landscape-ipad
         &
           float: left
@@ -99,6 +105,8 @@
       background-attachment: fixed
     height: 740px
     opacity: 0
+    +iphone
+      height: 340px
     +transition(opacity .5s linear)
     &.active
       opacity: 1
@@ -166,6 +174,8 @@
         margin-left: -400px
         +breakpoint-cs(480px)
           margin-left: -180px
+        +iphone
+          margin-left: -155px
       &:nth-child(2)
         width: 560px
         z-index: 1
@@ -177,6 +187,8 @@
     background-size: cover
     height: 20vw
     opacity: 0
+    +iphone
+      height: 60vw
     +transition(opacity .5s linear)
     &.active
       opacity: 1
@@ -187,6 +199,8 @@
     height: 14vw
     +breakpoint-cs(480px)
       height: 24vw
+    +iphone
+      background-size: 80%
     opacity: 0
     +transition(opacity .5s linear)
     &.active
@@ -197,6 +211,8 @@
     background-size: cover
     height: 30vw
     opacity: 1
+    +iphone
+      height: 50vw
     +transition(opacity .5s linear)
 
   .help
@@ -218,6 +234,9 @@
       margin-top: -26vw
       +landscape-ipad
         margin-top: -32vw
+      +iphone
+        width: 70vw
+        margin-left: -34vw
 
 
   .final

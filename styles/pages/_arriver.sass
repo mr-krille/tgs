@@ -16,6 +16,9 @@
       +breakpoint-cs(480px)
         width: 90%
         left: 5%
+      +iphone
+        width: 100% !important
+        left: 0
 
 
   .contacts, .meet, .history
@@ -43,7 +46,8 @@
       background-position: right center
       background-image: url(arriver/media/choose.png)
     .image
-      background-size: 270px auto
+      background-size: 170px auto
+      background-position-y: 30px
       background-image: url(arriver/media/phone1.png)
 
   .meet
@@ -51,16 +55,23 @@
       background-position: left center
       background-image: url(arriver/media/meet.png)
     .image
-      background-size: 270px auto
+      background-size: 170px auto
+      background-position-y: 30px
       background-image: url(arriver/media/phone2.png)
 
   .history
     .text
       background-position: right center
       background-image: url(arriver/media/history.png)
+      +iphone
+        height: 60vw !important
+        background-size: 70vw auto !important
     .image
       background-size: 500px auto
       background-image: url(arriver/media/phone3.png)
+      +iphone
+        background-size: 300px
+        background-position-y: 30px
 
   .waiting
     height: 20vw
@@ -284,6 +295,10 @@
         z-index: 3
         width: 400px
         margin-left: -200px
+        +iphone
+          width: 290px
+          margin-left: -150px
+          margin-top: 35px
       &:nth-child(2)
         width: 200px
         margin-left: -360px

@@ -31,21 +31,32 @@
       &:nth-child(1)
         margin-top: -30px
         margin-left: -294px
+        +iphone
+          margin-left: -155px
       &:nth-child(2)
         margin-top: -8px
         margin-left: -136px
+        +iphone
+          margin-left: -70px
         +transition-delay(.4s)
       &:nth-child(3)
         margin-top: -31px
         margin-left: -32px
+        +iphone
+          margin-left: -32px
         +transition-delay(.8s)
       &:nth-child(4)
         margin-top: -8px
         margin-left: 128px
+        +iphone
+          margin-left: 48px
         +transition-delay(1.2s)
       &:nth-child(5)
         margin-top: -34px
         margin-left: 226px
+        +iphone
+          margin-top: -30px
+          margin-left: 87px
         +transition-delay(1.6s)
 
     &.active
@@ -214,6 +225,8 @@
     background-size: auto 60px
     +breakpoint-cs(480px)
       background-size: auto 12vw
+    +iphone
+      background-size: auto 5vw
     height: 20vw
     position: relative
     a
