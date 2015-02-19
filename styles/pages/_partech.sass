@@ -1,5 +1,5 @@
 .headerpic-partech
-  background-image: url(partech/media/partechtop.jpg)
+  //background-image: url(partech/media/partechtop.jpg)
 
 .partech-casestudy
   .mockups
@@ -21,7 +21,7 @@
   .screens
     overflow: hidden
     border-bottom: 10px solid white
-    background: url(partech/media/bg_websites.jpg)
+    //background-image: url(partech/media/bg_websites.jpg)
     background-size: cover
     background-position: center
     text-align: center
@@ -66,7 +66,7 @@
       +landscape-ipad
         height: 33vw !important
     .mockup-screen
-      background-image: url(partech/media/mockup.jpg)
+      //background-image: url(partech/media/mockup.jpg)
       @extend %background_full_centered
     .layers
       background: #e1262d
@@ -88,7 +88,7 @@
         opacity: 1
 
   .sketch
-    background-image: url(partech/media/sketch.jpg)
+    //background-image: url(partech/media/sketch.jpg)
     @extend %background_full_centered
     height: 800px
     +breakpoint-cs(1024px)
@@ -110,13 +110,14 @@
 
   .mood
     height: 400px
-    background-image: url(partech/media/mood_final.jpg)
+    //background-image: url(partech/media/mood_final.jpg)
     @extend %background_full
     @include breakpoint-cs-min(1025px)
       background-attachment: fixed
 
   .values
-    background: url(partech/media/bg_values.jpg) center
+    //background-image: url(partech/media/bg_values.jpg)
+    background-position: center
     background-size: cover
     height: 360px
     +breakpoint-cs(480px)
@@ -139,18 +140,18 @@
         +breakpoint-cs(480px)
           +transform(scale(0.7))
       .value-passion
-        background-image: url(partech/media/passion.png)
+        //background-image: url(partech/media/passion.png)
         margin-left: -300px
         opacity: 0
         z-index: 98
         +transition-delay(.5s)
       .value-resilience
-        background-image: url(partech/media/resilience.png)
+        //background-image: url(partech/media/resilience.png)
         margin-left: -80px
         z-index: 99
         opacity: 0
       .value-integrity
-        background-image: url(partech/media/integrity.png)
+        //background-image: url(partech/media/integrity.png)
         margin-left: 140px
         opacity: 0
         z-index: 98
@@ -187,7 +188,7 @@
       position: absolute
       width: 835px
       height: 500px
-      background-image: url(partech/media/map.png)
+      //background-image: url(partech/media/map.png)
       background-size: auto 460px
       background-position: center
       background-repeat: no-repeat
@@ -195,7 +196,7 @@
         opacity: 0
         +transform(scale(1.2))
         +transition(all .3s ease-in-out)
-        background: url(partech/media/dot_map.png)
+        //background-image: url(partech/media/dot_map.png)
         background-size: 16px 16px
         position: absolute
         top: 50%
@@ -212,7 +213,9 @@
           content: ''
           width: 113px
           height: 14px
-          background: url(partech/media/sf.png) no-repeat center
+          //background-image: url(partech/media/sf.png)
+          background-repeat: no-repeat
+          background-position: center
           background-size: 100% auto
       .dot:nth-child(2)
         +transition-delay(.15s)
@@ -225,7 +228,9 @@
           content: ''
           width: 48px
           height: 14px
-          background: url(partech/media/berlin.png) no-repeat center
+          //background-image: url(partech/media/berlin.png)
+          background-repeat: no-repeat
+          background-position: center
           background-size: 100% auto
       .dot:nth-child(3)
         margin-top: -80px
@@ -238,12 +243,16 @@
           content: ''
           width: 40px
           height: 14px
-          background: url(partech/media/paris.png) no-repeat center
+          //background-image: url(partech/media/paris.png)
+          background-repeat: no-repeat
+          background-position: center
           background-size: 100% auto
 
   .two-column-wrapper
     .operate
-      background: #17528f url(partech/media/operate.png) no-repeat
+      background-color: #17528f
+      //background-image: url(partech/media/operate.png)
+      background-repeat: no-repeat
       // background-position: left center
       background-size: contain
       +breakpoint-cs(480px)
