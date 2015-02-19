@@ -91,8 +91,8 @@ var app = {
   getImages: function () {
     var images = document.querySelectorAll('img');
     for (var i = 0; i < images.length; i ++) {
-      images[i].addEventListener('load', app.loaded);
       app.preloading.push(images[i]);
+      images[i].addEventListener('load', app.loaded);
     }
   },
   pageHandler: function (evt) {

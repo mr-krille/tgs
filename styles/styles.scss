@@ -119,7 +119,7 @@
 }
 
 .contact .rightaboutheader {
-  background-image: url(img/typewriter.png);
+  //background-image: url(img/typewriter.png);
   opacity: 0;
   @include animation(fadeIn .8s linear);
   @include animation-fill-mode(both);
