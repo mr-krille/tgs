@@ -78,6 +78,7 @@ var app = {
   },
   loaded: function (evt) {
     app.preloading.pop();
+    console.log(app.preloading);
     if (app.preloading.length === 0) {
       document.body.classList.add('ready');
       app.ready();
@@ -87,12 +88,6 @@ var app = {
     if (app.data) {
       document.getElementById('wrapper').innerHTML = app.data;
       window.scrollTo(0, 0);
-      var images = document.querySelectorAll('img');
-      app.preloading = [];
-      for (var i = 0; i < images.length; i ++) {
-        app.preloading.push(images[i]);
-        app.preloading[i].addEventListener('load', app.preload);
-      }
       app.init();
     }
   },
@@ -127,7 +122,7 @@ var app = {
             begin = raw.split('<!--//BEGIN//-->'),
             preload = raw.split('/*PRELOAD*/');
 
-        // chenge syles and preload
+        // change syles and preload
         if (preload[1]) {
           document.getElementById('preload').childNodes[0].nodeValue = preload[1];
           app.preload(preload[1]);
