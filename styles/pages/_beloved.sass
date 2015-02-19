@@ -1,6 +1,6 @@
 .beloved-casestudy
   .headerpic-beloved
-    background-image: url(beloved/media/headerpic.jpg)
+    //background-image: url(beloved/media/headerpic.jpg)
 
   .brand-1
     div
@@ -10,11 +10,11 @@
       background-position: center
     > div:first-child
       height: 40vw
-      background-image: url(beloved/media/stoff.jpg)
+      //background-image: url(beloved/media/stoff.jpg)
     .simple
-      background-image: url(beloved/media/simple.jpg)
+      //background-image: url(beloved/media/simple.jpg)
     .tag
-      background-image: url(beloved/media/tag.jpg)
+      //background-image: url(beloved/media/tag.jpg)
 
   .brand-2
     overflow: hidden
@@ -101,7 +101,9 @@
       left: 50%
       width: 100%
       height: 50vw
-      background: url(beloved/media/blueprint.jpg) no-repeat center
+      //background-image url(beloved/media/blueprint.jpg)
+      background-repeat: no-repeat
+      background-position: center
       background-size: cover
       opacity: 1
       margin-left: -50vw
@@ -124,15 +126,15 @@
         +transition(all .8s linear)
 
     div:nth-child(1)
-      background-image: url(beloved/media/logo1.jpg)
+      //background-image: url(beloved/media/logo1.jpg)
       background-size: auto 50px
     div:nth-child(2)
-      background-image: url(beloved/media/logo2.jpg)
+      //background-image: url(beloved/media/logo2.jpg)
       background-size: auto 90px
       span
         +transition-delay(.4s)
     div:nth-child(3)
-      background-image: url(beloved/media/logo3.jpg)
+      //background-image: url(beloved/media/logo3.jpg)
       background-size: auto 60px
       span
         +transition-delay(.8s)
@@ -166,14 +168,20 @@
 
   .equipped
     height: 20vw
-    background: #141c21 url(beloved/media/equipped.png) no-repeat center
+    background-color: #141c21
+    //background-image: url(beloved/media/equipped.png)
+    background-repeat: no-repeat
+    background-position: center
     background-size: auto 6vw
     +breakpoint(xl)
       background-attachment: fixed
 
   .stationary
     height: 50vw
-    background: #ddd6cc url(beloved/media/stationary.jpg) no-repeat center
+    background-color: #ddd6cc
+    //background-image: url(beloved/media/stationary.jpg)
+    background-repeat: no-repeat
+    background-position: center
     background-size: cover
     +breakpoint-cs-min(1025px)
       background-attachment: fixed
@@ -186,18 +194,25 @@
       +breakpoint-cs(768px)
         height: auto !important
     .couture-logo
-      background: #595145 url(beloved/media/couture.jpg) no-repeat center
+      background-color: #595145
+      //background-image: url(beloved/media/couture.jpg)
+      background-repeat: no-repeat
+      background-position: center
       background-size: 30vw auto
       +breakpoint-cs(480px)
         background-size: 70vw auto
         height: 90vw !important
     .clothing
-      background: url(beloved/media/clothing.jpg) no-repeat center
+      //background-image: url(beloved/media/clothing.jpg)
+      background-repeat: no-repeat
+      background-position: center
       background-size: cover
       +transition-delay(.3s)
     .stamp
       height: 40vw !important
-      background: url(beloved/media/stamp.jpg) no-repeat center
+      //background-image: url(beloved/media/stamp.jpg)
+      background-repeat: no-repeat
+      background-position: center
       background-size: cover
       +transition-delay(.6s)
 
@@ -221,7 +236,10 @@
       opacity: 1
 
   .store-link
-    background: #e7e6e3 url(beloved/media/beloved.png) no-repeat center
+    background-color: #e7e6e3
+    //background-image: url(beloved/media/beloved.png)
+    background-repeat: no-repeat
+    background-position: center
     background-size: auto 60px
     +breakpoint-cs(480px)
       background-size: auto 12vw
@@ -238,7 +256,10 @@
       width: 100%
 
   .final
-    background: #e7e6e3 url(beloved/media/final.jpg) no-repeat center
+    background-color: #e7e6e3
+    //background-image: url(beloved/media/final.jpg)
+    background-repeat: no-repeat
+    background-position: center
     background-size: cover
     height: 40vw
     position: relative
