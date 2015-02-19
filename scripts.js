@@ -2,16 +2,14 @@ var app = {
   preloading: [],
   isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
   init: function () {
-    // first load?
     if (app.initial) {
       app.getImages();
     } else {
+      var preload = document.getElementById('preload');
+      if (preload) {
+        app.preload(preload.childNodes[0].nodeValue);
+      }
       app.initial = true;
-    }
-    // extract the bg images
-    var preload = document.getElementById('preload');
-    if (preload) {
-      app.preload(preload.childNodes[0].nodeValue);
     }
     // nothing to load?
     if (app.preloading.length === 0) {
@@ -78,7 +76,6 @@ var app = {
   },
   loaded: function (evt) {
     app.preloading.pop();
-    console.log(app.preloading);
     if (app.preloading.length === 0) {
       document.body.classList.add('ready');
       app.ready();
