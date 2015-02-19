@@ -6,7 +6,10 @@
 
   .simple
     height: 14vw
-    background: #ededed url(ecratum/media/simple.png) no-repeat center
+    background-color: #ededed
+    //background-image: url(ecratum/media/simple.png)
+    background-repeat: no-repeat
+    background-position: center
     background-size: 30%
     +breakpoint-cs(480px)
       height: 30vw
@@ -29,17 +32,17 @@
       +breakpoint-cs(768px)
         height: 40vh !important
     .before
-      background-image: url(ecratum/media/before.jpg)
+      //background-image: url(ecratum/media/before.jpg)
     .after
       +transition-delay(.2s)
-      background-image: url(ecratum/media/after.jpg)
+      //background-image: url(ecratum/media/after.jpg)
     &.active
       .before, .after
         opacity: 1
 
   .logo-mockup
     background-color: #bb3f17
-    background-image: url(ecratum/media/logo.png)
+    //background-image: url(ecratum/media/logo.png)
     background-size: auto 50vw
     background-position: center
     +breakpoint(l)
@@ -86,7 +89,10 @@
     +breakpoint-cs(480px)
       display: none
     height: 400px
-    background: white url(ecratum/media/font.png) no-repeat center
+    background-color: #fff
+    //background-image: url(ecratum/media/font.png)
+    background-repeat: no-repeat
+    background-position: center
     +breakpoint-cs-min(769px)
       background-size: auto 200px
     +breakpoint-cs(768px)
@@ -99,7 +105,9 @@
       opacity: 1
 
   .stationary1
-    background: url(ecratum/media/stationary1.jpg) no-repeat center
+    //background-image: url(ecratum/media/stationary1.jpg)
+    background-repeat: no-repeat
+    background-position: center
     background-size: cover
     +breakpoint(l)
       background-attachment: fixed
@@ -123,21 +131,22 @@
         width: 50%
         float: left
     div:first-child
-      background-image: url(ecratum/media/stationary2.jpg)
+      //background-image: url(ecratum/media/stationary2.jpg)
       +breakpoint-cs-min(1024px)
         border-right: 5px solid white
     div:last-child
       +transition-delay(.25s)
       +breakpoint-cs-min(1024px)
         border-left: 5px solid white
-      background-image: url(ecratum/media/stationary3.jpg)
+      //background-image: url(ecratum/media/stationary3.jpg)
     &.active div
       opacity: 1
 
   .adapt
     height: 28vh
-    background: no-repeat center
-    background-image: url(ecratum/media/adapting.png)
+    background-repeat: no-repeat
+    background-position: center
+    //background-image: url(ecratum/media/adapting.png)
     background-color: #bb3f17
     background-size: auto 20%
 
@@ -162,7 +171,9 @@
     height: 1400px
     +breakpoint-cs(480px)
       height: 600px
-    background: url(ecratum/media/bg_website.jpg) no-repeat center bottom
+    //background-image: url(ecratum/media/bg_website.jpg)
+    background-repeat: no-repeat
+    background-position: center bottom
     background-size: cover
     img
       position: absolute
@@ -183,7 +194,9 @@
         margin-left: -130px
 
   .modules
-    background: url(ecratum/media/modules.jpg) no-repeat center
+    //background-image: url(ecratum/media/modules.jpg)
+    background-repeat: no-repeat
+    background-position: center
     background-size: cover
     height: 20vw
     opacity: 0
@@ -194,7 +207,10 @@
       opacity: 1
 
   .easy
-    background: #b7b7b7 url(ecratum/media/easy.png) no-repeat center
+    background-color: #b7b7b7
+    background-image: url(ecratum/media/easy.png)
+    background-repeat: no-repeat
+    background-position: center
     background-size: auto 3vw
     height: 14vw
     +breakpoint-cs(480px)
@@ -207,7 +223,9 @@
       opacity: 1
 
   .modules2
-    background: url(ecratum/media/modules2.jpg) no-repeat center
+    //background-image: url(ecratum/media/modules2.jpg)
+    background-repeat: no-repeat
+    background-position: center
     background-size: cover
     height: 30vw
     opacity: 1
@@ -253,7 +271,9 @@
       +breakpoint-cs(480px)
         height: 120vw
       width: 100%
-      background: url(ecratum/media/final.jpg) no-repeat bottom center
+      //background-image: url(ecratum/media/final.jpg)
+      background-repeat: no-repeat
+      background-position: bottom center
       background-size: cover
       opacity: 0
       +transition(opacity .5s linear)

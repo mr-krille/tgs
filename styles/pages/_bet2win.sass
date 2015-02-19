@@ -1,6 +1,6 @@
 .bet2win-casestudy
   .headerpic-bet2win
-    background-image: url(bet2win/media/headerpic.jpg)
+    //background-image: url(bet2win/media/headerpic.jpg)
 
   .bigmockup
     padding-top: 150px
@@ -23,11 +23,17 @@
     .text, .image
       height: 30vw
     .text
-      background: #f4c540 url(bet2win/media/start.png) center right no-repeat
+      background-color: #f4c540
+      //background-image: url(bet2win/media/start.png)
+      background-position: center right
+      background-repeat: no-repeat
       +landscape-ipad
         background-size: auto 17vw !important
     .image
-      background: #e7e6e2 url(bet2win/media/start2.jpg) left -50px center no-repeat
+      background-color: #e7e6e2 
+      //background-image: url(bet2win/media/start2.jpg)
+      background-position: left -50px center
+      background-repeat: no-repeat
       background-size: contain
       opacity: 0
       +breakpoint-cs(768px)
@@ -45,10 +51,16 @@
     .text, .image
       height: 38vw
     .text
-      background: white url(bet2win/media/simple.png) center left no-repeat
+      background-color: #fff
+      //background-image: url(bet2win/media/simple.png)
+      background-position: center left
+      background-repeat: no-repeat
       background-size: auto 16vw
     .image
-      background: #e7e6e2 url(bet2win/media/structure.png) right -50px center no-repeat
+      background-color: #e7e6e2
+      //background-image: url(bet2win/media/structure.png)
+      background-position: right -50px center
+      background-repeat: no-repeat
       +breakpoint-cs-min(769px)
         background-size: auto 25vw
       +breakpoint-cs(768px)
@@ -96,7 +108,9 @@
       +background-image(linear-gradient(rgba(black, 0), rgba(black, 0.2)))
 
   .ipads
-    background: url(bet2win/media/actual.png) no-repeat center 70px
+    //background-image: url(bet2win/media/actual.png)
+    background-repeat: no-repeat
+    background-position: center 70px
     background-size: 60vw auto
     +breakpoint-cs(480px)
       background-size: 180% auto
@@ -113,7 +127,7 @@
     .img
       width: 80%
       height: 800px
-      background-image: url(bet2win/media/ipads.png)
+      //background-image: url(bet2win/media/ipads.png)
       background-repeat: no-repeat
       background-size: contain
       background-position: center top
@@ -144,7 +158,7 @@
           display: none
       &:after
         +transition-delay(.4s)
-        background-image: url(bet2win/media/ipad_detail2.png)
+        //background-image: url(bet2win/media/ipad_detail2.png)
         top: 30px
         right: 40px
         +breakpoint-cs(480px)
@@ -157,7 +171,7 @@
           top: -40px
           left: -50px
         +transition-delay(.7s)
-        background-image: url(bet2win/media/ipad_detail1.png)
+        //background-image: url(bet2win/media/ipad_detail1.png)
 
     &.active
       .img
@@ -200,7 +214,7 @@
 
   .mockup-photo
     height: 20vw
-    background-image: url(bet2win/media/csm_img12_0eeaf87f0b.jpg)
+    //background-image: url(bet2win/media/csm_img12_0eeaf87f0b.jpg)
     @extend %background_full_centered
     opacity: 0
     +transition(opacity .4s linear)
@@ -209,7 +223,10 @@
 
   .native
     height: 18vw
-    background: #121920 url(bet2win/media/native.png) center no-repeat
+    background-color: #121920
+    //background-image: url(bet2win/media/native.png)
+    background-position: center
+    background-repeat: no-repeat
     background-size: 80vw auto
     opacity: 0
     +transition(opacity .4s linear)
@@ -241,7 +258,10 @@
     .text, .image
       height: 36vw
     .text
-      background: #e7e6e2 url(bet2win/media/same.png) center left no-repeat
+      background-color: #e7e6e2
+      //background-image: url(bet2win/media/same.png)
+      background-position: center left
+      background-repeat: no-repeat
       +breakpoint(l)
         background-size: auto 18vw
       +breakpoint-cs(768px)
@@ -252,7 +272,9 @@
       opacity: 0
       +transition(all .4s linear)
     .image
-      background: url(bet2win/media/samesame.jpg) center no-repeat
+      //background: url(bet2win/media/samesame.jpg)
+      background-position: center
+      background-repeat: no-repeat
       background-size: cover
       +breakpoint-cs(768px)
         height: 50vh !important
@@ -290,7 +312,7 @@
 
   .another-photo
     height: 24vw
-    background: url(bet2win/media/mood_app.jpg)
+    //background-image: url(bet2win/media/mood_app.jpg)
     background-size: cover
     opacity: 0
     +transition(opacity .4s linear)
@@ -299,7 +321,10 @@
 
   .logo-mockup
     height: 14vw
-    background: #f4c540 url(bet2win/media/logo.png) no-repeat center
+    background-color: #f4c540
+    //background-image: url(bet2win/media/logo.png)
+    background-position: center
+    background-repeat: no-repeat
     background-size: auto 20%
     opacity: 1
     +breakpoint-cs(480px)
@@ -308,7 +333,9 @@
 
   .banner
     height: 50vw
-    background: url(bet2win/media/bg_banner.jpg) no-repeat center
+    //background-image: url(bet2win/media/bg_banner.jpg)
+    background-position: center
+    background-repeat: no-repeat
     background-size: cover
     position: relative
     text-align: center
@@ -331,7 +358,10 @@
 
   .final
     height: 60vw
-    background: #ffffff url(bet2win/media/soon.jpg) no-repeat center
+    background-color: #fff
+    //background-image: url(bet2win/media/soon.jpg)
+    background-position: center
+    background-repeat: no-repeat
     background-size: cover
     opacity: 1
     +iphone
