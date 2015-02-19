@@ -2,10 +2,10 @@ body
   overflow-x: hidden
 
 .headerpic-interactio
-  background-image: url(interactio/media/header.jpg)
+  //background-image: url(interactio/media/header.jpg)
 
 #c388
-  background-image: url(interactio/media/bg_worktable.jpg)
+  //background-image: url(interactio/media/bg_worktable.jpg)
   background-position-x: 50%
   @extend %background_full_centered
   @include breakpoint-cs-min(1025px)
@@ -82,13 +82,13 @@ body
       opacity: 0
       +transition(opacity .4s linear)
     &:nth-child(1)
-      background-image: url(interactio/media/phone_menu01.png)
+      //background-image: url(interactio/media/phone_menu01.png)
     &:nth-child(2)
-      background-image: url(interactio/media/phone_menu02.png)
+      //background-image: url(interactio/media/phone_menu02.png)
       img
         +transition-delay(.2s)
     &:nth-child(3)
-      background-image: url(interactio/media/phone_menu03.png)
+      //background-image: url(interactio/media/phone_menu03.png)
       img
         +transition-delay(.4s)
   &.active
@@ -166,7 +166,7 @@ body
     opacity: 0
     bottom: -200px
     +transition(all 1s ease-in-out)
-    background-image: url(interactio/media/phone3.png)
+    //background-image: url(interactio/media/phone3.png)
     background-size: 100%
     +iphone
       +transform(scale(0.6))
@@ -179,7 +179,7 @@ body
       +transition(all 1s ease-in-out 0.5s)
       width: 908px
       height: 500px
-      background-image: url(interactio/media/phone3_2.png)
+      //background-image: url(interactio/media/phone3_2.png)
       background-size: 100%
 
 #c723, #c751
@@ -198,7 +198,7 @@ body
 #c723
   .text
     background-color: #d6c7a5
-    background-image: url(interactio/media/text/sorting.png)
+    //background-image: url(interactio/media/text/sorting.png)
     background-position-x: 30px
     +transition(all .4s linear)
     +iphone
@@ -206,7 +206,7 @@ body
       background-size: 80vw auto !important
   .image
     background-color: white
-    background-image: url(interactio/media/phone4.png)
+    //background-image: url(interactio/media/phone4.png)
     background-position: center
     background-size: auto 120%
     +transition(opacity .4s linear)
@@ -220,7 +220,7 @@ body
 #c751
   .text
     background-color: #e7e6e2
-    background-image: url(interactio/media/text/working.png)
+    //background-image: url(interactio/media/text/working.png)
     // background-position: center right 30px
     +transition(all .4s linear)
     +iphone
@@ -228,7 +228,7 @@ body
       background-size: 80vw auto !important
   .image
     background-color: white
-    background-image: url(interactio/media/phone5.png)
+    //background-image: url(interactio/media/phone5.png)
     background-position: center bottom
     background-size: 60% auto
     opacity: 0
@@ -240,7 +240,9 @@ body
       background-position: center right -20px
 
 #c436
-  background: url(interactio/media/decide.jpg) no-repeat center
+  //background-image: url(interactio/media/decide.jpg)
+  background-repeat: no-repeat
+  background-position: center
   background-size: auto 100%
   height: 300px
   +breakpoint-cs(480px)
@@ -280,7 +282,7 @@ body
     height: 110px
     opacity: 0
     +transition(all 1s ease-in-out .5s)
-    background-image: url(interactio/media/arrow_right_call.png)
+    //background-image: url(interactio/media/arrow_right_call.png)
   &:before
     width: 170px
     height: 111px
@@ -288,24 +290,24 @@ body
     margin-left: -210px
     opacity: 0
     +transition(all 1s ease-in-out)
-    background-image: url(interactio/media/arrow_left_call.png)
+    //background-image: url(interactio/media/arrow_left_call.png)
 
 #c440
   height: 390px
-  background-image: url(interactio/media/csm_img14_d8609763a4.jpg)
+  //background-image: url(interactio/media/csm_img14_d8609763a4.jpg)
   @extend %background_full
   background-position: 50%
 
 #c442
   height: 390px
-  background-image: url(interactio/media/stack.jpg)
+  //background-image: url(interactio/media/stack.jpg)
   @extend %background_full
   background-position-x: 50%
   +iphone
     height: 300px !important
 
 #c443
-  background-image: url(interactio/media/final.png)
+  //background-image: url(interactio/media/final.png)
   background-position: bottom center
   background-size: 120% auto
   background-repeat: no-repeat
