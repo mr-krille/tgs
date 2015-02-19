@@ -37,7 +37,10 @@ var app = {
     } else {
       nav.init();
       if (!app.isMobile) {
-        $.stellar();
+        $.stellar({
+          responsive: true
+        });
+        $(window).trigger('resize');
       } else {
         var animated = document.querySelectorAll('[data-animated]');
         for(var i = 0; i < animated.length; i++) {
