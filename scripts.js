@@ -167,9 +167,6 @@ var animation = {
       animation.pages[animation.last].classList.add('last');
       animation.pages[animation.last].classList.remove('active');
       animation.pagination[animation.last].classList.remove('active');
-      window.setTimeout(function () {
-        animation.pages[animation.last].classList.remove('last');
-      }, 1300);
     }
     // footer
     if (animation.current === animation.count - 1) {
@@ -181,11 +178,6 @@ var animation = {
     animation.pages[animation.current].classList.add('active');
     // pagination
     animation.pagination[animation.current].classList.add('active');
-    // positioning
-    for (var i = 0; i < animation.count - 1; i++) {
-      animation.slides[i].setAttribute('style', '-webkit-transform:translate3d(0,' + ((i * -100) + (animation.current * 100)) + '%,0);transform:translate3d(0,' + ((i * -100) + (animation.current * 100)) + '%,0)');
-      animation.visuals[i].setAttribute('style', '-webkit-transform:translate3d(0,' + ((i * 100) + (animation.current * -100)) + '%,0);transform:translate3d(0,' + ((i * 100) + (animation.current * -100)) + '%,0)');
-    }
     // header
     if (animation.current === 0) {
       document.getElementById('navbar').classList.remove('fixed');
@@ -204,11 +196,15 @@ var animation = {
     }
     // remove event listener
     animation.detach();
+    if (animation.last !== undefined) {
+      animation.pages[animation.last].classList.remove('last');
+    }
     // current
     animation.last = animation.current;
     animation.current += step;
     // hash
     window.location.hash = '#' + animation.anchors[animation.current];
+    document.getElementById('wrapper').setAttribute('class', (delta < 0) ? 'up' : 'down');
     // positioning
     animation.move();
     // add events after animation
@@ -249,7 +245,11 @@ var animation = {
       var linkHandler = function (evt) {
         var anchor = this.getAttribute('href');
         var index = (anchor) ? animation.anchors.indexOf(anchor.replace('#', '')) : -1;
-        if (index !== -1) {
+        if (index !== -1 && index !== animation.current) {
+          if (animation.last !== undefined) {
+            animation.pages[animation.last].classList.remove('last');
+          }
+          document.getElementById('wrapper').setAttribute('class', (index > animation.current) ? 'up' : 'down');
           animation.last = animation.current;
           animation.current = index;
           animation.move();

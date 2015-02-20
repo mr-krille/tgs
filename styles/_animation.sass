@@ -1,4 +1,10 @@
+
 .active
+  .slide,
+  .visuals
+    z-index: 1
+
+.page.active
   // portfolio: text animation
   .slide
     .content
@@ -12,23 +18,59 @@
   .discover
     +animation(bounce 2s infinite)
 
-// portfolio: slide transition
-#contact,
-.animate,
-.last .slide,
-.last .visuals,
-.active .slide,
-.active .visuals
+// contact transition
+#contact
+  z-index: 1
   +transition(transform 1s ease)
 
+.up
+  .page.last
+    .slide
+      -webkit-animation: out-up 1s
+      animation: out-up 1s
+    .visuals
+      -webkit-animation: out-down 1s
+      animation: out-down 1s
+  .page.active
+    .slide
+      -webkit-animation: in-up 1s
+      animation: in-up 1s
+    .visuals
+      -webkit-animation: in-down 1s
+      animation: in-down 1s
+
+.down
+  .page.last
+    .slide
+      -webkit-animation: out-down 1s
+      animation: out-down 1s
+    .visuals
+      -webkit-animation: out-up 1s
+      animation: out-up 1s
+  .page.active
+    .slide
+      -webkit-animation: in-down 1s
+      animation: in-down 1s
+    .visuals
+      -webkit-animation: in-up 1s
+      animation: in-up 1s
+
+//@media screen and (min-width: 961px)
+//  .mockup
+//    opacity: 0
+
 // portfolio: show mockup on last slide
-.last .mockup
-  opacity: 1
+//.last .mockup
+//  opacity: 1
 
 // portfolio: fade in mockup
-.active .mockup
-  opacity: 1
-  +transition(opacity 1s linear 0.2s)
+.active
+  .mockup
+    +animation(fadeIn 1s ease)
+    +animation-fill-mode(both)
+    +animation-delay(0.2s)
+    //opacity: 1
+    //+transition(opacity 1s linear .2s)
 
 // page transition
 #curtain
