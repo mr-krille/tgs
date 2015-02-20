@@ -283,17 +283,21 @@ var touch = {
     var step;
     // up
     if (direction === 'up' && animation.current < animation.pages.length - 1) {
+      document.getElementById('wrapper').setAttribute('class', 'up');
       step = 1;
     }
     // down
     if (direction === 'down' && animation.current > 0) {
+      document.getElementById('wrapper').setAttribute('class', 'down');
       step = -1;
     }
-
     var next = animation.current + step;
     // out of range
     if (!step || next < 0 || next >= animation.count) {
       return false;
+    }
+    if (animation.last !== undefined) {
+      animation.pages[animation.last].classList.remove('last');
     }
     animation.last = animation.current;
     animation.current += step;
