@@ -164,16 +164,15 @@ var animation = {
     // not footer
     if (animation.current !== animation.count - 1 && animation.last !== undefined) {
       document.getElementById('pagination').classList.remove('inverse');
-      animation.pages[animation.last].classList.add('last');
-      animation.pages[animation.last].classList.remove('active');
-      animation.pagination[animation.last].classList.remove('active');
     }
     // footer
     if (animation.current === animation.count - 1) {
-      if (animation.last !== undefined) {
-        animation.pagination[animation.last].classList.remove('active');
-      }
       document.getElementById('pagination').classList.add('inverse');
+    }
+    if (animation.last !== undefined) {
+      animation.pages[animation.last].classList.add('last');
+      animation.pages[animation.last].classList.remove('active');
+      animation.pagination[animation.last].classList.remove('active');
     }
     animation.pages[animation.current].classList.add('active');
     // pagination

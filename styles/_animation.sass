@@ -21,7 +21,7 @@
 // contact transition
 #contact
   z-index: 1
-  +transition(transform 1s ease)
+  //+transition(transform 1s ease)
 
 .up
   .page.last
@@ -38,6 +38,9 @@
     .visuals
       -webkit-animation: in-down 1s
       animation: in-down 1s
+  #contact.active
+    -webkit-animation: out-down 1s
+    animation: out-down 1s
 
 .down
   .page.last
@@ -54,6 +57,9 @@
     .visuals
       -webkit-animation: in-up 1s
       animation: in-up 1s
+  #contact.last
+    -webkit-animation: in-up 1s
+    animation: in-up 1s
 
 //@media screen and (min-width: 961px)
 //  .mockup
