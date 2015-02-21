@@ -2,6 +2,7 @@ var app = {
   preloading: [],
   isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
   init: function () {
+    //console.log('app init');
     if (app.initial) {
       app.getImages();
     } else {
@@ -13,24 +14,9 @@ var app = {
     }
     // nothing to load?
     if (app.preloading.length === 0) {
-      app.loaded();
+      app.ready();
     }
-  },
-  ready: function () {
-    // loading animation
-    var curtain = document.getElementById('curtain');
-    if (curtain) {
-      curtain.classList.add('ready');
-      curtain.addEventListener('transitionend', function () {
-        document.getElementById('curtain').classList.remove('ready');
-      });
-    }
-    // header image sizing
-    $('.casestudies .headerpic').css('height', $(window).height() - $('.headertextwrap').outerHeight());
-    // reset ajax
-    app.data = null;
-    // body ready
-    document.body.classList.remove('loading');
+
     // portfolio?
     if (document.body.classList.contains('split')) {
       animation.init();
@@ -64,6 +50,22 @@ var app = {
       });
     }
   },
+  ready: function () {
+    //console.log('app ready');
+    document.body.classList.add('ready');
+    // loading animation
+    var curtain = document.getElementById('curtain');
+    if (curtain) {
+      curtain.classList.add('ready');
+      curtain.addEventListener('transitionend', function () {
+        document.getElementById('curtain').classList.remove('ready');
+      });
+    }
+    // header image sizing
+    $('.casestudies .headerpic').css('height', $(window).height() - $('.headertextwrap').outerHeight());
+    // body ready
+    document.body.classList.remove('loading');
+  },
   preload: function (data) {
     if (!data) return;
     var pattern = /url\(([\w\/\.-]*)\)/g,
@@ -78,17 +80,10 @@ var app = {
     }
   },
   loaded: function (evt) {
+    evt.stopPropagation();
     app.preloading.pop();
-    if (app.preloading.length === 0) {
-      document.body.classList.add('ready');
+    if (app.preloading.length === 0 && !app.finish) {
       app.ready();
-    }
-  },
-  change: function () {
-    if (app.data) {
-      document.getElementById('wrapper').innerHTML = app.data;
-      window.scrollTo(0, 0);
-      app.init();
     }
   },
   getImages: function () {
@@ -96,6 +91,15 @@ var app = {
     for (var i = 0; i < images.length; i ++) {
       app.preloading.push(images[i]);
       images[i].addEventListener('load', app.loaded);
+    }
+  },
+  change: function () {
+    app.finish = null;
+    if (app.pageContent) {
+      window.scrollTo(0, 0);
+      document.getElementById('wrapper').innerHTML = app.pageContent;
+      app.pageContent = null;
+      app.init();
     }
   },
   pageHandler: function (evt) {
@@ -108,7 +112,7 @@ var app = {
 
     animation.destroy();
 
-    //app.finish = window.setTimeout(app.change, 1500);
+    app.finish = window.setTimeout(app.change, 500);
 
     xhr = new window.XMLHttpRequest();
     xhr.open('GET', url);
@@ -132,8 +136,10 @@ var app = {
           data = begin[1].split('<!--//END//-->');
           app.url = url.replace('/', '');
           document.body.classList.add((url.length > 3) ? url.replace('/', '') : 'split');
-          app.data = data[0];
-          app.change();
+          app.pageContent = data[0];
+          if (app.finish === null) {
+            app.change();
+          }
         } else {
           // error
           //window.clearTimeout(app.finish);
@@ -212,12 +218,13 @@ var animation = {
     }, 1300);
   },
   init: function () {
+    //console.log('animation init');
     animation.pages = document.querySelectorAll('.page');
     animation.slides = document.querySelectorAll('.slide');
     animation.visuals = document.querySelectorAll('.visuals');
     animation.pagination = document.querySelectorAll('#pagination a');
     animation.count = animation.pages.length;
-    //document.body.classList.add('split');
+
     // anchors
     for (var i = 0; i < animation.count; i++) {
       animation.anchors[i] = animation.pages[i].getAttribute('id');
@@ -229,11 +236,11 @@ var animation = {
         var index = animation.anchors.indexOf(window.location.hash.slice(1));
         if (index !== -1) {
           animation.current = index;
-          animation.pages[animation.current].classList.add('active');
+          //animation.pages[animation.current].classList.add('active');
         }
-        if (window.location.hash === '#contact') {
+        /*if (window.location.hash === '#contact') {
           animation.current = animation.count - 1;
-        }
+        }*/
       }
       // positioning
       animation.move();
