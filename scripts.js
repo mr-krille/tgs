@@ -194,7 +194,9 @@ var animation = {
     if (animation.current === 0) {
       document.getElementById('navbar').classList.remove('fixed');
     } else {
-      document.getElementById('navbar').classList.add('fixed');
+      if (!document.getElementById('navbar').classList.contains('fixed')) {
+        document.getElementById('navbar').classList.add('fixed');
+      }
     }
   },
   handler: function (evt) {
