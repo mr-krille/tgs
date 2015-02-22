@@ -17,43 +17,64 @@
   z-index: 1
   //+transition(transform 1s ease)
 
-.up
-  .page.last
-    .slide
-      -webkit-animation: out-up 1s both
-      animation: out-up 1s both
-    .visuals
+@media screen and (min-width: 961px)
+  .up
+    .page.last
+      .slide
+        -webkit-animation: out-up 1s both
+        animation: out-up 1s both
+      .visuals
+        -webkit-animation: out-down 1s both
+        animation: out-down 1s both
+    .page.active
+      .slide
+        -webkit-animation: in-up 1s both
+        animation: in-up 1s both
+      .visuals
+        -webkit-animation: in-down 1s both
+        animation: in-down 1s both
+    #contact.active
       -webkit-animation: out-down 1s both
       animation: out-down 1s both
-  .page.active
-    .slide
-      -webkit-animation: in-up 1s both
-      animation: in-up 1s both
-    .visuals
-      -webkit-animation: in-down 1s both
-      animation: in-down 1s both
-  #contact.active
-    -webkit-animation: out-down 1s both
-    animation: out-down 1s both
 
-.down
-  .page.last
-    .slide
-      -webkit-animation: out-down 1s both
-      animation: out-down 1s both
-    .visuals
-      -webkit-animation: out-up 1s both
-      animation: out-up 1s both
-  .page.active
-    .slide
-      -webkit-animation: in-down 1s both
-      animation: in-down 1s both
-    .visuals
+  .down
+    .page.last
+      .slide
+        -webkit-animation: out-down 1s both
+        animation: out-down 1s both
+      .visuals
+        -webkit-animation: out-up 1s both
+        animation: out-up 1s both
+    .page.active
+      .slide
+        -webkit-animation: in-down 1s both
+        animation: in-down 1s both
+      .visuals
+        -webkit-animation: in-up 1s both
+        animation: in-up 1s both
+    #contact.last
       -webkit-animation: in-up 1s both
       animation: in-up 1s both
-  #contact.last
-    -webkit-animation: in-up 1s both
-    animation: in-up 1s both
+
+@media screen and (max-width: 960px)
+  .down
+    .page.last
+      -webkit-animation: out-up 1s both
+      animation: out-up 1s both
+
+    .page.active
+      -webkit-animation: in-up 1s both
+      animation: in-up 1s both
+
+  .up
+    .page.last
+      -webkit-animation: out-down 1s both
+      animation: out-down 1s both
+
+    .page.active
+      -webkit-animation: in-down 1s both
+      animation: in-down 1s both
+
 
 //@media screen and (min-width: 961px)
 //  .mockup

@@ -1,39 +1,5 @@
 
 @media screen and (max-width: $breakpoint-m)
-  .up .page.active
-    z-index: 20
-    +transform(translate3d(0, 100%, 0))
-
-  .up .page.last
-    z-index: 10
-
-  .down .page.last
-    z-index: 20
-    +transform(translate3d(0, 100%, 0))
-
-  .down .page.active
-    z-index: 10
-    +transform(translate3d(0, 0, 0))
-
-  .page.active
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    +transform(translate3d(0, 100%, 0))
-
-  .page.last
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    +transform(translate3d(0, 0, 0))
-
-  .page.animate
-    -webkit-transition: -webkit-transform 1s ease
-
   .split section
     position: relative
     height: 200vh

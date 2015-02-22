@@ -268,11 +268,6 @@ var animation = {
       }
       // events
       animation.attach();
-
-    // touch
-    } else {
-      //document.body.style.overflow = 'hidden';
-      //window.addEventListener('touchstart', touch.touchstart);
     }
   },
   destroy: function (evt) {
@@ -308,8 +303,6 @@ var touch = {
     window.location.hash = '#' + animation.anchors[animation.current];
     // positioning
     animation.move();
-    // clear after animation
-    //window.addEventListener('webkitTransitionEnd', touch.touchend);
   },
   touchmove: function (event) {
     var touches = event.touches;
@@ -345,16 +338,6 @@ var touch = {
       startY = touches[0].pageY;
       window.addEventListener('touchmove', touch.touchmove);
     }
-  },
-  touchend: function (evt) {
-    window.removeEventListener('webkitTransitionEnd', touch.touchend);
-    if (animation.last !== undefined) {
-      animation.pages[animation.last].classList.remove('animate');
-    }
-    animation.pages[animation.current].classList.remove('animate');
-    //animation.pages[animation.last].classList.remove('last');
-    //animation.pages[animation.last].removeAttribute('style');
-    //animation.pages[animation.current].classList.remove('animate');
   }
 };
 
