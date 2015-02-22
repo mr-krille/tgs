@@ -2,6 +2,8 @@ var app = {
   preloading: [],
   isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
   init: function () {
+    app.url = null;
+    app.klass = null;
     //console.log('app init');
     if (app.initial) {
       app.getImages();
@@ -35,6 +37,8 @@ var app = {
       }
     }
 
+    document.body.classList.add('ready');
+
     var pageLinks = document.querySelectorAll('.inlink');
     for (var i = 0; i < pageLinks.length; i++) {
       pageLinks[i].addEventListener('click', app.pageHandler);
@@ -53,50 +57,27 @@ var app = {
   ready: function () {
     //console.log('app ready');
     document.body.classList.add('ready');
+    //document.body.classList.remove('loading');
     // loading animation
     var curtain = document.getElementById('curtain');
     if (curtain) {
       curtain.classList.add('ready');
-      curtain.addEventListener('transitionend', function () {
-        document.getElementById('curtain').classList.remove('ready');
-      });
+      curtain.classList.remove('loading');
+      window.setTimeout(function () {
+        document.getElementById('curtain').setAttribute('class', '');
+      }, 1000);
     }
     // header image sizing
     $('.casestudies .headerpic').css('height', $(window).height() - $('.headertextwrap').outerHeight());
     // body ready
-    document.body.classList.remove('loading');
-  },
-  preload: function (data) {
-    if (!data) return;
-    var pattern = /url\(([\w\/\.-]*)\)/g,
-        styles = data.split('/*MOBILE*/');
-    data = (window.innerWidth > 960) ? styles[0] : styles[1];
-    
-    while (match = pattern.exec(data)) {
-      var img = new Image();
-      app.preloading.push(match[1]);
-      img.onload = app.loaded;
-      img.src = match[1];
-    }
-  },
-  loaded: function (evt) {
-    evt.stopPropagation();
-    app.preloading.pop();
-    if (app.preloading.length === 0 && !app.finish) {
-      app.ready();
-    }
-  },
-  getImages: function () {
-    var images = document.querySelectorAll('img');
-    for (var i = 0; i < images.length; i ++) {
-      app.preloading.push(images[i]);
-      images[i].addEventListener('load', app.loaded);
-    }
+    //document.getElementById('curtain').setAttribute('class', '');
   },
   change: function () {
     app.finish = null;
     if (app.pageContent) {
       window.scrollTo(0, 0);
+      window.history.pushState(null, null, app.url);
+      document.body.setAttribute('class', app.klass);
       document.getElementById('wrapper').innerHTML = app.pageContent;
       app.pageContent = null;
       app.init();
@@ -108,16 +89,16 @@ var app = {
     var link = (evt.target.tagName === "A") ? evt.target : evt.target.parentNode;
     var url = link.getAttribute('href');
 
-    document.body.setAttribute('class', 'loading');
+    document.getElementById('curtain').setAttribute('class', 'loading');
 
     animation.destroy();
 
-    app.finish = window.setTimeout(app.change, 500);
+    app.finish = window.setTimeout(app.change, 1000);
 
     xhr = new window.XMLHttpRequest();
     xhr.open('GET', url);
 
-    history.pushState(null, null, url);
+    app.url = url;
 
     xhr.onreadystatechange = function () {
       if (xhr.readyState == 4) {
@@ -134,8 +115,7 @@ var app = {
 
         if (begin.length > 1) {
           data = begin[1].split('<!--//END//-->');
-          app.url = url.replace('/', '');
-          document.body.classList.add((url.length > 3) ? url.replace('/', '') : 'split');
+          app.klass = (url.length > 3) ? url.replace('/', '') : 'split';
           app.pageContent = data[0];
           if (app.finish === null) {
             app.change();
@@ -148,6 +128,33 @@ var app = {
     };
 
     xhr.send();
+  },
+  getImages: function () {
+    var images = document.querySelectorAll('img');
+    for (var i = 0; i < images.length; i ++) {
+      app.preloading.push(images[i]);
+      images[i].addEventListener('load', app.loaded);
+    }
+  },
+  preload: function (data) {
+    if (!data) return;
+    var pattern = /url\(([\w\/\.-]*)\)/g,
+        styles = data.split('/*MOBILE*/');
+    data = (window.innerWidth > 960) ? styles[0] : styles[1];
+
+    while (match = pattern.exec(data)) {
+      var img = new Image();
+      app.preloading.push(match[1]);
+      img.onload = app.loaded;
+      img.src = match[1];
+    }
+  },
+  loaded: function (evt) {
+    evt.stopPropagation();
+    app.preloading.pop();
+    if (app.preloading.length === 0 && !app.finish) {
+      app.ready();
+    }
   }
 };
 
@@ -275,11 +282,6 @@ var animation = {
   },
   destroy: function (evt) {
     animation.detach();
-    for (var i = 0; i < animation.count - 1; i++) {
-      animation.slides[i].removeAttribute('style');
-      animation.visuals[i].removeAttribute('style');
-    }
-    document.body.classList.remove('split');
   }
 };
 
