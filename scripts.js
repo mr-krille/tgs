@@ -159,7 +159,6 @@ var app = {
 };
 
 var animation = {
-  current: 0,
   anchors: [],
   attach: function () {
     window.addEventListener('MozMousePixelScroll', animation.handler);
@@ -228,6 +227,8 @@ var animation = {
   },
   init: function () {
     //console.log('animation init');
+    animation.current = 0;
+    animation.last = undefined;
     animation.pages = document.querySelectorAll('.page');
     animation.slides = document.querySelectorAll('.slide');
     animation.visuals = document.querySelectorAll('.visuals');
@@ -247,9 +248,6 @@ var animation = {
           animation.current = index;
           //animation.pages[animation.current].classList.add('active');
         }
-        /*if (window.location.hash === '#contact') {
-          animation.current = animation.count - 1;
-        }*/
       }
       // positioning
       animation.move();
