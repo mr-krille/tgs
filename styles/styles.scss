@@ -183,12 +183,8 @@
   @include iphone { height: 100vh !important; }
 }
 
-.row1lefttop {
-  background-image: url(img/img4.jpg)
-}
-
 .successwrap .row1rightresp {
-  background-image: url(img/img5.jpg);
+  //background-image: url(img/img5.jpg);
   @include iphone {
     background-image: none !important;
   }
@@ -199,24 +195,12 @@
 
 .successwrap .row1right {
   background-color: #ff4c14;
-  @include breakpoint(xl) {
-    background-image: url(img/img5.jpg);
-  }
+  //@include breakpoint(xl) {
+  //  background-image: url(img/img5.jpg);
+  //}
   background-position: 380px 0;
   background-repeat: no-repeat;
   background-size: auto 100%
-}
-
-.row2s {
-  background-image: url(img/img6.jpg)
-}
-
-.row3right,.row3rightresp {
-  background-image: url(img/img7.jpg)
-}
-
-.row4left {
-  background-image: url(img/img8.jpg)
 }
 
 .contact .rightaboutheader {
