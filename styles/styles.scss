@@ -209,33 +209,6 @@
   @include animation(fadeIn .8s linear);
   @include animation-fill-mode(both);
 }
-/*
-.footer {
-  min-height: 450px
-}
-
-@media only screen and (min-height: 560px) {
-.footer {
-  max-height: 580px
-}
-}
-*/
-.aboutfooter,.aboutfootertop {
-  height: 100vh;
-  max-height: none;
-}
-
-.aboutfooter .footerleft {
-  background: #171717;
-}
-
-.footerleft .absolutewrap {
-  width: 100%;
-}
-
-.aboutfmail a,.aboutftel a {
-  padding-left: 20px;
-}
 
 @media only screen and (min-width: 960px) {
 .colcontainer2.righttext .col2element {
