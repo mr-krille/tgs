@@ -1,10 +1,8 @@
 @-webkit-keyframes nav-fixed {
   0% {
-    top: 62%;
     -webkit-transform: translate3d(0, -30%, 0);
   }
   100% {
-    top: 2%;
     -webkit-transform: translate3d(0, -85%, 0);
   }
 }
