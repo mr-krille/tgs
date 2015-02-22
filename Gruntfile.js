@@ -48,6 +48,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-open');
 
   grunt.registerTask('serve', ['compass:dev', 'connect:server', 'open:server', 'watch']);
-  grunt.registerTask('build', ['compass:dist'])
+  grunt.registerTask('build', ['compass:dist']);
   grunt.registerTask('default', ['serve']);
 };
