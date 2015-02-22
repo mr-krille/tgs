@@ -409,25 +409,33 @@ var nav = {
       });
     }
 
-    if (top < nav.offset) {
+    if (top >= 0 && top < nav.offset) {
       nav.elm.setAttribute('class', '');
       return;
     }
-    if (top < nav.top) {
+    if (top > nav.offset && top < nav.top) {
       //console.log('up');
-      nav.elm.classList.add('show');
-      nav.show = true;
       nav.top = top;
+      if (!nav.elm.classList.contains('show')) {
+        nav.elm.setAttribute('class', 'show');
+        window.removeEventListener('scroll', nav.handler);
+        window.setTimeout(function () {
+          window.addEventListener('scroll', nav.handler);
+        }, 100);
+      }
       return;
     }
-    if (top > nav.top + 20) {
+    if (top > nav.offset && top > nav.top + 20) {
       //console.log('down');
-      nav.elm.classList.add('hide');
-      nav.elm.classList.remove('show');
-      nav.show = false;
       nav.top = top;
+      if (!nav.elm.classList.contains('hide')) {
+        nav.elm.setAttribute('class', 'hide');
+        window.removeEventListener('scroll', nav.handler);
+        window.setTimeout(function () {
+          window.addEventListener('scroll', nav.handler);
+        }, 300);
+      }
     }
-
     return;
   }
 };
