@@ -192,10 +192,10 @@ var animation = {
     animation.pagination[animation.current].classList.add('active');
     // header
     if (animation.current === 0) {
-      document.getElementById('navbar').classList.remove('fixed');
+      document.getElementById('header').classList.remove('fixed');
     } else {
-      if (!document.getElementById('navbar').classList.contains('fixed')) {
-        document.getElementById('navbar').classList.add('fixed');
+      if (!document.getElementById('header').classList.contains('fixed')) {
+        document.getElementById('header').classList.add('fixed');
       }
     }
   },

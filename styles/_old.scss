@@ -946,19 +946,6 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
   background-position: 86px bottom
 }
 
-.fixed {
-  position: fixed;
-  top: 70px;
-  z-index: 5000;
-  width: 53.5%;
-  color: #000;
-  left: 0
-}
-
-.fixed li,.fixed li a {
-  color: #000
-}
-
 .s2top {
   max-width: 1200px;
   margin: 0 auto;
@@ -2060,10 +2047,6 @@ div.csc-textpic-responsive, div.csc-textpic-responsive * {
 
   .aboutfooterbottom .footerright {
     float: right
-  }
-
-  .fixed {
-    width: 48%
   }
 
   .deviceimgwrap {

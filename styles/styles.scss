@@ -62,12 +62,10 @@
 }
 @keyframes nav-fixed {
   0% {
-    top: 62%;
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, -30%, 0);
   }
   100% {
-    top: 2%;
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, -80%, 0);
   }
 }
 @keyframes out-up {
