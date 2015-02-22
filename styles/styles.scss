@@ -237,29 +237,29 @@
 }
 */
 .aboutfooter,.aboutfootertop {
-  height: 100%;
-  max-height: none
+  height: 100vh;
+  max-height: none;
 }
 
 .aboutfooter .footerleft {
-  background: #171717
+  background: #171717;
 }
 
 .footerleft .absolutewrap {
-  width: 100%
+  width: 100%;
 }
 
 .aboutfmail a,.aboutftel a {
-  padding-left: 20px
+  padding-left: 20px;
 }
 
 @media only screen and (min-width: 960px) {
 .colcontainer2.righttext .col2element {
-  width: 50%
+  width: 50%;
 }
 
 .colcontainer2.lefttext .col1element {
-  width: 49.9%
+  width: 49.9%;
 }
 }
 
