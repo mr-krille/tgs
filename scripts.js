@@ -37,8 +37,6 @@ var app = {
       }
     }
 
-    document.body.classList.add('ready');
-
     var pageLinks = document.querySelectorAll('.inlink');
     for (var i = 0; i < pageLinks.length; i++) {
       pageLinks[i].addEventListener('click', app.pageHandler);
@@ -55,9 +53,9 @@ var app = {
     }
   },
   ready: function () {
+    app.finish = null;
     //console.log('app ready');
     document.body.classList.add('ready');
-    //document.body.classList.remove('loading');
     // loading animation
     var curtain = document.getElementById('curtain');
     if (curtain) {
@@ -69,8 +67,6 @@ var app = {
     }
     // header image sizing
     $('.casestudies .headerpic').css('height', $(window).height() - $('.headertextwrap').outerHeight());
-    // body ready
-    //document.getElementById('curtain').setAttribute('class', '');
   },
   change: function () {
     app.finish = null;
@@ -80,6 +76,7 @@ var app = {
       document.body.setAttribute('class', app.klass);
       document.getElementById('wrapper').innerHTML = app.pageContent;
       app.pageContent = null;
+      app.finish = window.setTimeout(app.ready, 1000);
       app.init();
     }
   },
