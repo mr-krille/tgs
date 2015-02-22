@@ -420,7 +420,7 @@ var nav = {
       nav.top = top;
       return;
     }
-    if (top > nav.top) {
+    if (top > nav.top + 20) {
       //console.log('down');
       nav.elm.classList.add('hide');
       nav.elm.classList.remove('show');
