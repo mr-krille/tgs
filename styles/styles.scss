@@ -1,9 +1,9 @@
 @-webkit-keyframes nav-fixed {
   0% {
-    -webkit-transform: translate3d(0, -30%, 0);
+    -webkit-transform: translate3d(0, -38%, 0);
   }
   100% {
-    -webkit-transform: translate3d(0, -85%, 0);
+    -webkit-transform: translate3d(0, -100%, 0);
   }
 }
 @-webkit-keyframes out-up {
@@ -60,10 +60,10 @@
 }
 @keyframes nav-fixed {
   0% {
-    transform: translate3d(0, -30%, 0);
+    transform: translate3d(0, -38%, 0);
   }
   100% {
-    transform: translate3d(0, -85%, 0);
+    transform: translate3d(0, -100%, 0);
   }
 }
 @keyframes out-up {
