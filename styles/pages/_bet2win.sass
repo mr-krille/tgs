@@ -224,11 +224,15 @@
   .native
     height: 18vw
     background-color: #121920
-    //background-image: url(bet2win/media/native.png)
     background-position: center
     background-repeat: no-repeat
-    background-size: 80vw auto
+    // background: #121920 url(bet2win/media/native.png) center no-repeat
+    background-size: 60vw auto
     opacity: 0
+    +landscape-ipad
+      background-size: 50vw auto
+    +portrait-ipad
+      background-size: 60vw
     +transition(opacity .4s linear)
     &.active
       opacity: 1

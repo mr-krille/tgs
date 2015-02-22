@@ -49,6 +49,8 @@
       background-size: 170px auto
       background-position-y: 30px
       //background-image: url(arriver/media/phone1.png)
+      +portrait-ipad
+        background-size: 300px auto
 
   .meet
     .text
@@ -58,6 +60,8 @@
       background-size: 170px auto
       background-position-y: 30px
       //background-image: url(arriver/media/phone2.png)
+      +portrait-ipad
+        background-size: 300px auto
 
   .history
     .text
@@ -72,6 +76,12 @@
       +iphone
         background-size: 300px
         background-position-y: 30px
+      +landscape-ipad
+        background-size: 400px auto
+        background-position-y: 30px
+      +portrait-ipad
+        background-size: 440px auto
+        background-position-y: 30px 
 
   .waiting
     height: 20vw
@@ -80,10 +90,13 @@
     background-size: auto 6vw
     background-position: center
     background-repeat: no-repeat
+    +portrait-ipad
+      background-size: auto 4vw
 
     +breakpoint-cs(480px)
       background-size: 90%
-
+    +landscape-ipad
+      background-size: auto 3vw
   .photo
     height: 280px
     //background-image: url(arriver/media/weather.jpg)
@@ -165,9 +178,13 @@
     background-size: auto 6vw
     background-position: center
     background-repeat: no-repeat
+    +portrait-ipad
+      background-size: auto 4vw
 
     +breakpoint-cs(480px)
       background-size: 90%
+    +landscape-ipad
+      background-size: auto 3vw
 
   .screens
     background: #b6ddf2

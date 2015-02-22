@@ -191,7 +191,7 @@
   background-repeat: no-repeat;
   @include landscape-ipad {
     background-size: 120% auto;
-    background-position: top center !important;
+    background-position: top center;
   }
   @include breakpoint-cs-min(1025px) { background-attachment: fixed; }
   @include breakpoint(m) { min-height: 470px; }

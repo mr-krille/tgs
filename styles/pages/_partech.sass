@@ -1,5 +1,7 @@
 .headerpic-partech
-  //background-image: url(partech/media/partechtop.jpg)
+  background-image: url(partech/media/partechtop.jpg)
+  +landscape-ipad
+    background-position: center !important
 
 .partech-casestudy
   .mockups
@@ -83,6 +85,8 @@
     &.active
       .layers img
         bottom: -170px
+        +landscape-ipad
+          bottom: -70px !important
         +iphone
           bottom: -85px !important
         opacity: 1
