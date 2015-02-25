@@ -5,7 +5,7 @@ var app = {
   init: function () {
     app.url = null;
     app.klass = null;
-    //console.log('app init');
+    console.log('app init');
     if (app.initial) {
       app.getImages();
     } else {
@@ -50,7 +50,7 @@ var app = {
   },
   ready: function () {
     app.finish = null;
-    //console.log('app ready');
+    console.log('app ready');
     document.body.classList.add('ready');
     // loading animation
     var curtain = document.getElementById('curtain');
@@ -72,7 +72,7 @@ var app = {
       document.body.setAttribute('class', app.klass);
       document.getElementById('wrapper').innerHTML = app.pageContent;
       app.pageContent = null;
-      app.finish = window.setTimeout(app.ready, 1000);
+      app.finish = window.setTimeout(app.ready, 2000);
       app.init();
     }
   },
