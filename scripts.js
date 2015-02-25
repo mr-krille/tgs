@@ -3,9 +3,10 @@ var app = {
   hasPlayed: window.localStorage.getItem('played'),
   isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
   init: function () {
+    //console.log('app init');
     app.url = null;
     app.klass = null;
-    console.log('app init');
+    
     if (app.initial) {
       app.getImages();
     } else {
@@ -49,8 +50,11 @@ var app = {
     }
   },
   ready: function () {
+    //console.log('app ready');
     app.finish = null;
-    console.log('app ready');
+    if (app.preloading.length > 0) {
+      return;
+    }
     document.body.classList.add('ready');
     // loading animation
     var curtain = document.getElementById('curtain');
