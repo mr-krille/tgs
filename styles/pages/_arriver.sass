@@ -9,7 +9,7 @@
     padding: 100px 0
     img:first-child
       position: absolute
-      +breakpoint-cs-min(m)
+      +breakpoint-cs-min(1024px)
         width: 900px
         left: 50%
         margin-left: -450px
@@ -81,7 +81,7 @@
         background-position-y: 30px
       +portrait-ipad
         background-size: 440px auto
-        background-position-y: 30px 
+        background-position-y: 30px
 
   .waiting
     height: 20vw
@@ -92,7 +92,8 @@
     background-repeat: no-repeat
     +portrait-ipad
       background-size: auto 4vw
-
+    +breakpoint-cs-min(1024px)
+      background-size: 60vw auto !important
     +breakpoint-cs(480px)
       background-size: 90%
     +landscape-ipad
@@ -180,7 +181,8 @@
     background-repeat: no-repeat
     +portrait-ipad
       background-size: auto 4vw
-
+    +breakpoint-cs-min(1024px)
+      background-size: 60vw auto !important
     +breakpoint-cs(480px)
       background-size: 90%
     +landscape-ipad

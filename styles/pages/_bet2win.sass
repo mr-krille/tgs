@@ -29,8 +29,10 @@
       background-repeat: no-repeat
       +landscape-ipad
         background-size: auto 17vw !important
+      +breakpoint-cs-min(1024px)
+        background-size: 30vw auto !important
     .image
-      background-color: #e7e6e2 
+      background-color: #e7e6e2
       //background-image: url(bet2win/media/start2.jpg)
       background-position: left -50px center
       background-repeat: no-repeat
@@ -56,6 +58,8 @@
       background-position: center left
       background-repeat: no-repeat
       background-size: auto 16vw
+      +breakpoint-cs-min(1024px)
+        background-size: 30vw auto !important
     .image
       background-color: #e7e6e2
       //background-image: url(bet2win/media/structure.png)
@@ -112,12 +116,14 @@
     background-repeat: no-repeat
     background-position: center 70px
     background-size: 60vw auto
+    +breakpoint-cs-min(1024px)
+      background-size: 40vw auto
     +breakpoint-cs(480px)
       background-size: 180% auto
       height: 270px !important
-      +iphone
-        background-size: 80% auto
-        height: 290px !important
+    +iphone
+      background-size: 80% auto
+      height: 290px !important
     position: relative
     overflow: hidden
     padding-top: 10vw

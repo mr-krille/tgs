@@ -82,6 +82,12 @@
         +transition(all 1s ease-in-out)
         left: -20%
         width: 140%
+        +breakpoint-cs-min(1024px)
+          left: initial
+          bottom: initial
+          top: 50%
+          left: 50%
+          +transform(translate(-50%, -50%))
     &.active
       .layers img
         bottom: -170px
@@ -115,7 +121,7 @@
   .mood
     height: 400px
     //background-image: url(partech/media/mood_final.jpg)
-    @extend %background_full
+    @extend %background_full_centered
     @include breakpoint-cs-min(1025px)
       background-attachment: fixed
 
