@@ -95,6 +95,7 @@
 
 // page transition
 #curtain
+  float: none
   visibility: hidden
 
   &.show
@@ -103,7 +104,7 @@
   &.ready
     visibility: visible
 
-    &.left::after
+    &::after
       -webkit-animation: out-right 1s both
       animation: out-right 1s both
 
@@ -114,7 +115,7 @@
   &.loading
     visibility: visible
 
-    &.left::after
+    &::after
       -webkit-animation: in-left 1s both
       animation: in-left 1s both
 
