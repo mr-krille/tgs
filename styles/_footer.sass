@@ -72,8 +72,27 @@
 .copy strong
   font-weight: normal
 
-.careerfooter .about-link
-  color: #000
+.footerrightWrap
+  position: relative
+  height: 100%
+  background: #ebebeb
+  
+  .devicetextwrap
+    position: relative
+    top: 60px
+
+  .about-link
+    color: #000
+
+  .biggerpic
+    position: relative
+    height: 60%
+    width: 100%
+    
+    img
+      margin: 20px 0 0 40px
+      max-height: 100%
+      max-width: 100%
 
 @media screen and (max-width: $breakpoint-s)
   #contact
@@ -143,7 +162,8 @@
 
 @media only screen and (min-width: 769px)
   .section.footer
-    min-height: 63%
+    overflow: visible
+    min-height: 70%
     width: 100%
 
   .aboutfooter,
