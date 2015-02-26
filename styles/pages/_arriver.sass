@@ -49,6 +49,8 @@
       background-size: 170px auto
       background-position-y: 30px
       //background-image: url(arriver/media/phone1.png)
+      +breakpoint-cs-min(1024px)
+        background-size: 350px auto
       +portrait-ipad
         background-size: 300px auto
 
@@ -57,9 +59,12 @@
       background-position: left center
       //background-image: url(arriver/media/meet.png)
     .image
+      background-color: #b4ddf3
       background-size: 170px auto
       background-position-y: 30px
       //background-image: url(arriver/media/phone2.png)
+      +breakpoint-cs-min(1024px)
+        background-size: 350px auto
       +portrait-ipad
         background-size: 300px auto
 
@@ -70,6 +75,9 @@
       +iphone
         height: 60vw !important
         background-size: 70vw auto !important
+      +portrait-ipad
+        height: 33vw
+        background-size: auto 24vw
     .image
       background-size: 500px auto
       //background-image: url(arriver/media/phone3.png)
@@ -192,6 +200,10 @@
     background: #b6ddf2
     position: relative
     overflow: hidden
+    +portrait-ipad
+      height: 340px !important
+      img
+        bottom: -40px !important
     +breakpoint-cs(768px)
       height: 370px
     +breakpoint-cs(480px)
