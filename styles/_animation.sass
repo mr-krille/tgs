@@ -103,13 +103,21 @@
   &.ready
     visibility: visible
 
-    &::after
+    &.left::after
       -webkit-animation: out-right 1s both
       animation: out-right 1s both
+
+    &.right::after
+      -webkit-animation: out-left 1s both
+      animation: out-left 1s both
 
   &.loading
     visibility: visible
 
-    &::after
+    &.left::after
       -webkit-animation: in-left 1s both
       animation: in-left 1s both
+
+    &.right::after
+      -webkit-animation: in-right 1s both
+      animation: in-right 1s both

@@ -5,7 +5,7 @@ var app = {
   init: function () {
     //console.log('app init');
     app.url = null;
-    app.klass = null;
+    //app.klass = null;
     
     if (app.initial) {
       app.getImages();
@@ -87,8 +87,18 @@ var app = {
 
     var link = (evt.target.tagName === "A") ? evt.target : evt.target.parentNode;
     var url = link.getAttribute('href');
+    var backLink = link.classList.contains('prev');
 
-    document.getElementById('curtain').setAttribute('class', 'loading');
+    var homeLink = link.classList.contains('top') || link.classList.contains('home');
+
+    var direction = 'left';
+
+    // back
+    if ((['arriver', 'beloved', 'bet2win', 'ecratum', 'interactio', 'partech'].indexOf(app.klass) > -1 && ['./', 'about/', 'career/', 'contact/'].indexOf(url) > -1) || backLink || homeLink) {
+      direction = 'right';
+    }
+
+    document.getElementById('curtain').setAttribute('class', 'loading ' + direction);
 
     animation.destroy();
 
