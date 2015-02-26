@@ -74,6 +74,8 @@ var app = {
       window.scrollTo(0, 0);
       window.history.pushState(null, null, app.url);
       document.body.setAttribute('class', app.klass);
+      document.getElementById('preload').childNodes[0].nodeValue = app.styles;
+      app.styles = null;
       document.getElementById('wrapper').innerHTML = app.pageContent;
       app.pageContent = null;
       app.finish = window.setTimeout(app.ready, 2000);
@@ -106,7 +108,6 @@ var app = {
 
         // change syles and preload
         if (preload[1]) {
-          document.getElementById('preload').childNodes[0].nodeValue = preload[1];
           app.preload(preload[1]);
         }
 
@@ -137,6 +138,8 @@ var app = {
     if (!data) return;
     var pattern = /url\(([\w\/\.-]*)\)/g,
         styles = data.split('/*MOBILE*/');
+
+    app.styles = data;
     data = (window.innerWidth > 960) ? styles[0] : styles[1];
 
     while (match = pattern.exec(data)) {
