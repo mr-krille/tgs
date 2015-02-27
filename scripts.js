@@ -21,12 +21,7 @@ var app = {
       animation.init();
     } else {
       nav.init();
-      if (!app.isMobile) {
-        $.stellar({
-          responsive: true
-        });
-        $(window).trigger('resize');
-      } else {
+      if (app.isMobile) {
         var animated = document.querySelectorAll('[data-animated]');
         for(var i = 0; i < animated.length; i++) {
           animated[i].classList.add('active');
@@ -63,7 +58,15 @@ var app = {
     if (app.preloading.length > 0) {
       return;
     }
+    // header image sizing
+    $('.casestudies .headerpic').css('height', $(window).height() - $('.headertextwrap').outerHeight());
     document.body.classList.add('ready');
+    if (!app.isMobile) {
+      $.stellar({
+        responsive: true
+      });
+      $(window).trigger('resize');
+    }
     // loading animation
     var curtain = document.getElementById('curtain');
     if (curtain) {
@@ -73,8 +76,6 @@ var app = {
         document.getElementById('curtain').setAttribute('class', '');
       }, 1000);
     }
-    // header image sizing
-    $('.casestudies .headerpic').css('height', $(window).height() - $('.headertextwrap').outerHeight());
   },
   change: function () {
     app.finish = null;
