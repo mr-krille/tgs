@@ -94,7 +94,7 @@ var app = {
     var direction = 'left';
 
     // back
-    if ((['arriver', 'beloved', 'bet2win', 'ecratum', 'interactio', 'partech'].indexOf(app.klass) > -1 && ['./', 'about/', 'career/', 'contact/'].indexOf(url) > -1) || backLink || homeLink) {
+    if ((['arriver', 'beloved', 'bet2win', 'ecratum', 'interactio', 'partech'].indexOf(app.klass) > -1 && url === './') || backLink || homeLink) {
       direction = 'right';
     }
 
