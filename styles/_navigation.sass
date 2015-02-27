@@ -45,7 +45,7 @@
     padding: 0 10px 0 30px
     background: url(img/prev_btn.png) no-repeat left center
 
-    &:after
+    &::after
       content: ''
       position: absolute
       top: 14px
@@ -72,6 +72,9 @@
     padding: 0 10px 0 30px
     text-align: right
     background: url(img/prev_btn.png) no-repeat left center
+
+    &::after
+      display: none
 
   .top,
   .prev,
