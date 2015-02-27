@@ -7,6 +7,9 @@ var app = {
     app.url = null;
     //app.klass = null;
     
+    // header image sizing
+    $('.casestudies .headerpic').css('height', $(window).height() - $('.headertextwrap').outerHeight());
+
     if (app.initial) {
       app.getImages();
     } else {
@@ -20,7 +23,6 @@ var app = {
     if (document.body.classList.contains('split')) {
       animation.init();
     } else {
-      nav.init();
       if (app.isMobile) {
         var animated = document.querySelectorAll('[data-animated]');
         for(var i = 0; i < animated.length; i++) {
@@ -58,14 +60,16 @@ var app = {
     if (app.preloading.length > 0) {
       return;
     }
-    // header image sizing
-    $('.casestudies .headerpic').css('height', $(window).height() - $('.headertextwrap').outerHeight());
     document.body.classList.add('ready');
+    // candy
     if (!app.isMobile) {
       $.stellar({
         responsive: true
       });
       $(window).trigger('resize');
+    }
+    if (!document.body.classList.contains('split')) {
+      nav.init();
     }
     // loading animation
     var curtain = document.getElementById('curtain');
@@ -441,9 +445,3 @@ var nav = {
 };
 
 window.addEventListener('load', app.init, false);
-
-if(window.jQuery) {
-  $(window).on('resize', function () {
-    $('.casestudies .headerpic').css('height', $(window).height()-$('.headertextwrap').outerHeight());
-  }).trigger('resize');
-}
