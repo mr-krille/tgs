@@ -39,6 +39,14 @@ var app = {
       pageLinks[i].addEventListener('click', app.pageHandler);
     }
 
+    $('.about .discover, .career .discover').bind("click", function(evt) {
+      evt.preventDefault();
+
+      $('html,body').animate({
+        scrollTop: window.innerHeight
+      }, 1000);
+    });
+
     var svgs = document.querySelectorAll('[data-inline-svg]');
     for(var i = 0; i < svgs.length; i++) {
       var svg = svgs[i];
