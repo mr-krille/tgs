@@ -86,6 +86,7 @@ var app = {
     if (app.pageContent) {
       window.scrollTo(0, 0);
       window.history.pushState(null, null, app.url);
+      ga('send', 'pageview', app.url);
       document.body.setAttribute('class', app.klass);
       document.getElementById('preload').childNodes[0].nodeValue = app.styles;
       app.styles = null;
