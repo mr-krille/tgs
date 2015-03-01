@@ -40,7 +40,7 @@
 
 #navbar
   .prev
-    right: 130px
+    right: 150px
     margin-left: 30px
     padding: 0 10px 0 30px
     background: url(img/prev_btn.png) no-repeat left center
@@ -87,6 +87,18 @@
     line-height: 40px
     text-transform: uppercase
     background-size: 12px
+
+@media screen and (max-width: 480px)
+  #navbar .prev
+    right: 130px
+
+  .top,
+  .prev
+    margin-lef: 15px
+
+  .next,
+  .only
+    margin-right: 15px
 
 @media screen and (max-width: $breakpoint-m)
   #navbar
