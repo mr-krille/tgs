@@ -63,10 +63,11 @@ var app = {
     document.body.classList.add('ready');
     // candy
     if (!app.isMobile) {
-      $.stellar({
-        responsive: true
-      });
-      $(window).trigger('resize');
+      if ($(window).data('plugin_stellar')) {
+        $(window).data('plugin_stellar').refresh();
+      } else {
+        $(window).stellar({});
+      }
     }
     if (!document.body.classList.contains('split')) {
       nav.init();
@@ -86,7 +87,7 @@ var app = {
     if (app.pageContent) {
       window.scrollTo(0, 0);
       window.history.pushState(null, null, app.url);
-      ga('send', 'pageview', app.url);
+      ga('send', 'pageview', (app.url == './') ? '/' : app.url);
       document.body.setAttribute('class', app.klass);
       document.getElementById('preload').childNodes[0].nodeValue = app.styles;
       app.styles = null;
