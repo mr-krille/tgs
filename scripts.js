@@ -1,6 +1,7 @@
 var app = {
   preloading: [],
-  hasPlayed: window.localStorage.getItem('played'),
+  isSafari: (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1),
+  isIE: (navigator.appName.indexOf("Internet Explorer")!=-1),
   isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
   init: function () {
     //console.log('app init');
@@ -62,7 +63,7 @@ var app = {
     }
     document.body.classList.add('ready');
     // candy
-    if (!app.isMobile) {
+    if (!app.isMobile && !app.isSafari && !app.isIE) {
       if ($(window).data('plugin_stellar')) {
         $(window).data('plugin_stellar').refresh();
       } else {
